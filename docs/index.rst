@@ -7,9 +7,13 @@ Welcome to hostmobility-documentation's documentation!
 ======================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
-      hmx-leds
+   
+   unified-manual
+      generic-leds
+         hmx-leds
+         
 
 
 Indices and tables
