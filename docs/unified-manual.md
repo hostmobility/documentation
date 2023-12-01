@@ -42,4 +42,6 @@ nxp-distro eller open...
 
 [HMX] [kirkstone-v1]
 
-![[generic-leds]]
+[[:generic-leds:]]
+
+- {ref} `generic-leds`
