@@ -8,3 +8,4 @@ The system leds are configured and used with the standard Linux LED subsystem ht
 
 - [hmx-leds](hmx-leds)
 - [c61-leds](c61-leds)
+- [[hmx-leds]]

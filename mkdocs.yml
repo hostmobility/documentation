@@ -1,0 +1,16 @@
+site_name: Host Mobility Documentation
+
+theme:
+  name: material
+
+nav:
+  - index.md
+  - documentation-howto.md
+  - tags.md
+
+plugins:
+  - search:
+  - tags:
+      tags_file: tags.md
+  - plantuml:
+      puml_url: http://anansi.setekgroup.local:8081
