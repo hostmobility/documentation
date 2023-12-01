@@ -20,8 +20,10 @@ build:
       #- python -m sphinx -b linkcheck -D linkcheck_timeout=1 docs/ $READTHEDOCS_OUTPUT/linkcheck
 python:
   install:
-    #TODO - requirements: python_requirements.txt
-    - myst-parser
+    - method: pip
+      path: .
+      extra_requirements:
+        - myst-parser
 
 # Build documentation in the "docs/" directory with Sphinx
 sphinx:
