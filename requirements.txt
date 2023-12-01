@@ -49,4 +49,4 @@ sphinxcontrib-serializinghtml==1.1.5
 urllib3==1.26.13
     # via requests
 
-myst_parser==2.0.0
+myst-parser==1.0.0
