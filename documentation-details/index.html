@@ -16,7 +16,7 @@
     
     
       
-        <title>C61 leds - Host Mobility Documentation</title>
+        <title>Editing details and tools - Host Mobility Documentation</title>
       
     
     
@@ -60,6 +60,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#visual-studio-code" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -92,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              C61 leds
+              Editing details and tools
             
           </span>
         </div>
@@ -253,6 +258,71 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Studio Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visual Studio Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#markdown-all-in-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markdown All in One
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plantuml-vs-code-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      PlantUML VS Code plugin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plantuml-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      PlantUML Diagrams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PlantUML Diagrams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-own-plantuml-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Own PlantUML Server
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -270,16 +340,42 @@
     
     
     
-      <a href="../tags/#c61" class="md-tag">c61</a>
+      <a href="../tags/#contribute" class="md-tag">contribute</a>
     
   
 </nav>
 
 
 
-  <h1>C61 leds</h1>
+  <h1>Editing details and tools</h1>
 
-<p>LEDS on the C61 are accessed through spi</p>
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+<p>You can get help with markdown and get preview here as well with plugins:</p>
+<h3 id="markdown-all-in-one"><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All in One</a></h3>
+<h3 id="plantuml-vs-code-plugin"><a href="https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml">PlantUML VS Code plugin</a></h3>
+<ol>
+<li>In jebbs.plantuml plugin setting set plantuml.server to http://anansi.setekgroup.local:8081</li>
+<li>Allow http on localhost if you get a warning about http*</li>
+</ol>
+<h2 id="plantuml-diagrams">PlantUML Diagrams</h2>
+<p><a href="https://plantuml.com/">PlantUML</a> can be used to generated diagrams</p>
+<p><em>Example</em></p>
+<pre><code>@startuml
+&quot;Documentation Writer&quot; as writer
+&quot;Read documentation &quot; as (read)
+writer --&gt; (Write documentation)
+writer --&gt; (Publish documentation)
+:User: --&gt; (read)
+@enduml
+</code></pre>
+<p><em>Rendered as</em></p>
+<div class="puml"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="191px" preserveAspectRatio="true" style="background: #ffffff" version="1.1" viewBox="0 0 646 191" width="646px" zoomAndPan="magnify"><defs/><g><g id="elem_writer"><ellipse cx="209" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M209,22 L209,49 M196,30 L222,30 M209,49 L196,64 M209,49 L222,64 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="133.5" y="78.4951">Documentation Writer</text></g><g id="elem_read"><ellipse cx="547.0029" cy="163.7446" fill="#F1F1F1" rx="93.2229" ry="21.0446" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="472.5029" y="166.5913">Read documentation</text></g><g id="elem_Write documentation"><ellipse cx="96.9996" cy="163.7399" fill="#F1F1F1" rx="90.9996" ry="20.5999" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="24.9996" y="166.5866">Write documentation</text></g><g id="elem_Publish documentation"><ellipse cx="321.001" cy="163.7422" fill="#F1F1F1" rx="97.711" ry="21.9422" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="241.501" y="166.5889">Publish documentation</text></g><g id="elem_User"><ellipse cx="547" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M547,22 L547,49 M534,30 L560,30 M547,49 L534,64 M547,49 L560,64 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="531" y="78.4951">User</text></g><g id="link_writer_Write documentation"><path d="M173.56,82.01 C154.34,102.28 135.4783,122.156 119.7483,138.746 " fill="none" id="writer-to-Write documentation" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="115.62,143.1,124.7151,139.3212,119.0602,139.4717,118.9098,133.8168,115.62,143.1" style="stroke:#181818;stroke-width:1.0;"/></g><g id="link_writer_Publish documentation"><path d="M244.44,82.01 C263.15,101.74 281.2907,120.867 296.9807,137.407 " fill="none" id="writer-to-Publish documentation" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="301.11,141.76,297.818,132.4776,297.6689,138.1325,292.014,137.9833,301.11,141.76" style="stroke:#181818;stroke-width:1.0;"/></g><g id="link_User_read"><path d="M547,82.01 C547,102.01 547,119.87 547,136.44 " fill="none" id="User-to-read" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="547,142.44,551,133.44,547,137.44,543,133.44,547,142.44" style="stroke:#181818;stroke-width:1.0;"/></g></g></svg></div>
+
+<h3 id="use-own-plantuml-server">Use Own PlantUML Server</h3>
+<p><code>mkdocs build</code> need access to server which we run on <a href="http://anansi.setekgroup.local:8081">anansi.setekgroup.local:8081</a> </p>
+<p>You can edit the server name in <code>mkdocs.yml</code> and run your own elsewhere, e.g. localhost. but make sure you don't commit changes to this file.</p>
+<pre><code>docker run -d --name plantuml -p 8081:8080 plantuml/plantuml-server:tomcat
+</code></pre>
 
 
 

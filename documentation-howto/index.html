@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../tags/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>documentation - Host Mobility Documentation</title>
+        <title>Writing Host Mobility Product Documentation - Host Mobility Documentation</title>
       
     
     
@@ -61,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#documentation" class="md-skip">
+        <a href="#get-the-source" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              documentation
+              Writing Host Mobility Product Documentation
             
           </span>
         </div>
@@ -191,11 +195,103 @@
         
   
   <span class="md-ellipsis">
-    Welcome
+    Index
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Writing Host Mobility Product Documentation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Writing Host Mobility Product Documentation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-the-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get the source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-the-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit the documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-the-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy the documentation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -211,7 +307,7 @@
         
   
   <span class="md-ellipsis">
-    Our beloved tags
+    Tags
   </span>
   
 
@@ -237,8 +333,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -247,26 +341,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#get-the-source" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Usage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install-mkdocs-tools-and-dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install mkdocs tools and dependencies
+      Get the source
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#install-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-the-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit the documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-the-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy the documentation
+    </span>
+  </a>
   
 </li>
       
@@ -283,15 +389,50 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../tags/#contribute" class="md-tag">contribute</a>
+    
+  
+</nav>
 
 
-<h1 id="documentation">documentation</h1>
-<p>Unified documentation for Host Mobility Products</p>
-<h2 id="usage">Usage</h2>
-<h3 id="install-mkdocs-tools-and-dependencies">Install mkdocs tools and dependencies</h3>
-<pre><code class="language-bash">virtualenv venv
+
+  <h1>Writing Host Mobility Product Documentation</h1>
+
+<p>This document describes how to write and publish <a href="https://hostmobility.github.io/documentation">Host Mobility Product Documentation</a></p>
+<h2 id="get-the-source">Get the source</h2>
+<p>Clone the <a href="git@github.com:hostmobility/documentation.git">documentation repo</a>
+and create a working branch.</p>
+<pre><code class="language-bash">git clone git@github.com:hostmobility/documentation.git (push)
+git checkout -b doc-work
+</code></pre>
+<h2 id="install-tools">Install tools</h2>
+<p>Install <a href="https://www.mkdocs.org/">MkDocs</a>. Install it the first time after
+cloning. Use a virtual environment:</p>
+<pre><code class="language-bash">cd documentation
+. venv/bin/activate
 pip install -r requirements.txt
 </code></pre>
+<p>Activate the virtual enviroment if you have done the previous step before.</p>
+<pre><code class="language-bash">cd documentation
+. venv/bin/activate
+</code></pre>
+<p>Use the built-in server</p>
+<pre><code class="language-bash">mkdocs serve
+</code></pre>
+<p><a href="http://127.0.0.1:8000/documentation-howto">Preview</a> your changes.</p>
+<h2 id="edit-the-documentation">Edit the documentation</h2>
+<p>Edit the documentation using your chosen editor e.g. <code>vim docs/documentation-howto.md</code> or <code>code docs/</code></p>
+<p><a href="../documentation-details/">Editing details and setup</a></p>
+<h2 id="deploy-the-documentation">Deploy the documentation</h2>
+<pre><code class="language-bash">mkdocs gh-deploy
+</code></pre>
+<p>The documentation is published on <a href="https://hostmobility.github.io/documentation">hostmobility.github.io/documentation</a>. It shall appear identically as on the local server.</p>
 
 
 
