@@ -28,5 +28,5 @@ title: Index
 * [Accelerometer](interfaces/accelerometer)
 * [Digital I/O](interfaces/digital_io)
 * [CAN](interfaces/can)
-* [LEDS](generic-leds.md)
+* [LEDs](interfaces/leds.md)
 * [Networking](interfaces/networking.md)
