@@ -1,9 +1,20 @@
-# Accelerometer
+---
+title: Accelerometer
+tags:
+    - hmx
+    - c61
+    - mx4
+    - mxv
+---
 
 ## Overview
 
 The accelerometer is presented as an industrial i/o device(iio). It can be
 found at `/sys/bus/iio/devices/iio\:device0/in_accel_*`
+
+## Platform specific
+
+[HMX](hmx/accelerometer.md)
 
 ## Example
 
