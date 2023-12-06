@@ -1,0 +1,519 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Digital I/O - Host Mobility Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#digital-io" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Host Mobility Documentation" class="md-header__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Host Mobility Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Digital I/O
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Host Mobility Documentation" class="md-nav__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Host Mobility Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation-howto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Host Mobility Product Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#digital-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital out
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Digital out">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-digital-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable digital out
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digital-out-high-and-low" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital out high and low
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#over-current-sense" class="md-nav__link">
+    <span class="md-ellipsis">
+      Over-current sense
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="digital-io">Digital I/O</h1>
+<p>Digital I/O on the MX-V is handled through the Linux GPIO subsystem. This
+is a generic interface that organizes the GPIO pins by the hardware chips that
+input or output digital signals. The interface is generic and presents a large
+number of inputs and outputs in the system, mostly internal.</p>
+<p>To use the digital I/O on the MX-V, the new (since Linux v4.8) GPIO API is
+recommended. This  C API is implemented in
+<a href="https://git.kernel.org/pub/scm/libs/libgpiod/libgpiod.git">libgpiod</a> and comes
+with bindings also for C++ and Python.</p>
+<p>The library comes with a set of tools that can be used from a shell script to
+set and get values.</p>
+<ul>
+<li>gpiodetect - list all gpiochips present on the system, their names, labels and number of GPIO lines</li>
+<li>gpioinfo   - list all lines of specified gpiochips, their names, consumers, direction, active state and additional flags</li>
+<li>gpioget    - read values of specified GPIO lines </li>
+<li>gpioset    - set values of specified GPIO lines, potentially keep the lines exported and wait until timeout, user input or signal</li>
+<li>gpiofind   - find the gpiochip name and line offset given the line name </li>
+<li>gpiomon    - wait for events on GPIO lines, specify which events to watch, how many events to process before exiting or if the events should be reported to the console</li>
+</ul>
+<p>By using gpiodetect, a list of the GPIO chips in the system is shown.</p>
+<pre><code class="language-bash">root@mxv-pt:~# gpiodetect
+gpiochip0 [209c000.gpio] (32 lines)
+gpiochip1 [20a0000.gpio] (32 lines)
+gpiochip10 [digital_in] (13 lines)
+gpiochip2 [20a4000.gpio] (32 lines)
+gpiochip3 [20a8000.gpio] (32 lines)
+gpiochip4 [20ac000.gpio] (32 lines)
+gpiochip5 [20b0000.gpio] (32 lines)
+gpiochip6 [20b4000.gpio] (32 lines)
+gpiochip7 [modem_control] (4 lines)
+gpiochip8 [ncv7751] (32 lines)
+gpiochip9 [gpio_overlay] (25 lines)
+</code></pre>
+<h2 id="digital-out">Digital out</h2>
+<h3 id="overview">Overview</h3>
+<p>The digital out channels (lines) have been collected in an <code>overlay</code> virtual chip
+that also restricts the user from changing the direction of the signal (which
+can usually be done for these generic I/Os).</p>
+<p>With the <code>gpioinfo</code> command, the available channels are listed.</p>
+<pre><code class="language-bash">root@mxv-pt:~# gpioinfo gpio_overlay
+gpiochip9 - 25 lines:
+        line   0: &quot;digital-out-source-0&quot; unused input active-high
+        line   1: &quot;digital-out-source-1&quot; unused input active-high
+        line   2: &quot;digital-out-source-2&quot; unused input active-high
+        line   3: &quot;digital-out-source-3&quot; unused input active-high
+        line   4: &quot;digital-out-source-4&quot; unused input active-high
+        line   5: &quot;digital-out-source-5&quot; unused input active-high
+        line   6: &quot;digital-out-source-6&quot; unused input active-high
+        line   7: &quot;digital-out-source-7&quot; unused input active-high
+        line   8: &quot;digital-out-oc-0&quot; unused input active-high
+        line   9: &quot;digital-out-oc-1&quot; unused input active-high
+        line  10: &quot;digital-out-oc-2&quot; unused input active-high
+        line  11: &quot;digital-out-oc-3&quot; unused input active-high
+        line  12: &quot;digital-out-oc-4&quot; unused input active-high
+        line  13: &quot;digital-out-oc-5&quot; unused input active-high
+        line  14: &quot;digital-out-oc-6&quot; unused input active-high
+        line  15: &quot;digital-out-oc-7&quot; unused input active-high
+        line  16: &quot;digital-out-sink-0&quot; unused input active-high
+        line  17: &quot;digital-out-sink-1&quot; unused input active-high
+        line  18: &quot;digital-out-sink-2&quot; unused input active-high
+        line  19: &quot;digital-out-sink-3&quot; unused input active-high
+        line  20: &quot;digital-out-sink-4&quot; unused input active-high
+        line  21: &quot;digital-out-sink-5&quot; unused input active-high
+        line  22: &quot;digital-out-sink-6&quot; unused input active-high
+        line  23: &quot;digital-out-sink-7&quot; unused input active-high
+        line  24: &quot;digital-out-enable&quot; unused input active-high
+</code></pre>
+<p>To find a specific signal, the <code>gpiofind</code> command can be used:</p>
+<pre><code class="language-bash">root@mxv-pt:~# gpiofind digital-out-enable
+gpiochip9 24
+</code></pre>
+<h3 id="enable-digital-out">Enable digital out</h3>
+<p>To enable digital out, the <code>digital-out-enable</code> line needs to be set to high.</p>
+<p>We can use the <code>gpioset</code> command in combination with <code>gpiofind</code> in <code>bash</code>.</p>
+<pre><code class="language-bash">root@mxv-pt:~# gpioset $(gpiofind digital-out-enable)=1
+</code></pre>
+<h3 id="digital-out-high-and-low">Digital out high and low</h3>
+<p>The digital out drivers can both source and sink current. The 8 source drivers
+are controlled with <code>digital-out-source-0..7</code> and the sink drivers with
+<code>digital-out-sink-0..7</code>. For a specific channel, the source and sink drivers
+cannot be used at the same time.</p>
+<pre><code class="language-bash">root@mxv-pt:~# gpioset $(gpiofind digital-out-source-0)=1
+</code></pre>
+<h3 id="over-current-sense">Over-current sense</h3>
+<p>For each digital-out-source-n there is a digital-out-oc-n which can be read to
+detect short-circuits.</p>
+<pre><code class="language-bash">root@mxv-pt:~# gpioget $(gpiofind digital-out-oc-0)
+</code></pre>
+<h3 id="debugging">Debugging</h3>
+<p><code>/sys/kernel/debug/gpio</code> can be read to get the kernel's view of the GPIO status.</p>
+<pre><code class="language-bash">root@mxv-pt:~# cat /sys/kernel/debug/gpio | grep -i dig
+ gpio-48  (DIG_OUT_LO_1        |DIG-OUT-LO          ) out hi
+ gpio-49  (DIG_OUT_EN          |DIG-OUT-EN          ) out hi
+ gpio-64  (DIG_OUT_HI_1        |DIG-OUT-HI          ) out hi
+ gpio-65  (DIG_OUT_HI_2        |DIG-OUT-HI          ) out lo
+ gpio-66  (DIG_OUT_HI_3        |DIG-OUT-HI          ) out lo
+ gpio-67  (DIG_OUT_HI_4        |DIG-OUT-HI          ) out lo
+ gpio-68  (DIG_OUT_HI_5        |DIG-OUT-HI          ) out lo
+ gpio-69  (DIG_OUT_HI_6        |DIG-OUT-HI          ) out lo
+ gpio-70  (DIG_OUT_HI_7        |DIG-OUT-HI          ) out lo
+ gpio-71  (DIG_OUT_HI_8        |DIG-OUT-HI          ) out lo
+ gpio-72  (DIG_OUT_HI_OC_1     |DIG-OUT-HI-OC       ) in  hi
+ gpio-73  (DIG_OUT_HI_OC_2     |DIG-OUT-HI-OC       ) in  lo
+ gpio-74  (DIG_OUT_HI_OC_3     |DIG-OUT-HI-OC       ) in  lo
+ gpio-75  (DIG_OUT_HI_OC_4     |DIG-OUT-HI-OC       ) in  lo
+ gpio-76  (DIG_OUT_HI_OC_5     |DIG-OUT-HI-OC       ) in  hi
+ gpio-77  (DIG_OUT_HI_OC_6     |DIG-OUT-HI-OC       ) in  lo
+ gpio-78  (DIG_OUT_HI_OC_7     |DIG-OUT-HI-OC       ) in  hi
+ gpio-79  (DIG_OUT_HI_OC_8     |DIG-OUT-HI-OC       ) in  lo
+ gpio-166 (DIG_OUT_LO_2        |DIG-OUT-LO          ) out hi
+ gpio-493 (digital-out-source-0|gpioset             ) in  hi
+ gpio-494 (digital-out-source-1)
+ gpio-495 (digital-out-source-2)
+ gpio-496 (digital-out-source-3)
+ gpio-497 (digital-out-source-4)
+ gpio-498 (digital-out-source-5)
+ gpio-499 (digital-out-source-6)
+ gpio-500 (digital-out-source-7)
+ gpio-501 (digital-out-oc-0    )
+ gpio-502 (digital-out-oc-1    )
+ gpio-503 (digital-out-oc-2    )
+ gpio-504 (digital-out-oc-3    )
+ gpio-505 (digital-out-oc-4    )
+ gpio-506 (digital-out-oc-5    )
+ gpio-507 (digital-out-oc-6    )
+ gpio-508 (digital-out-oc-7    )
+ gpio-509 (digital-out-sink-0  )
+ gpio-510 (digital-out-sink-1  )
+ gpio-511 (digital-out-enable  )
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>

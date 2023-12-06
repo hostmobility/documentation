@@ -16,7 +16,7 @@
     
     
       
-        <title>Generic leds - Host Mobility Documentation</title>
+        <title>Login - Host Mobility Documentation</title>
       
     
     
@@ -60,6 +60,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#login" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -92,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Generic leds
+              Login
             
           </span>
         </div>
@@ -253,6 +258,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -264,33 +286,18 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
-<nav class="md-tags" >
-  
-    
-    
-    
-      <a href="../tags/#hmx" class="md-tag">hmx</a>
-    
-  
-    
-    
-    
-      <a href="../tags/#c61" class="md-tag">c61</a>
-    
-  
-</nav>
 
 
+  <h1>Login</h1>
 
-  <h1>Generic leds</h1>
-
-<p>The system leds are configured and used with the standard Linux LED subsystem https://docs.kernel.org/leds/leds-class.html #hmx</p>
-<ul>
-<li><a href="hmx-leds">hmx-leds</a></li>
-<li><a href="c61-leds">c61-leds</a></li>
-<li>[[hmx-leds]]</li>
-</ul>
+<h2 id="login">Login</h2>
+<p>The Host Mobility Hardwares have an SSH server enabled by default. For ethernet over USB0,
+the IP address is 192.168.250.1. For regular ethernet, the MX-V gets
+IP addresses from a DHCP server, e.g. a router.  In case there is no
+DHCP server available, the IP addresses default to <code>192.168.1.200</code>
+(eth0) and <code>192.168.2.200</code> (eth1).</p>
+<p>Log in by running <code>ssh root@IP-ADDRESS</code> and provide an empty
+password.  The latter can be changed as usual with the <code>passwd</code> command.</p>
 
 
 
