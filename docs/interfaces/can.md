@@ -14,10 +14,11 @@ similar to TCP/IP.
 
 ## Configuration
 
-A CAN device is typically configured with the
+Being a network interface, a CAN device is typically configured with the `ip
+link` command in the
 [iproute2](https://wiki.linuxfoundation.org/networking/iproute2) utilities.
 
-### List of supported switches
+Supported option are shown by the `ip` `help` subcommand
 
 ```bash
     $ ip link set can0 type can help  
@@ -50,6 +51,26 @@ A CAN device is typically configured with the
                       RESTART-MS    := { 0 | NUMBER }
 ```
 
+### Persistent configuration 
+
+CAN bus parameters can be set in systemd-networkd configuration files.
+
+Example:
+
+Edit or create `/lib/systemd/network/80-can.network`
+
+```
+[Match]
+Name=can*
+
+[CAN]
+BitRate=500K
+RestartSec=2000ms
+DataBitRate=4000000
+FDMode=True
+```
+
+
 ### Configure bit rate of one specific CAN controller
 
 ```bash
@@ -76,7 +97,7 @@ network.
 ### Dump all incoming data
 
 ```bash
-$ candump -l any,0:0,#FFFFFFFF    (log error frames and also all data frames)
+$ candump -c -l any,0:0,#FFFFFFFF    (log error frames and also all data frames)
 ```
 
 ### Send a single CAN frame
