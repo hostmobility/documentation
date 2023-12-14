@@ -19,7 +19,7 @@ git checkout -b doc-work
 ## Install tools
 
 Install [MkDocs](https://www.mkdocs.org/). Install it the first time after
-cloning. Use a virtual environment:
+cloning. Use a virtual environment(pip install virtualenv):
 
 ```bash
 cd documentation
@@ -39,6 +39,11 @@ Use the built-in server
 ```bash
 mkdocs serve
 ```
+Trouble with `mkdocs serve` edit /etc/hosts
+```
+192.168.128.54   anansi.setekgroup.local
+```
+
 [Preview](http://127.0.0.1:8000/documentation-howto) your changes.
 
 ## Edit the documentation
