@@ -1,7 +1,7 @@
 ---
 tags:
-  - hmx
-  - c61
+  - HMX
+  - C61
 ---
 
 LEDs are usually* accessed through the [Linux LED subsystem API](https://docs.kernel.org/leds/leds-class.html). 

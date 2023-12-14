@@ -1,6 +1,6 @@
 ---
 tags:
-  - hmx
+  - HMX
 ---
 
 ### The following leds are available on HMX

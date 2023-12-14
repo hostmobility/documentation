@@ -1,10 +1,10 @@
 ---
 title: Accelerometer
 tags:
-    - hmx
-    - c61
-    - mx4
-    - mxv
+    - HMX
+    - C61
+    - MX-4
+    - MX-V
 ---
 
 ## Overview

@@ -1,7 +1,7 @@
 ---
 title: Writing Host Mobility Product Documentation
 tags:
-  - contribute
+  - Contribute
 ---
 
 This document describes how to write and publish [Host Mobility Product Documentation](https://hostmobility.github.io/documentation)
