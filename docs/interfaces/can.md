@@ -1,24 +1,47 @@
 ---
-title: CAN (Controller Area Network)
+title: CAN
 tags:
   - CAN
+  - HMX
+  - C61
+  - MX-4
+  - MX-V
 ---
 
-The [CAN](https://en.wikipedia.org/wiki/CAN_bus) interfaces on the Host
-Mobility Hardware accessed with the
-[SocketCAN](https://www.kernel.org/doc/html/v4.19/networking/can.html) API.
-This means that a CAN interface is implemented as a type of network interface.
-They can utilize the Linux network stack and present a programming model
-similar to TCP/IP.
+## Overview
+
+[CAN(controller area network)](https://en.wikipedia.org/wiki/CAN_bus) is a bus type network where all nodes on a single bus communicates directly to each other. 
+
+Host Mobility Hardware all have a number of CAN channels.
+
+In Linux, CAN channels are implemented as network interfaces. They can utilize the Linux network stack and present a programming model similar to TCP/IP. Applications use the [SocketCAN](https://www.kernel.org/doc/html/v4.19/networking/can.html) API, either directly or tthough a higher level library.
+
+## Configuration though Systemd-Networkd
+
+**Note:** Not for BSP release 1.6/1.5 and older
+
+Bus parameters can be set in systemd-networkd configuration files. 
+
+Example:
+
+Edit or create `/lib/systemd/network/80-can.network`
+```
+[Match]
+Name=can*
+
+[CAN]
+BitRate=500K
+RestartSec=2000ms
+DataBitRate=4000000
+FDMode=True
+```
 
 
-## Configuration
+## Manual configuration
 
-Being a network interface, a CAN device is typically configured with the `ip
-link` command in the
-[iproute2](https://wiki.linuxfoundation.org/networking/iproute2) utilities.
+Use `ip link` to configure the bus parameters manually. This is a standard utility([iproute2](https://wiki.linuxfoundation.org/networking/iproute2))
 
-Supported option are shown by the `ip` `help` subcommand
+Supported options are shown by the `ip` `help` subcommand
 
 ```bash
     $ ip link set can0 type can help  
@@ -51,41 +74,52 @@ Supported option are shown by the `ip` `help` subcommand
                       RESTART-MS    := { 0 | NUMBER }
 ```
 
-### Persistent configuration 
 
-CAN bus parameters can be set in systemd-networkd configuration files.
-
-Example:
-
-Edit or create `/lib/systemd/network/80-can.network`
-
+*Example : Set Standard(2.0) CAN with a bitrate of 500 kbit/s and listen only mode.*
 ```
-[Match]
-Name=can*
-
-[CAN]
-BitRate=500K
-RestartSec=2000ms
-DataBitRate=4000000
-FDMode=True
+ip link set can0 down
+ip link set can0 up type can bitrate 500000 listen-only on
 ```
 
-
-### Configure bit rate of one specific CAN controller
-
+*Example : Setup CAN-FD with a bitrate of 500/4000 kbit/s in normal mode.*
 ```bash
-    $ ifconfig can0 down
-    $ ip link set can0 type can bitrate 250000
-    $ ifconfig can0 up
+ip link set can0 down
+ip link set can0 up type can bitrate 500000 dbitrate 4000000 fd on
 ```
 
 ### Query a device for its current configuration
 
-    $ ip -d link show can0
+```bash
+ip -d link show can0
+```
+
+```bash
+8: can0: <NOARP,UP,LOWER_UP,ECHO> mtu 72 qdisc pfifo_fast state UP mode DEFAULT group default qlen 10
+    link/can  promiscuity 0 minmtu 0 maxmtu 0 
+    can <FD> state ERROR-PASSIVE (berr-counter tx 0 rx 127) restart-ms 0 
+	  bitrate 500000 sample-point 0.875
+	  tq 25 prop-seg 34 phase-seg1 35 phase-seg2 10 sjw 1 brp 1
+	  m_can: tseg1 2..256 tseg2 2..128 sjw 1..128 brp 1..512 brp_inc 1
+	  dbitrate 4000000 dsample-point 0.700
+	  dtq 25 dprop-seg 3 dphase-seg1 3 dphase-seg2 3 dsjw 1 dbrp 1
+	  m_can: dtseg1 1..32 dtseg2 1..16 dsjw 1..16 dbrp 1..32 dbrp_inc 1
+	  clock 40000000 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 parentbus spi parentdev spi3.0 
+```
 
 ### Query a device for statistics
 
-    $ ip -s link show can0
+```bash
+ip -s link show can0
+```
+
+```bash
+8: can0: <NOARP,UP,LOWER_UP,ECHO> mtu 72 qdisc pfifo_fast state UP mode DEFAULT group default qlen 10
+    link/can 
+    RX:  bytes packets errors dropped  missed   mcast           
+             0       0      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+             0       0      0       0       0       0 
+```
 
 ## CAN-utils 
 
@@ -105,3 +139,10 @@ $ candump -c -l any,0:0,#FFFFFFFF    (log error frames and also all data frames)
 ```bash
 $ cansend can0 123#DEADBEEF
 ```
+
+
+## Platform specific
+
+[HMX](hmx/can.md)
+
+
