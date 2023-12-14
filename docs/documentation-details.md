@@ -1,7 +1,7 @@
 ---
 title: Editing details and tools
 tags:
-  - contribute
+  - Contribute
 ---
 
 ## Visual Studio Code

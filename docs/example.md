@@ -1,9 +1,9 @@
 ---
 title: Special
 tags:
-  - c61
-  - hmx
-  - mxv
+  - C61
+  - HMX
+  - MX-V
 ---
 
 
@@ -11,4 +11,4 @@ tags:
 # Special machines
 
 
-Documentation specific to c61, hmx and more.
+Documentation specific to C61, HMX and more.
