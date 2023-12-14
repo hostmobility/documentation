@@ -14,7 +14,12 @@ found at `/sys/bus/iio/devices/iio\:device0/in_accel_*`
 
 ## Platform specific
 
-[HMX](hmx/accelerometer.md)
+- [HMX](hmx/accelerometer.md)
+- [MX-4 T30/T30fr](mx4/accelerometer.md)
+- [C61](mx4/accelerometer.md)
+- [MX-4](mx4/accelerometer.md)
+- [MX-V](mx4/accelerometer.md)
+- [CT](mx4/accelerometer.md)
 
 ## Example
 
@@ -33,5 +38,8 @@ root@mxv-pt:~# cat /sys/bus/iio/devices/iio\:device0/in_accel_*
 31
 0
 1037
+cat /sys/bus/iio/devices/iio:device0/in_accel_x_raw
+cat /sys/bus/iio/devices/iio:device0/in_accel_y_raw
+cat /sys/bus/iio/devices/iio:device0/in_accel_z_raw
 ```
 
