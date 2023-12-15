@@ -10,11 +10,11 @@ tags:
 
 ## Overview
 
-[CAN(controller area network)](https://en.wikipedia.org/wiki/CAN_bus) is a bus type network where all nodes on a single bus communicates directly to each other. 
+[CAN (Controller Area Network)](https://en.wikipedia.org/wiki/CAN_bus) is a bus type network where all nodes on a single bus communicates directly with each other. 
 
 Host Mobility Hardware all have a number of CAN channels.
 
-In Linux, CAN channels are implemented as network interfaces. They can utilize the Linux network stack and present a programming model similar to TCP/IP. Applications use the [SocketCAN](https://www.kernel.org/doc/html/v4.19/networking/can.html) API, either directly or tthough a higher level library.
+In Linux, CAN channels are implemented as network interfaces. They can utilize the Linux network stack and present a programming model similar to TCP/IP. Applications use the [SocketCAN](https://www.kernel.org/doc/html/v4.19/networking/can.html) API, either directly or though a higher level library.
 
 ## Configuration though Systemd-Networkd
 
@@ -75,13 +75,13 @@ Supported options are shown by the `ip` `help` subcommand
 ```
 
 
-*Example : Set Standard(2.0) CAN with a bitrate of 500 kbit/s and listen only mode.*
+*Example : Set Standard (2.0) CAN with a bitrate of 500 kbit/s and listen-only mode.*
 ```
 ip link set can0 down
 ip link set can0 up type can bitrate 500000 listen-only on
 ```
 
-*Example : Setup CAN-FD with a bitrate of 500/4000 kbit/s in normal mode.*
+*Example : Set up CAN-FD with a bitrate of 500/4000 kbit/s in normal mode.*
 ```bash
 ip link set can0 down
 ip link set can0 up type can bitrate 500000 dbitrate 4000000 fd on

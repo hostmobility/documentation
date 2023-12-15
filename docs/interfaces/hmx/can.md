@@ -5,7 +5,7 @@ tags:
   - CAN
 ---
 
-Host Monitor X has 6 CAN channels. Typically named `can0` to `can5`
+Host Monitor X has 6 CAN channels, typically named `can0` to `can5`
 
 ## HMX CAN performance tuning
 
@@ -14,7 +14,7 @@ the use case, the interrupt handling CAN be tuned for performance or CPU load.
 
 ### Use Ethtool to limit the number of interrupts
 
-Wait until 6 frames has been received or 1000 us has gone by:
+Wait until 6 frames have been received or 1000 µs passed:
 ```bash
 for i in 0 3 4 5; do 
     ethtool -C can${i} tx-usecs-irq 1000 rx-usecs-irq 1000 rx-frames-irq 6 tx-frames-irq 6
@@ -38,7 +38,7 @@ also comes with a certain overhead, so polling might be cheaper. This
 parameter sets the limit where polling is still used. The default is 30 µs.
 This value depends on your hardware and can be tuned.
 
-Setup a typical CAN bus load and measure the CPU usage with htop. Tweak the
+Set up a typical CAN bus load and measure the CPU usage with htop. Tweak the
 polling limit with:
 
 ```bash
