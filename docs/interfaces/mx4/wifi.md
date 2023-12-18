@@ -1,9 +1,10 @@
 ---
-title: MX-4 WiFi
+title: WiFi (MX-4)
 tags:
-    - T30
-    - T30 FR
-    - CT
+  - WiFi
+  - T30
+  - T30 FR
+  - CT
 ---
 ## Overview
 
