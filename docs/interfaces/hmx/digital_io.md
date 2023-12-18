@@ -4,19 +4,18 @@ tags:
     - HMX
 ---
 ## Overview
-  Hmx has specific Digital IOs and below is a list of those that is supported. 
-  Check technical file for more information about the diffrent thersholds and if it possible to change state (digital out)
+The HMX-specific Digital I/Os are listed below. Check the technical file for more information about the different thresholds and whether it's possible to change state (digital out).
 
 ## List of supported outputs
 
-There is four diffrent types of digital outputs.
+There are four different types of digital outputs.
 
-- outputs with possible to sink a signal to gnd 
+- outputs with ability to sink a signal to ground
     - SINK_OUT_1
     - SINK_OUT_2
 - Activate eth2 network on OBDII cable
     - Digital_output_ETH2_ACT
-- outputs with possible to source VCC power (they have diffrent maximium current)
+- outputs with ability to source VCC power (they have different maximum current)
     - SOURCE_Digital_OUT_1
     - SOURCE_Digital_OUT_2
     - SOURCE_OUT_3
@@ -27,12 +26,12 @@ There is four diffrent types of digital outputs.
     - SOURCE_OUT_8
     - SOURCE_PWR_OUT_LED_1
     - SOURCE_PWR_OUT_LED_2
-- output with both an internal buzzer and possible to connect a external buzzer.
+- output with both an internal buzzer and the ability to connect an external buzzer.
     - SOURCE_PWR_OUT_BUZZER
 
 ## List of supported inputs
 
-Two types of digital inputs.
+There are two types of digital inputs:
 
 - Pull down (33k to GND)
     - Digital_input_pulldown_1

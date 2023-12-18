@@ -5,7 +5,7 @@ tags:
 ---
 
 ## Overview
-MX-V has 8 digital out where it can both be used as a sink or source on the same pin called either digital-out-source or digital-out-sink with a number.
+MX-V has 8 digital out that can be used as either sink or source on the same pin: digital-out-source or digital-out-sink with a number.
 
 ## Gpiodetect
 

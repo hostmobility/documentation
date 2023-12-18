@@ -9,9 +9,9 @@ tags:
     - C61
 ---
 ## Overview 
-Diffrent platform support diffrent amount of this list check the technical documentation to find the supported IOs.
+Different platform support different parts of this list. Please consult the technical specification to find the supported IOs.
 
-### List of IO
+### List of IOs
 - digital-out-1-source
 - digital-out-2-source
 - digital-out-3-source
@@ -27,17 +27,17 @@ Diffrent platform support diffrent amount of this list check the technical docum
 - digital-out-6-source
 - digital-out-7-source
 - digital-out-1
-    - depricated with digital out source 1
+    - deprecated with digital out source 1
 - digital-out-2
-    - depricated with digital out source 2
+    - deprecated with digital out source 2
 - digital-out-3
-    - depricated with digital out source 3
+    - deprecated with digital out source 3
 - digital-out-4
-    - depricated with digital out source 4
+    - deprecated with digital out source 4
 - digital-out-5 / 4-20
-    - depricated with digital out source 5
+    - deprecated with digital out source 5
 - digital-out-6
-    - depricated with digital out sink 6
+    - deprecated with digital out sink 6
 - digital-in-1 / sc
 - digital-in-2 / sc
 - digital-in-3 / sc
@@ -58,20 +58,20 @@ Diffrent platform support diffrent amount of this list check the technical docum
 gpioset $(gpiofind digital-out-1)=1
 ```
 
-### Set Digital in
+### Read Digital in
 ```bash
 gpioget $(gpiofind digital-in-1)
 ```
 
 ## Systems without gpiolib
 
-**Note:** for bsp release 1.6(1.5) and older
+**Note:** This is for BSP releases 1.6/1.5 and older
 
 For digital I/O we use the standard linux framework.
 
 See [Linux Kernel GPIO documentation](https://www.kernel.org/doc/Documentation/gpio/)
 
-**Note:** GPIO numbers can differ on different MX-4 platforms. This is just an example.
+**Note:** GPIO numbers can differ depending on the exact MX-4 platform. This is just an example.
 
 ```bash
 root@mx4-t30-29009999:~# cat /sys/kernel/debug/gpio | grep -i digital
@@ -96,7 +96,7 @@ GPIOs 344-383, spi/spi0.0, mx4_digitals:
 
 `sc digital out` are inputs indicating short for each output. If a short is detected it goes HIGH (1).
 
-#### Read gpio value
+#### Read GPIO value
 
 ```bash
 # Example reading status from Digital-In-2. 0 = LOW, 1 = HIGH
@@ -104,7 +104,7 @@ root@mx4-gtt:~# cat /sys/class/gpio/gpio23/value
 0
 ```
 
-#### Write gpio value
+#### Write GPIO value
 
 ```bash
 # Example setting Digital-Out-1 high
@@ -113,18 +113,18 @@ root@mx4-gtt:~# echo 1 > /sys/class/gpio/gpio238/value
 
 #### Set input as interrupt
 
-All digital inputs can generate an "event" on a specific change. The changes are "rising", "falling" or "both"
+Each digital input can trigger an event on a specific change. The changes are **rising**, **falling** or **both**.
 
 ```bash
 # Trigger an event on rising edge.
 root@mx4-gtt:~# echo rising > /sys/class/gpio/gpio23/edge
 ```
 
-It is also possible to set falling or both to edge file.
+It is also possible to set **falling** or **both** to `edge` file.
 
-To listen for event you need to run `poll(2) <http://man7.org/linux/man-pages/man2/poll.2.html>`_ on the "value" file of that specific input. See `example application <https://github.com/hostmobility/file-poll>`_
+To listen for events you need to run `poll(2) <http://man7.org/linux/man-pages/man2/poll.2.html>`_ on the value file of that specific input. See `example application <https://github.com/hostmobility/file-poll>`_
 
-#### Example app listening for GPIO events.
+#### Example app listening for GPIO events
 ```c
 	#include <stdio.h>
 	#include <fcntl.h>
