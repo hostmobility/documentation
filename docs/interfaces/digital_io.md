@@ -23,8 +23,7 @@ Digital I/O is handled by the Linux GPIO subsystem. This is a generic interface 
 [mx4](mx4/digital_io.md)
 
 ## Geting started
-To use the digital I/O the new way (since Linux v4.8) GPIO API is
-recommended. This  C API is implemented in
+Where possible, it is recommended to use the modern (since Linux v4.8) GPIO API. It is implemented in
 [libgpiod](https://git.kernel.org/pub/scm/libs/libgpiod/libgpiod.git) and comes
 with bindings also for C++ and Python.
 
