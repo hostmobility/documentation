@@ -178,10 +178,3 @@ This unit has 13 digital and analog in (adc) channels using iio devices.
  cat /sys/bus/iio/devices/iio:device0/*AN_IN_AN_4_raw
  cat /sys/bus/iio/devices/iio:device0/*AN_IN_AN_5_raw
 ```
-
-
-
-
-
-
-

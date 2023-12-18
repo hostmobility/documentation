@@ -1,5 +1,5 @@
 ---
-title:  Mx4 Digital I/O
+title:  MX-4 Digital I/O
 tags:
     - T30
     - T30 FR
@@ -9,7 +9,7 @@ tags:
     - C61
 ---
 ## Overview 
-Different platform support different parts of this list. Please consult the technical specification to find the supported IOs.
+Different parts of this list are available depending on the platform. Please consult the technical specification to find the supported IOs.
 
 ### List of IOs
 - digital-out-1-source
@@ -122,7 +122,7 @@ root@mx4-gtt:~# echo rising > /sys/class/gpio/gpio23/edge
 
 It is also possible to set **falling** or **both** to `edge` file.
 
-To listen for events you need to run `poll(2) <http://man7.org/linux/man-pages/man2/poll.2.html>`_ on the value file of that specific input. See `example application <https://github.com/hostmobility/file-poll>`_
+To listen for events you need to run `poll(2) <http://man7.org/linux/man-pages/man2/poll.2.html>` on the value file of that specific input. See `example application <https://github.com/hostmobility/file-poll>`.
 
 #### Example app listening for GPIO events
 ```c
