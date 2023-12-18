@@ -5,7 +5,7 @@ tags:
   - CAN
   - Ethernet
   - USB
-  - WIFI
+  - WiFi
 ---
 
 ## Overview

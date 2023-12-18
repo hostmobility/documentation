@@ -1,9 +1,10 @@
 ---
 title: WiFi
 tags:
-    - MX-V
-    - T30
-    - T30 FR
+  - WiFi
+  - MX-V
+  - T30
+  - T30 FR
 ---
 ## Overview
 
