@@ -10,9 +10,9 @@ tags:
     - C61
     - HMX
 ---
-## Overview 
+## Overview
 
-The ways to communicate with the modems differ between products. This page shows what is common for all the modems provided in our products.
+The modems in Host Mobility's products typically provide support for both mobile (cellular) networks and Global Positioning System (GPS) functionality. Although communication methods with the modems may vary across our product range, this page highlights the shared common features among all the integrated modems in our products.
 
 ## Platform specific
 
@@ -68,7 +68,9 @@ Expected reply
 OK
 ```
 
-## Test mobile network
+## Mobile network
+
+### Test mobile network
 
 * List all current network operators:
 ```
@@ -96,5 +98,14 @@ error:
 +CME ERROR: SIM not inserted
 ```
 
+## Global Positioning System (GPS)
 
+### Time
 
+The GPS time can be extracted from the `$GPRMC` string outputted by the GPS.
+
+This time is backed up to facilitate faster GPS fix times, avoiding the need to restart from scratch with each GPS engine restart.
+
+Additionally, this backed-up time serves as a fallback for applications in case the system time cannot be synchronized from the Internet for any reason. Please note that our default BSPs currently do not utilize this feature.
+
+See also [Real Time Clock (RTC)](../rtc.md).
