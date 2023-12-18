@@ -16,6 +16,13 @@ Host Mobility Hardware all have a number of CAN channels.
 
 In Linux, CAN channels are implemented as network interfaces. They can utilize the Linux network stack and present a programming model similar to TCP/IP. Applications use the [SocketCAN](https://www.kernel.org/doc/html/v4.19/networking/can.html) API, either directly or though a higher level library.
 
+## Platform specific
+
+- [HMX](hmx/can.md)
+- [MX-4](mx4/can.md)
+- [MX-V](mxv/can.md)
+- [C61](c61/can.md)
+
 ## Configuration though Systemd-Networkd
 
 **Note:** Not for BSP release 1.6/1.5 and older
@@ -139,10 +146,3 @@ $ candump -c -l any,0:0,#FFFFFFFF    (log error frames and also all data frames)
 ```bash
 $ cansend can0 123#DEADBEEF
 ```
-
-
-## Platform specific
-
-[HMX](hmx/can.md)
-
-

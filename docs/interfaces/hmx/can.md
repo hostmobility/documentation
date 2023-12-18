@@ -1,11 +1,12 @@
 ---
-title: CAN HMX
+title: CAN (HMX)
 tags:
-  - HMX
   - CAN
+  - HMX
 ---
+## Overview
 
-Host Monitor X has 6 CAN channels, typically named `can0` to `can5`
+6 CAN-FD channels, typically named `can0` to `can5`
 
 ## HMX CAN performance tuning
 
