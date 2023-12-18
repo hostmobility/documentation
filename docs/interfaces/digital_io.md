@@ -12,10 +12,7 @@ tags:
 ---
 
 ## Overview
-Digital I/O on is handled through the Linux GPIO subsystem. This
-is a generic interface that organizes the GPIO pins by the hardware chips that
-input or output digital signals. The interface is generic and presents a large
-number of inputs and outputs in the system, mostly internal.
+Digital I/O is handled by the Linux GPIO subsystem. This is a generic interface that organizes the GPIO pins by the hardware chips that input or output digital signals. The interface is generic and presents a large number of inputs and outputs in the system, mostly internal.
 
 ## Platform specific
 
