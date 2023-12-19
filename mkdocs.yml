@@ -2,8 +2,22 @@ site_name: Host Mobility Documentation
 
 theme:
   name: material
+  features:
+    - header.autohide
+    - content.code.copy
   logo: assets/hm-logo-grey-on-transparent.svg
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
 
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 nav:
   - index.md
   - tags.md
@@ -14,3 +28,8 @@ plugins:
       tags_file: tags.md
   - plantuml:
       puml_url: http://anansi.setekgroup.local:8081
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
