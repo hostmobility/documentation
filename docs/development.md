@@ -10,20 +10,34 @@ tags:
   - C61
 ---
 
-
-
 ## Overview
 
-The source code for all of our software is on [Host Mobility Github pages](https://github.com/hostmobility)
+The operating system running on Host Mobility Hardware and most of the tools are built from source. The build system used for this is the [Yocto Build System](https://www.yoctoproject.org/) This combines software written by Host Mobility with free software from software and hardware developers all over the world.  
 
-https://github.com/hostmobility
+The software and configurations written by us is hosted on [Host Mobility Github pages](https://github.com/hostmobility). They fall into a number of categories:
 
-https://github.com/hostmobility/meta-hostmobility-bsp
+### Yocto metadata
+
+*Recipes for use by bitbake and has a "meta-" prefix.*
+
+* [meta-hostmobility-bsp](https://github.com/hostmobility/meta-mobility-poky-distro) - Host Mobility Hardware dependent recipes, e.g. kernel, u-boot and more.
+* [meta-mobility-poky-distro](https://github.com/hostmobility/meta-mobility-poky-distro) - System configuration and software.
+
+### Versioned build system
+
+*Xml files with recipe repo versions.*
+
+* [mobility-poky-platform](https://github.com/hostmobility/mobility-poky-platform) - Manifest files for Poky.
+* [hostmobility-bsp-platform](https://github.com/hostmobility/hostmobility-bsp-platform) - Legacy manifest files for Ångström.
+
+### Software source
+
+*Source for drivers and tools*
+
+* [hm-commercial](https://github.com/hostmobility/hm-commercial) - Source for drivers and tools for HMX and MX-V.
+* [mx4-commercial](https://github.com/hostmobility/mx4-commercial) - Source for drivers and tools for mx-4.
 
 ## Building with Yocto
-
-The operating system on Host Mobility Hardware is built using the [Yocto Build System](https://www.yoctoproject.org/)
-
 
 ## Bygg script 
 Since building with Yocto can be quite complex, we have [mobility-poky-platform](https://github.com/hostmobility/mobility-poky-platform.git) which automates much of the build tasks.
