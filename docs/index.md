@@ -2,7 +2,9 @@
 title: Index
 ---
 
-![Host Mobility](https://hostmobility-eng.setek.se/wp-content/uploads/2021/06/logo-host-mobility200.png)
+
+![bild](assets/hm-logo-grey-on-transparent.svg)
+
 
 ## Hardware
 
@@ -34,3 +36,7 @@ title: Index
 ## Writing Documentation
 
 * [Documentation Howto](documentation-howto)
+
+## Tags
+
+* [Tags](tags.md)

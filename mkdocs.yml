@@ -2,6 +2,7 @@ site_name: Host Mobility Documentation
 
 theme:
   name: material
+  logo: assets/hm-logo-grey-on-transparent.svg
 
 nav:
   - index.md
