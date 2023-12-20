@@ -18,5 +18,28 @@ Reference SDKs are available at
 
 Legacy toolchains are available at [hostmobility.org:8008/tools](http://hostmobility.org:8008/tools/)
 
-The toolchains can be easily built using `bitbake -c populate-sdk <image-name>`. See [sdk](sdk.md).
+## Building
+
+SDKs are built against the image it will be used with using `bitbake -c populate_sdk <image-name>`. See [sdk](sdk.md).
+
+## Installation
+
+The SDK is installed by running the installer from the build step above. An installation folder is requested and you can use any directory that you have write access to, e.g. `~/sdk` in your home directory.
+
+## Usage
+
+Source the `enviroment-setup` folder where you installed the SDK
+*example*
+```bash
+. ~/sdk/hmx-kirkstone/environment-setup-armv8a-fslc-linux 
+```
+
+This will set the enviroment variables for compiler, linker etc.
+
+For example, the kernel headers can be found in `SDKTARGETSYSROOT` (the option needs to be set in the image).
+
+*access kernel headers e.g. when compiling external modules*
+```bash
+export KDIR=$SDKTARGETSYSROOT/usr/src/kernel
+```
 
