@@ -20,26 +20,78 @@ Legacy toolchains are available at [hostmobility.org:8008/tools](http://hostmobi
 
 ## Building
 
-SDKs are built for a specific system image using `bitbake -c populate_sdk <image-name>`. See [sdk](sdk.md).
+SDKs are built for a specific system image using `bitbake -c populate_sdk <image-name>`.
+
+*example with MACHINE set to imx8mp-var-dart-hmx1*
+```bash
+bitbake -c populate_sdk console-hostmobility-image
+```
+
+The installer has now been built. Its name is based on the architechture, image name and poky
+version. In this case, the name is
+`poky-glibc-x86_64-console-hostmobility-image-cortexa53-crypto-imx8mp-var-dart-hmx1-toolchain-4.0.13.sh`
 
 ## Installation
 
-The SDK is installed by running the installer from the build step above. An installation folder is requested and you can use any directory that you have write access to, e.g. `~/sdk` in your home directory.
+The SDK is installed by running the installer from the build step above. 
 
-## Usage
 
-Source the `enviroment-setup` folder where you installed the SDK
+*Set the file as executable*
+```bash
+chmod +x poky-glibc-x86_64-console-hostmobility-image-cortexa53-crypto-imx8mp-var-dart-hmx1-toolchain-4.0.13.sh 
+```
 
-Example:
+*Run the installer*
+```bash
+./poky-glibc-x86_64-console-hostmobility-image-cortexa53-crypto-imx8mp-var-dart-hmx1-toolchain-4.0.13.sh 
+```
+
+
+*Select folder where to install the SDK*
+``` 
+Poky (Yocto Project Reference Distro) SDK installer version 4.0.13
+==================================================================
+Enter target directory for SDK (default: /opt/poky/4.0.13): ~/sdk/
+You are about to install the SDK to "/home/mattias/sdk". Proceed [Y/n]? Y
+Extracting SDK.................................................................^Bn................................................................................................................................................................done
+Setting it up...done
+SDK has been successfully set up and is ready to be used.
+Each time you wish to use the SDK in a new shell session, you need to source the environment setup script e.g.
+ $ . /home/mattias/sdk/environment-setup-cortexa53-crypto-poky-linux
+```
+
+## Usage and test
+
+To get a sample application, Do a `cat >>program.c*`, paste the following and press `CTRL-d`
+
+```C
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    for (int i = 0; i < argc; i++) {
+        printf("%d: %s\n", argc, argv[i]);
+  }
+}
+```
+
+
+*Source the `enviroment-setup` folder where you installed the SDK.*
+
 ```bash
 . ~/sdk/hmx-kirkstone/environment-setup-armv8a-fslc-linux 
 ```
 
-This will set the environment variables for the compiler, linker, etc.
+*run make*
+```bash
+make --no-silent  program
+```
+*Make is now aware of the cross-compiler through the environment.*
+```
+aarch64-poky-linux-gcc  -mcpu=cortex-a53 -march=armv8-a+crc+crypto -mbranch-protection=standard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/mattias/sdk/sysroots/cortexa53-crypto-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types   -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  -Wl,-z,relro,-z,now  program.c   -o program
+```
 
-For example, the kernel headers can be found in `SDKTARGETSYSROOT` (the option needs to be set in the image).
-
-Access kernel headers, e.g. when compiling external modules:
+*Example: access kernel headers e.g. when compiling external modules*
 ```bash
 export KDIR=$SDKTARGETSYSROOT/usr/src/kernel
 ```
