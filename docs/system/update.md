@@ -10,6 +10,11 @@ tags:
   - C61
   - Updating
 ---
+
+## Overview
+
+Host Mobility hardware is able to update itself with two methods. Either by putting the update files on a memory stick and plug it into the hardware or by copying them over the network to /boot directory.
+
 ## Installing (flashing) using a USB drive
 
 ### MX-V
@@ -39,4 +44,20 @@ tags:
 
 ### use post install script with USB memory
 * you can add a autoboot.sh script to the USB memory drive on the first boot after flash to perform post installation.
+
+## Installing system remotely
+
+### HMX
+
+Two files are needed which are:
+
+* hmx_boot.scr 
+* hmx-image.wic.gz (*rename from image-name-platform-name-wic.gz*)
+
+*Copy files to a unit connected with a USB cable*
+```bash
+scp console-hostmobility-image-imx8mp-var-dart-hmx1.wic.gz root@192.168.250.1:/boot/hmx-image.wic.gz
+scp hmx_boot.scr root@192.168.250.1:/boot/
+```
+
 
