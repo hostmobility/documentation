@@ -1,45 +1,47 @@
 ---
-title: Power management (MX-4)
+title: Power Management (MX-4)
 tags:
-  - Power management
+  - Power Management
   - MX-4
 ---
 
-#### Overview of suspend design
+## Overview of Suspend Design
 
-The MX-4 platform consists of two cpu's:
-- The main CPU which runs Linux and where user applications are run
-- The co-cpu which is a multi purpose CPU (PMIC, gpio-chip, analog inputs, hardware watchdog and more)
+The MX-4 platform consists of two CPUs:
 
-The main CPU is the one that always initiates sleep/suspend mode.
+- The main CPU runs Linux and user applications.
+- The co-CPU serves multiple purposes (PMIC, GPIO chip, analog inputs, hardware watchdog, etc.).
 
-Wakeup on the other hand could be that main CPU wakes up co-cpu or co-cpu wakes up main CPU (this depends on wakeup source. See [Wakeup](#wakeup)).
+The main CPU initiates sleep/suspend mode, while wakeup can be triggered by either CPU, depending on the wakeup source (see [Wakeup](#wakeup)).
 
-When sleep/suspend mode is entered
-- The main CPU will enter a mode where most of its peripherals are powered off.
-- The co-cpu will run on internal low power RC (32 kHz) and run a cyclic sleep
-- 3.3 V is turned off. Consumers differ across different MX-4 platforms
-- 5 V is turned off. Consumers differ across different MX-4 platforms
+During sleep/suspend mode:
 
-List of periphials that will lose power and that need to be re-initalized after wakeup:
-- SD-card - Application should umount SD-card before entering sleep/suspend. Re-mount is handled by platform on wakeup.
+- The main CPU powers off most peripherals.
+- The co-CPU runs on internal low-power RC (32 kHz) and performs cyclic sleep.
+- 3.3 V and 5 V power off, specific to different MX-4 platforms.
+
+**Warning:** Peripherals that lose power and need re-initialization after wakeup:
+
+- SD-card (Unmount before sleep, re-mounted on wakeup)
 - Wifi
 - UARTS
-- CAN
+- CAN (T30 FR optional power on/off for CAN transceivers)
 - Ethernet
+- Flexray
 
-#### Enter sleep
+## Enter Sleep
 
-Host Mobility provides a script to easy enter sleep/suspend mode. The script is `/opt/hm/go_to_sleep.sh`.
+A script, `/opt/hm/go_to_sleep.sh`, provided by Host Mobility facilitates entering sleep/suspend mode:
 
 ```bash
-Usage: go_to_sleep.sh options (t:D:hdcnsal:p:)
+Usage: go_to_sleep.sh options (t:hdcCnsaD)
                 -t <time in seconds> - Setup wakealarm (rtc)
                 -d - Disable wake on DIGITAL-IN-2
                 -a - Disable wake on START-SIGNAL
                 -l <mV level> - START-SIGNAL wake-up volt level
                 -c - Wake on CAN
                 -n - Will renew dhcp lease
+                -C - Disable suspend CAN for quicker wakeup-time"
                 -s - Will suspend modem (turn off), Will not restore on wake up
                 -D <time in seconds> - Will enter deep sleep.
                         Power to main CPU will be cut after specified time and it
@@ -48,89 +50,88 @@ Usage: go_to_sleep.sh options (t:D:hdcnsal:p:)
                         the power is cut.
                 -p <wake up mask> - Mask to enable/disable wakeup sources
                 -h - Print this text
-
 ```
 
 #### Wakeup
 
-The MX-4 platform supports a lot different wakeup sources. Below is a list off supported wakeup sources.
-Note that not all MX-4 platforms supports all wakeup sources.
-- Digital Inputs (DIGITAL-IN-2 is enabled by default as wakeup source)
+The MX-4 platform supports various wakeup sources. Not all MX-4 platforms support all wakeup sources:
+
+- Digital Inputs (DIGITAL-IN-2 is enabled by default as a wakeup source)
 - Analog Inputs
 - Wake on CAN
-- Wake on RTC(wake up after x seconds)
+- Wake on RTC (wake up after x seconds)
 - Wake on RING (call/SMS to modem) - Not yet supported in software
 - Wake on Accelerometer - Not yet supported in software
 
 ##### Wake on Digital Inputs
 
-By default DIGITAL-IN-2 (rising edge) is enabled as wakeup source. This is mostly for historical reasons. To disable it one can pass `-d` option to `go_to_sleep.sh`.
+By default, DIGITAL-IN-2 (rising edge) is enabled as a wakeup source, mostly due to historical reasons. To disable it, use the `-d` option with `go_to_sleep.sh`.
 
-On some platforms DIGITAL-IN-2 is the only digital input that is capable to wake up the system.
+On some platforms, DIGITAL-IN-2 is the only digital input capable of waking up the system.
 
-If your output of `cat /sys/kernel/debug/gpio | grep digital` looks like below
+Supported digital inputs as wakeup sources, see [](../interfaces/mx4/digital_io.md#list-of-ios)
 
+**Note:** If `-d` option is not specified, it will always set bit 4 in the wakeup mask, regardless of what you passed.
+
+**Note:** If `-d` option is specified with -t or without any other wakeup flag (use WAKE_UP_SRC_MODEM_RING bitmask or set -l to a voltage level higer than input voltage), the system will reboot itself. See [Reset Cause](reset_cause.md)
+
+To enable different wakeup sources and set the edge, use the `-p` option with a bitmask (see code snippet for bitmask details).
+```c
+#define WAKE_UP_SRC_NONE            0x00
+#define WAKE_UP_SRC_WDT             0x01
+#define WAKE_UP_SRC_SPI_INT         0x02
+#define WAKE_UP_SRC_MAIN_VOLTAGE    0x03
+#define WAKE_UP_SRC_BATTERY_VOLTAGE 0x04
+#define WAKE_UP_SRC_ANALOG_1        0x05
+#define WAKE_UP_SRC_ANALOG_2        0x06
+#define WAKE_UP_SRC_ANALOG_3        0x07
+#define WAKE_UP_SRC_ANALOG_4        0x08
+#define WAKE_UP_SRC_START_SIGNAL    0x09
+#define WAKE_UP_SRC_CAN             0x0a
+#define WAKE_UP_SRC_DIN_1_F         0x0b
+#define WAKE_UP_SRC_DIN_1_R         0x0c
+#define WAKE_UP_SRC_DIN_2_F         0x0d
+#define WAKE_UP_SRC_DIN_2_R         0x0e
+#define WAKE_UP_SRC_DIN_3_F         0x0f
+#define WAKE_UP_SRC_DIN_3_R         0x10
+#define WAKE_UP_SRC_DIN_4_F         0x11
+#define WAKE_UP_SRC_DIN_4_R         0x12
+#define WAKE_UP_SRC_DIN_5_F         0x13
+#define WAKE_UP_SRC_DIN_5_R         0x14
+#define WAKE_UP_SRC_DIN_6_F         0x15
+#define WAKE_UP_SRC_DIN_6_R         0x16
+#define WAKE_UP_SRC_MODEM_RING      0x17
+#define WAKE_UP_SRC_START_SWITCH_F  0x18
+#define WAKE_UP_SRC_START_SWITCH_R  0x19
+
+/*  NOTE! we jump from 0x19 to 0x20 here. It is un-intentional but will leave
+    it as-is not to break API.
+*/
+#define WAKE_UP_SRC_MIN_1_F         0x20
+#define WAKE_UP_SRC_MIN_1_R         0x21
+#define WAKE_UP_SRC_MIN_2_F         0x22
+#define WAKE_UP_SRC_MIN_2_R         0x23
+
+#define WAKE_UP_SRC_DIN_7_F         0x24
+#define WAKE_UP_SRC_DIN_7_R         0x25
+#define WAKE_UP_SRC_DIN_8_F         0x26
+#define WAKE_UP_SRC_DIN_8_R         0x27
 ```
-GPIOs 238-273, spi/spi3.0, mx4_digitals:
- gpio-238 (digital-out-1       ) out lo
- gpio-239 (digital-out-2       ) out lo
- gpio-240 (digital-out-3       ) out lo
- gpio-241 (digital-out-4       ) out lo
- gpio-242 (digital-out-5 / 4-20) out lo
- gpio-243 (digital-out-6       ) out lo
- gpio-250 (digital-in-1 / sc   ) in  hi
- gpio-251 (digital-in-2 / sc   ) in  hi
- gpio-252 (digital-in-3 / sc   ) in  hi
- gpio-253 (digital-in-4 / sc   ) in  hi
- gpio-254 (digital-in-5 / sc   ) in  lo
- gpio-255 (digital-in-6        ) in  lo
-```
-Then your system is capable of having all digital inputs as wakeup sources.
-
-To enable different wakeup sources and to set edge, the `-p` option is used. The `-p` takes an argument which should be a bitmask of following.
-
-```
-#define WAKE_UP_TRIGGER_CAN             (1UL << 0)
-#define WAKE_UP_TRIGGER_DIN_1_F         (1UL << 1)
-#define WAKE_UP_TRIGGER_DIN_1_R         (1UL << 2)
-#define WAKE_UP_TRIGGER_DIN_2_F         (1UL << 3)
-#define WAKE_UP_TRIGGER_DIN_2_R         (1UL << 4)
-#define WAKE_UP_TRIGGER_DIN_3_F         (1UL << 5)
-#define WAKE_UP_TRIGGER_DIN_3_R         (1UL << 6)
-#define WAKE_UP_TRIGGER_DIN_4_F         (1UL << 7)
-#define WAKE_UP_TRIGGER_DIN_4_R         (1UL << 8)
-#define WAKE_UP_TRIGGER_DIN_5_F         (1UL << 9)
-#define WAKE_UP_TRIGGER_DIN_5_R         (1UL << 10)
-#define WAKE_UP_TRIGGER_DIN_6_F         (1UL << 11)
-#define WAKE_UP_TRIGGER_DIN_6_R         (1UL << 12)
-#define WAKE_UP_TRIGGER_MODEM_RING      (1UL << 13)
-#define WAKE_UP_TRIGGER_START_SWITCH_F  (1UL << 14)
-#define WAKE_UP_TRIGGER_START_SWITCH_R  (1UL << 15)
-#define WAKE_UP_TRIGGER_MIN_1_F         (1UL << 16)
-#define WAKE_UP_TRIGGER_MIN_1_R         (1UL << 17)
-#define WAKE_UP_TRIGGER_MIN_2_F         (1UL << 18)
-#define WAKE_UP_TRIGGER_MIN_2_R         (1UL << 19)
-```
-
-NOTE! If `-d` option is not specified it will always set bit 4 in the wakeup mask, regardless of what you passed.
 
 ##### Wake on Analog Inputs
 
-Analog inputs as wakeup sources are not handled by `go_to_sleep.sh`.
+Analog inputs as wakeup sources are not managed by `go_to_sleep.sh`.
 
-All analog inputs have four sysfs files associated with them. If we take input voltage as an example:
-```bash
-root@mx4-vcc-1000000:/sys/bus/spi/devices/spi3.0# ls input_voltage*
-input_voltage_calibration_u      input_voltage_threshold_high
-input_voltage                 input_voltage_threshold_low
-```
+All analog inputs have four sysfs files associated with them. For example, if we take input voltage:
 
-- `input_voltage` is the file where we read the value of input voltage.
-- `input_voltage_calibration_u` is used internally by Host Mobility to calibrate the input for component tolerances.
-- `input_voltage_threshold_high` is used to enable wake on a high level threshold
-- `input_voltage_threshold_low` is used to enable wake on low level threshold.
+[Sysfs files and their purposes]
 
-Some wakeup setup examples:
+- `input_voltage` reads the value of input voltage.
+- `input_voltage_calibration_u` calibrates the input for component tolerances.
+- `input_voltage_threshold_high` enables wake on a high-level threshold.
+- `input_voltage_threshold_low` enables wake on a low-level threshold.
+
+Examples for wakeup setup:
 
 ```bash
 # Wakeup system from sleep/suspend if input voltage is above 16 V
@@ -153,18 +154,17 @@ root@mx4-vcc-1000000:~# echo 12000 > /opt/hm/pic_attributes/input_voltage_thresh
 root@mx4-vcc-1000000:~# echo 0 > /opt/hm/pic_attributes/input_voltage_threshold_high
 root@mx4-vcc-1000000:~# echo 0 > /opt/hm/pic_attributes/input_voltage_threshold_low
 ```
-User has to setup analog wakeup sources prior to calling `go_to_sleep.sh`. See [Enter sleep](#enter-sleep)
+User setup for analog wakeup sources is required before calling `go_to_sleep.sh`. See [Enter sleep](#enter-sleep).
 
 ##### Wake on CAN
 
-Wake on CAN is not supported by all MX-4 platforms. Contact Host Mobility support to see if your platform supports this.
+Wake on CAN isn't supported on all MX-4 platforms. Contact Host Mobility support for compatibility information.
 
-Wake on CAN is enabled by passing `-c` to `go_to_sleep.sh`. See [Enter sleep](#enter-sleep). But prior to doing this one has
-to enable which specific CAN buses should be enabled as wakeup source.
+Enable Wake on CAN by passing `-c` to `go_to_sleep.sh` (see [Enter sleep](#enter-sleep)). However, before doing this, specific CAN buses should be enabled as wakeup sources.
 
-By default all CAN buses will trigger a wakeup if there is traffic on them and `-c` is passed to `go_to_sleep.sh`
+By default, all CAN buses will trigger a wakeup if there is traffic on them and `-c` is passed to `go_to_sleep.sh`. For T30 FR it is possible to wake up on single specific CAN frame(`can-xcvr`).
 
-GPIO's are used to set this up.
+GPIOs are used to set this up:
 
 ```bash
 root@mx4-vcc-1000000:~# cat /sys/kernel/debug/gpio | grep -i wakeup
@@ -176,7 +176,7 @@ root@mx4-vcc-1000000:~# cat /sys/kernel/debug/gpio | grep -i wakeup
  gpio-63  (P179 - CAN5-WAKEUP  ) out lo
 ```
 
-To disable wakeup for a specific bus one has to write a 1 to that GPIO's value.
+To disable wakeup for a specific bus, write a 1 to that GPIO's value.
 
 ```bash
 # Disable wakeup on CAN0
@@ -186,42 +186,25 @@ root@mx4-vcc-1000000:~# echo 1 > /sys/class/gpio/gpio58/value
 
 ### Deep Sleep
 
-Deep sleep mode means that we put the co-cpu in a sleep mode while cutting the power rail to the main CPU. This means that upon wake up we will have a cold reboot instead of a fast resume, this trade off is for lower consumtion during the suspended state.
+Deep sleep mode puts the co-CPU to sleep while cutting the power rail to the main CPU. Upon wakeup, a cold reboot occurs instead of a fast resume, trading off for lower consumption during the suspended state.
 
-Wakeup sources available from deep sleep vary on different platforms.
+Wakeup sources available from deep sleep vary across different platforms.
 
-Deep sleep is entered by passing the -D option to `go_to_sleep.sh`. See [Enter sleep](#enter-sleep)
+Enter deep sleep by passing the `-D` option to `go_to_sleep.sh`. See [Enter sleep](#enter-sleep).
+
+**Note:** CT and CT GL does not support Deep Sleep
 
 ### Shutdown
 
-This mode is not supported by all MX-4 platforms. Contact Host Mobility support to see if your platform supports this.
+Not all MX-4 platforms support this mode. Contact Host Mobility support for information on compatibility.
 
-The MX-4 shutdown/cutoff state is where system is turned off with close to zero power consumption.
+The MX-4 shutdown/cutoff state turns the system off with close to zero power consumption:
 
 ```bash
 # Cutoff in 60 seconds
 root@mx4-vcc-1000000:~# echo 60 > /opt/hm/pic_attributes/ctrl_on_4v
 ```
 
-The above means that in 60 seconds we will cut the 4 V which the whole system
-runs on and the system will only restart if ANALOG-IN-1 is HIGH.
+In this example, within 60 seconds, the system will cut the 4V power and restart only if [Start signal](../../interfaces/mx4/start_signal.md) is LOW.
 
-Before these 60 seconds run out the application should have finished and
-run the command `poweroff` to shutdown Linux.
-
-```bash
-root@mx4-vcc-1000000:~# echo 60 > /opt/hm/pic_attributes/ctrl_on_4v
-root@mx4-vcc-1000000:~# poweroff
-Sending SIGTERM to remaining processes...
-Sending SIGKILL to remaining processes...
-Unmounting file systems.
-Unmounting /sys/fs/fuse/connections.
-All filesystems unmounted.
-Deactivating swaps.
-All swaps deactivated.
-Detaching loop devices.
-All loop devices detached.
-Detaching DM devices.
-All DM devices detached.
-[  239.327263] System halted.
-```
+Before these 60 seconds elapse, ensure the application finishes and runs `poweroff` to shut down Linux command `poweroff`
