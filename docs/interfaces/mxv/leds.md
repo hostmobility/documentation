@@ -9,16 +9,14 @@ tags:
 
 This platform has red and greed LEDs.
 
-All leds can be used as you like and they are just named.
+**Warning:** Uncontrolled behavior of the GNSS red LED, after power on and which doesn't disappear in less than one second, indicates that the main CPU has been hanged. The coprocessor will then restart the system. If the problem persists, the platform has no working internal flash or BOR level is set to low for the coprocessor. If this happens, contact us at support@hostmobility.com and we will help you.
 
-**Warning:** GNSS led can be lit when powered and if it not turn off in 1 sec the main cpu has been hanged, the co-cpu will restart the system and if it continues the unit has failed to boot u-boot.
+When power up the "func LED" red is lit when the main processor has enter u-boot state and will be turned off by linux system.
 
-Start up the func led red is lit when enter u-boot state and off in linux.
+The power LED is controlled by the coprocessor and the func LED green is set up from device tree with heartbeat trigger and will blink if the system is running (average CPU load).
+The power led is lit green when co-cpu is running and sometimes the co-cpu lit the red led short it is currently some debug prints and if it is solid lit it has an error.
 
-The power led is controlled buy the co-cpu and the func led green is setup from device tree with heartbeat trigger and will blink if the system is running.
-The power led is lit green when co-cpu is runing and somtimes the co-cpu lit the red led short it is currently some debug prints and if it is solid lit it has an error.
-
-### The following leds are available on HMX
+### The following LEDs are available on the MX-V
 
 | Name                 | Use Case               |
 | ---------------------|------------------------|
