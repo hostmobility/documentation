@@ -14,6 +14,8 @@ tags:
 ## Overview
 LEDs are typically accessed through the [Linux LED subsystem API](https://docs.kernel.org/leds/leds-class.html).
 
+All LEDs can be used as you wish and they are just named except the "Power" LED.
+
 (*For MX-4, refer to [mx4-leds](mx4/leds.md).*)
 
 ## Set LED

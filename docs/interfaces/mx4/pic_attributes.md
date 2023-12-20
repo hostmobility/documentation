@@ -1,5 +1,5 @@
 ---
-title: Pic_attributes (co-cpu )(MX-4)
+title: PIC attributes (coprocessor) (MX-4)
 tags:
   - C61
   - MX-4
