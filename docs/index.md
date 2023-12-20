@@ -6,7 +6,7 @@ title: Index
 ![bild](assets/hm-logo-grey-on-transparent.svg)
 
 
-## Hardware
+## Hardware platforms
 
 * [Host Monitor X](tags.md#hmx)
 * [MX-4 C61](tags.md#c61)
@@ -33,7 +33,7 @@ title: Index
 * [Networking](interfaces/networking.md)
 
 
-## Writing Documentation
+## Writing documentation
 
 * [Documentation Howto](documentation-howto)
 
