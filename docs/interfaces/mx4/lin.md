@@ -10,12 +10,12 @@ tags:
 ---
 
 ## Deactivate LIN
-LIN is default on and you can deactivate it with sending a zero to
-`LIN enabled` and/or `LIN2 enabled`. See [Digital IO](../digital_io.md) to use linux gpio.
+Local Interconnect Network (LIN) is enabled by default but you can disable it by writing a zero to
+`LIN enabled` and/or `LIN2 enabled`. See [Digital IO](../digital_io.md) on how use the Linux GPIO API.
 
 ## How to control LIN via serial interface
 
-The LIN interface in the PIC is accessed via the serial console with baudrate 115200.
+The LIN interface in the coprocessor can be accessed via the serial console with baud rate 115200.
 
 * T30 and T30 FR
     - LIN 1: /dev/ttyHS1
@@ -29,37 +29,37 @@ The LIN interface in the PIC is accessed via the serial console with baudrate 11
 
 The LIN interface is controled via a set of predefined frames, mostly used to alter the LIN schedule table.
 
-### All frames sent to co-cpu is on the format
+### Format
+
+All frames sent to the coprocessor is on the format
 
 ```
 start of transmission | message length | message type | data | checksum
 ```
-### start of transmission (4 bytes)
 
-This is a byte sequence used to indicate the start of a frame.
-It consists of the 4 byte long sequence: ```0x7e 0x7e 0x7e 0xa7```
+- **Start of transmission** (4 bytes)
 
-### message length (1 byte)
+  This is a byte sequence used to indicate the start of a frame. It consists of the 4-byte sequence `0x7e 0x7e 0x7e 0xa7`.
 
-The length of message type (1 byte) + data (variable) + checksum (1 byte)
-The byte for message length is not included in message length.
+- **Message length** (1 byte)
 
-### message type (1 byte)
+  The length of `message type` (1 byte) + `data` (variable) + `checksum` (1 byte). The byte for message length is not included in the message length.
 
-Which type of operation that is requested.
-Values start at 1 and is sequentially increased.
+- **Message type** (1 byte)
 
- 1. [Received response](#received-response). Message contains data received from LIN slave unit. Direction from PIC to Linux.
+  Indicates the type of operation requested. Values start at 1 and are sequentially increased.
 
- 2. [Set schedule](#set-schedule). Setup the LIN schedule.
+ 1. [Received response](#received-response). The message contains data received from the LIN slave unit. Direction from coprocessor to Linux.
 
- 3. [Set frame](#set-frame). Setup a LIN frame.
+ 2. [Set schedule](#set-schedule). Set up the LIN schedule.
 
- 4. [Set item](#set-item). Setup a LIN schedule item.
+ 3. [Set frame](#set-frame). Set up a LIN frame.
 
- 5. [Set baudrate](#set-baudrate). Setup LIN baudrate.
+ 4. [Set item](#set-item). Set up a LIN schedule item.
 
- 6. [Set master](#set-master). Setup master/listen mode.
+ 5. [Set baudrate](#set-baudrate). Set up LIN baud rate.
+
+ 6. [Set master](#set-master). Set up master/listen mode.
 
  7. [Listen message](#listen-message)
 
@@ -81,71 +81,71 @@ data (variable):
 Bytes of data that each message type may contain.
 
 checksum:
-A simple XOR checksum of all bytes in message including message length.
+A simple XOR checksum of all bytes in the message including message length.
 
 #### Message types
 ##### Received response
     If a frame that requests a response from a slave unit is configured to
-    forward the response the response is forwarded from PIC to Linux in a
-    frame formatted:
+    forward the response, the response is forwarded from coprocessor to Linux in a
+    frame of this format:
     message start | length of message | message type 1 | data (revc status 1
     byte, frame id 1 byte, response length 1 byte, response data) | checksum
 
 ##### Set schedule
     This frame sets the start, end and current item to handle and
     enables/disables the schedule. Start, end and current can be any value
-    0-255. Start cannot be past end. Current must be inside start and end.
-    Enabled i any value > 0.
+    from 0 to 255. Start cannot be after end. Current must be within start and end interval.
+    Enabled i any value greater than 0.
     Format:
     message start | length of message | message type 2 | data (start slot 1
     byte, end slot 1 byte, current slot 1 byte, enabled 1 byte) | checksum
 
 ##### Set frame
-    This frame type is used to setup a specific LIN frame.
+    This frame type is used to set up a specific LIN frame.
     Format:
     message start | length of message | message type 3 | data (LIN id 1 byte,
     frame options 1 byte, frame flags 1 byte, data length 1 byte, data
     0-LIN_MAX_DATABYTES) | checksum
 
-    LIN id can be any valid LIN id. 0-64.
+    LIN id can be any valid LIN id. from 0 to 64.
     frame options:
-        Specifies if frame is send/receive. Bit 0 - unset specifies frame is
-        send fram. Bit 1 - if response shall be forwardet. Bit 3 - if frame is
-        oneshot.
+        Specifies if frame is send/receive. Bit 0 -- unset specifies frame is
+        send; bit 1 -- if response shall be forwarded; bit 3 - if frame is
+        one-shot.
 
     frame flags:
-        Specifies the version of LIN protocoll to be used. Bit 0 - unset
-        specifies that protocoll 1 is used for this frame.
+        Specifies the version of the LIN protocol to be used. Bit 0 -- unset
+        specifies that protocol 1 is used for this frame.
 
     data length:
-        Length of data to be sent or received. For receive frames expected
+        Length of data to be sent or received. For receive frames, the expected
         data length must be set.
 
 ##### Set item
-    This frame type is used to setup an item in the schedule.
-    It specifies a position in the schedule were a given LIN id shall be
-    handled. Multiple items with the same id can exist. How many LIN ticks
+    This frame type is used to set up an item in the schedule.
+    It specifies a position in the schedule where a given LIN id shall be
+    handled (multiple items with the same id can exist), how many LIN ticks
     the item shall use and if the item is enabled.
     Format:
     message start | length of message | message type 4 | data (frame number 1
     byte, LIN id 1 byte, LIN ticks 1 byte, enabled 1 byte) | checksum
 
     frame number:
-        Which slot in the scheudle. Value 0 - LIN_SCHEDULE_TABLE_ENRIES (256)
+        Which slot in the schedule. Value 0 -- LIN_SCHEDULE_TABLE_ENTRIES (256)
 
     LIN id:
         Any valid LIN id.
 
     LIN ticks:
-        How long time the item occupies. One tick is 10ms long.
+        How much time the item occupies. One tick is 10ms long.
 
     Enable:
         Any value >0 to enable.
 
 ##### Set baudrate
-    The defualt baudrate of this LIN implementation is 9600 bauds. The LIN
-    specification states that baudrates 2400, 9600 and 19200 is supported.
-    These rates are supported and rates 4800 and 10400 can also be set.
+    The defualt baud rate of this LIN implementation is 9600. The LIN
+    specification states that the baud rates 2400, 9600 and 19200 are supported.
+    All of the these rates are supported in addition to 4800 and 10400.
     Format:
     message start | length of message | message type 5 | data (baudrate
     enumerator 1 byte) | checksum
@@ -159,7 +159,7 @@ A simple XOR checksum of all bytes in message including message length.
 
 ##### Set master
     Configures LIN bus for either acting as master or just listening for LIN
-    data on the bus. LIN bus is default configured as master.
+    data on the bus. The LIN bus is configured as master by default.
     When configured as listener all valid messages will be forwarded.
     Format:
     message start | length of message | message type 6 | data (master/listen 1
@@ -180,9 +180,9 @@ A simple XOR checksum of all bytes in message including message length.
 #define STATUS_RECV_NO_DATA 2
 #define STATUS_MASTER_REQUEST 3
 ```
-    STATUS_RECV_ERROR indicates that data have been read on the bus, but no valid LIN frame were found. Just all the data is returned for debuging purposes.
+    STATUS_RECV_ERROR indicates that data has been read on the bus, but no valid LIN frame were found. Just all the data is returned for debugging purposes.
     STATUS_RECV_NO_DATA activity on the bus but no data found.
-    STATUS_MASTER_REQUEST message with only one byte data found, this is a
+    STATUS_MASTER_REQUEST message with only one byte data found. This is a
     master request.
 
     data:
@@ -191,8 +191,8 @@ A simple XOR checksum of all bytes in message including message length.
     id: With parity omit bit 7 and 6 for id without parity
     LIN checksum: If it is a valid frame the checksum is here
 #### Overflow message
-    When a overflow occurs at any of the busses handling LIN a report of which
-    bus and how many overflows that have occured is sent to the Linux system.
+    If an overflow occurs at any of the LIN buses, a report of the bus ID
+    and the overflow count are sent to the Linux system.
     Format:
     message start | length of message | message type (8-11) | count
     Each typ of overflow has its own message type:
@@ -206,7 +206,7 @@ A simple XOR checksum of all bytes in message including message length.
 
 ### Status message
 
-    All commands sent to PIC, except listen which is no command, will return a status message.
+    All commands sent to the coprocessor, except listen which is no command, will return a status message.
     Format:
     message start | status
     status: One byte status, 0 status ok
@@ -222,7 +222,7 @@ A simple XOR checksum of all bytes in message including message length.
 #define ERROR_TO_LONG_FRAME 8
 ```
 
-### Sample application for sending frames and receiving responses on Linux
+### Sample application for sending frames and receiving responses in Linux
 
 ```c
 #include <string.h>
