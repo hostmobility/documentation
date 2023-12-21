@@ -25,4 +25,5 @@ To know more about how to build it See [Software Development Kits (SDKs)](sdk/sd
 
 The reference operating system is built using Yocto. It combines software written by Host Mobility with free software from developers all over the world. See [Yocto Build System](yocto/yocto.md) for details.
 
+And for older system running bsp 1.5/1.6 or older See [Legacy build system](legacy-build-system.md)
 
