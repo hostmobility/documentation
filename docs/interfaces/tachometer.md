@@ -24,7 +24,7 @@ This input is designed for use with a tachometer output. The coprocessor counts 
 - **T30 and T30 FR**
     - Support slow signal changes; can be used as a digital input.
 
-### Example
+### Examples
 
 - **Read**
 
@@ -32,7 +32,7 @@ This input is designed for use with a tachometer output. The coprocessor counts 
 cat /opt/hm/pic_attributes/c3_counter
 ```
 
-- **Reset Counter**
+- **Reset counter**
 
 ```
 echo 0 > /opt/hm/pic_attributes/c3_counter
