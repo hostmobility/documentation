@@ -1,12 +1,13 @@
 ---
-title:  MX-4 Digital I/O
+title: Digital I/O (MX-4)
 tags:
-    - T30
-    - T30 FR
-    - MX-4
-    - CT
-    - CT GL
-    - C61
+  - Digital I/O
+  - T30
+  - T30 FR
+  - MX-4
+  - CT
+  - CT GL
+  - C61
 ---
 ## Overview 
 Different parts of this list are available depending on the platform. Please consult the technical specification to find the supported IOs.
