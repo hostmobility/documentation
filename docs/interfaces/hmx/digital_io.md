@@ -1,7 +1,8 @@
 ---
-title:  Host Monitor x Digital I/O
+title:  Digital I/O (HMX)
 tags:
-    - HMX
+  - Digital I/O
+  - HMX
 ---
 ## Overview
 The HMX-specific Digital I/Os are listed below. Check the technical file for more information about the different thresholds and whether it's possible to change state (digital out).

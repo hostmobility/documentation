@@ -1,14 +1,15 @@
 ---
 title:  Digital I/O
 tags:
-    - MX-V
-    - T30
-    - T30 FR
-    - MX-4
-    - CT
-    - CT GL
-    - C61
-    - HMX
+  - Digital I/O
+  - MX-V
+  - T30
+  - T30 FR
+  - MX-4
+  - CT
+  - CT GL
+  - C61
+  - HMX
 ---
 
 ## Overview

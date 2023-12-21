@@ -1,7 +1,8 @@
 ---
-title:  MX-V Digital I/O
+title: Digital I/O (MX-V)
 tags:
-    - MX-V
+  - Digital I/O
+  - MX-V
 ---
 
 ## Overview
