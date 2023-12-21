@@ -19,11 +19,11 @@ title: Index
 ## Installation and power
 
 * [Installation](installation)
- 
+
 ## System
 
 * [Login](login.md)
-* [Development](system/development.md) 
+* [Development](system/development.md)
 
 ## Interfaces
 

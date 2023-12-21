@@ -20,6 +20,6 @@ Host Mobility computers run GNU/Linux where almost all software is built from so
 
 ## Yocto build system
 
-The reference operating system is built using Yocto. It combines software written by Host Mobility with free software from developers all over the world. See [Yocto Build System](yocto.md) for details. 
+The reference operating system is built using Yocto. It combines software written by Host Mobility with free software from developers all over the world. See [Yocto Build System](yocto/yocto.md) for details.
 
 
