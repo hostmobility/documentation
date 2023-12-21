@@ -13,11 +13,51 @@ tags:
 
 ## Overview
 
-Host Mobility hardware is able to update itself with two methods. Either by putting the update files on a memory stick and plug it into the hardware or by copying them over the network to /boot directory.
+Updating the software in Host Mobility hardware falls into two main categories:
 
-## Installing (flashing) using a USB drive
+1. Installation or upgrade of specific software.
+2. System installation or re-installation.
+ 
+##  Installation or upgrade of specific software.
 
-### MX-V
+###  Opkg package manager
+
+`opkg` is used  to install extra packages that are not installed with the original image.
+
+*To use it, first update package lists*
+```bash
+opkg update
+opkg list
+```
+
+*Example: install rsync*
+```bash
+opkg install rsync
+```
+
+### Editing package feeds
+
+The files in the folder `/etc/opkg/*` define where to get extra software. You can edit to point to a customer server.
+**NOTE: Make sure the package repository that you add is compatible and secure to use**
+
+## System installation or re-installation
+
+### System image
+
+Host Mobility hardware is able to update itself with two methods using files created by the build system:
+
+1. Put files on a USB memory and plug it into the hardware and press `reset-button`. *On the HMX, the USB-upgrade button must be held down during reset as well*
+2. Copy the files over the network to /boot directory and set the `firmware_update` u-boot environment variable to `true`
+
+The files themselves are:
+
+1. A u-boot script. Depending on the hardware type, the name can be `hmx_boot.scr`, `flashmx5.scr` or `*_hmupdate.img`. This scripts is able to update all software components (Linux kernel, u-boot, file-system(distribution), co-processor firmware).
+2. The image file, named `hmx-image.wic.gz`, `mx5-image.wic.gz`, etc. *For the `*_hmupdate.img` script case, the image file can be baked into the script itself.*
+
+
+### Method 1. Installing (flashing) using a USB memory
+
+#### MX-V
 
 * copy and rename 'mobility-image-***.wic.gz' into mx5-image.wic.gz on the USB drive,
 * copy flashmx5.scr to the USB drive,
@@ -25,7 +65,7 @@ Host Mobility hardware is able to update itself with two methods. Either by putt
 * push and hold the reset button for 1 sec,
 * wait 1–2 min until finished (until the function LED blinks green).
 
-### HMX (imx8mp-var-dart-hmx1)
+#### HMX (imx8mp-var-dart-hmx1)
 
 * copy and rename '*-hostmobility-image-***.wic.gz' into hmx-image.wic.gz on the USB drive or copy to /boot in linux(only reset needs to be pushed),
 * copy hmx_boot.scr to the USB drive or copy to /boot in linux(only reset needs to be pushed),
@@ -35,29 +75,72 @@ Host Mobility hardware is able to update itself with two methods. Either by putt
 * the unit shall now start to flash a white led in the middle off the box (blink in 1 sec and when it start to perform the flash it blinks three times faster)
 * wait 1–2 min until finished (led in the middle off the box should go back to blue then green when it is up and running in linux, if the this led goes red it has failed and will reset itself after 10sec).
 
-### MX-4 t30 and MX-4 c61
+#### MX-4 t30 and MX-4 c61
+
 * start build image with help of mx4-deploy
 * the result file is a vf_hmupdate.img(c61) or t30_hmupdate.img(t30) in deploy-(machine) folder.
 * copy '**hmupdate.img' into hmx-image.wic.gz on the USB drive
 * push and hold the reset button for 1 sec,(all leds will blink green if the system has started with the reflash)
 * wait 1–2 min until finished (until the pwr LED is green or blink green/orange).
 
-### use post install script with USB memory
-* you can add a autoboot.sh script to the USB memory drive on the first boot after flash to perform post installation.
+#### Using a post install script with USB memory
 
-## Installing system remotely
+* You can add a autoboot.sh script to the USB memory on the first boot after flash to perform post installation.
 
-### HMX
+### Method 2. Copy the files over the network(remote install)
+
+#### Remote install overview
+
+The files can be put in /boot in a number of ways. In the case of using ssh(secure shell) access, you can use the `~/.ssh/config` file like this:
+
+*Assign the unit connected with USB cable to name dut*
+```
+Host dut
+  HostName 192.168.250.1
+  User root
+  StrictHostKeyChecking No
+```
+
+#### HMX
 
 Two files are needed which are:
 
 * hmx_boot.scr 
-* hmx-image.wic.gz (*rename from image-name-platform-name-wic.gz*)
+* hmx-image.wic.gz (*rename from IMAGE-NAME-image-imx8mp-var-dart-hmx1.wic.gz*)
 
-*Copy files to a unit connected with a USB cable*
+*Copy files to a unit connected with a USB cable NOTE: the image file must be renamed*
 ```bash
-scp console-hostmobility-image-imx8mp-var-dart-hmx1.wic.gz root@192.168.250.1:/boot/hmx-image.wic.gz
-scp hmx_boot.scr root@192.168.250.1:/boot/
+image=console-hostmobility-image-imx8mp-var-dart-hmx1.wic.gz
+scp "$image" dut:/boot/hmx-image.wic.gz && \
+scp hmx_boot.scr dut:/boot/ && \
+ssh dut reboot
+```
+
+#### MX-V
+
+Two files are needed which are:
+
+* hmx_boot.scr 
+* mx5-image.wic.gz (*rename from image-name-platform-name-wic.gz*)
+
+*Copy files to a unit connected with a USB cable NOTE: the image file must be renamed*
+```bash
+image=console-hostmobility-image-mx5.wic.gz
+scp "$image" dut:/boot/mx5-image.wic.gz  && \
+scp flashmx5.scr dut:/boot/ && \
+ssh dut reboot
 ```
 
 
+#### MX-4
+
+**To trigger an update from /boot one needs to set the `firmware_update` u-boot environment variable to `true`. See below example on how to do that.**
+
+**Setting `firmware_update` to `true` will enable USB update as well if an image is present on the USB drive.**
+
+```bash
+image=t30_hmupdate.img
+scp "$image" dut:/boot/ && \
+/opt/hm/fw_env/fw_setenv firmware_update true && \
+ssh dut reboot
+```
