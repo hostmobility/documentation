@@ -1,6 +1,7 @@
 ---
 title: Yocto Build (Manually)
 tags:
+  - Development
   - HMX
   - MX-4
   - CT
@@ -8,7 +9,6 @@ tags:
   - T30
   - T30 FR
   - C61
-  - Development
 ---
 
 ## Regular Host Mobility Yocto/OE-core setup
