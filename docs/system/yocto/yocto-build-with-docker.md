@@ -1,6 +1,7 @@
 ---
 title: Yocto Build (With Docker)
 tags:
+  - Development
   - HMX
   - MX-4
   - CT
@@ -8,7 +9,6 @@ tags:
   - T30
   - T30 FR
   - C61
-  - Development
 ---
 
 ## Build scripts
