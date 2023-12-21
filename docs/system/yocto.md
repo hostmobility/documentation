@@ -13,7 +13,7 @@ tags:
 
 ## Overview
 
-The operating system running on Host Mobility Hardware and most of the tools are built from source. The build system used for this is the [Yocto Build System](https://www.yoctoproject.org/). This combines software written by Host Mobility with free software from software and hardware developers all over the world.  
+The operating system running on Host Mobility hardware and most of the tools are built from source. The build system used for this is the [Yocto Build System](https://www.yoctoproject.org/). It combines software written by Host Mobility with free software from developers all over the world.
 
 ## Building with Yocto
 
@@ -39,7 +39,7 @@ scripts/bygg \
 
 ## Native build environment 
 
-* You can also build using a [Native build environment](yocto-build-manually.md) (without Docker).
+* You can also build using a [native build environment](yocto-build-manually.md) (without Docker).
 
 ## Packages and Images
 
@@ -51,34 +51,34 @@ From the packages,
 
 ## Package server
 
-We have chosen the `ipk` format which are installed with the `opkg` tool. 
+For our reference distributions we use the `ipk` package format and the `opkg` tool.
 
-Typically, the .`ipk` files are not installed manually but are uploaded to a server. 
+Typically, .`ipk` files are not installed manually but uploaded to a server.
 
 We provide a package server at [hostmobility.org](https://hostmobility.org/).
 
 ## Yocto details
 
-The software and configurations written Host Mobility is hosted on [Host Mobility Github pages](https://github.com/hostmobility). They fall into a number of categories:
+The software and configurations written by Host Mobility are hosted on [Host Mobility's GitHub repositories](https://github.com/hostmobility). They fall into a number of categories:
 
 ### Yocto metadata
 
-*Recipes for use by bitbake and has a "meta-" prefix.*
+Recipes for use by bitbake that have a "meta-" prefix.
 
-* [meta-hostmobility-bsp](https://github.com/hostmobility/meta-hostmobility-bsp) - Host Mobility Hardware dependent recipes, e.g. kernel, u-boot and more.
-* [meta-mobility-poky-distro](https://github.com/hostmobility/meta-mobility-poky-distro) - System configuration and software.
+* [meta-hostmobility-bsp](https://github.com/hostmobility/meta-hostmobility-bsp) – Host Mobility hardware dependent recipes, e.g. kernel, u-boot and more.
+* [meta-mobility-poky-distro](https://github.com/hostmobility/meta-mobility-poky-distro) – System configuration and software.
 
 ### Versioned build system
 
-*Xml files with recipe repo versions.*
+Xml files with recipe repo versions.
 
-* [mobility-poky-platform](https://github.com/hostmobility/mobility-poky-platform) - Manifest files for Poky.
-* [hostmobility-bsp-platform](https://github.com/hostmobility/hostmobility-bsp-platform) - Legacy manifest files for Ångström.
+* [mobility-poky-platform](https://github.com/hostmobility/mobility-poky-platform) – manifest files for Poky
+* [hostmobility-bsp-platform](https://github.com/hostmobility/hostmobility-bsp-platform) – legacy manifest files for Ångström
 
 ### Software source
 
-*Source for drivers and tools*
+Source code for drivers and tools.
 
-* [hm-commercial](https://github.com/hostmobility/hm-commercial) - Source for drivers and tools for HMX and MX-V.
-* [mx4-commercial](https://github.com/hostmobility/mx4-commercial) - Source for drivers and tools for mx-4.
+* [hm-commercial](https://github.com/hostmobility/hm-commercial) – source for drivers and tools for HMX and MX-V
+* [mx4-commercial](https://github.com/hostmobility/mx4-commercial) – source for drivers and tools for MX-4
 
