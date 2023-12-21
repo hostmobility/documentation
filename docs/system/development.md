@@ -27,3 +27,9 @@ The reference operating system is built using Yocto. It combines software writte
 
 And for older system running bsp 1.5/1.6 or older See [Legacy build system](legacy-build-system.md)
 
+## Development application
+
+We have two example of compile a c/c++ application
+- [Usage and test](sdk/sdk.md#usage-and-test)
+- [Development using Eclipse](eclipse.md)
+
