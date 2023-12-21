@@ -18,13 +18,13 @@ Updating the software in Host Mobility hardware falls into two main categories:
 1. Installation or upgrade of specific software.
 2. System installation or re-installation.
  
-##  Installation or upgrade of specific software.
+##  Installation or upgrade of specific software
 
 ###  Opkg package manager
 
 `opkg` is used  to install extra packages that are not installed with the original image.
 
-*To use it, first update package lists*
+*To use it, first update the package lists*
 ```bash
 opkg update
 opkg list
@@ -37,8 +37,8 @@ opkg install rsync
 
 ### Editing package feeds
 
-The files in the folder `/etc/opkg/*` define where to get extra software. You can edit to point to a customer server.
-**NOTE: Make sure the package repository that you add is compatible and secure to use**
+The files under `/etc/opkg/*` define where to get extra software. You can edit them to point to the server of your choice.
+**NOTE: Make sure that the package repository you add is compatible and secure to use**
 
 ## System installation or re-installation
 
@@ -46,12 +46,12 @@ The files in the folder `/etc/opkg/*` define where to get extra software. You ca
 
 Host Mobility hardware is able to update itself with two methods using files created by the build system:
 
-1. Put files on a USB memory and plug it into the hardware and press `reset-button`. *On the HMX, the USB-upgrade button must be held down during reset as well*
+1. Put files on a USB memory stick, plug it into the machine and press `reset-button`. *On the HMX, the USB-upgrade button must be held down during reset as well*
 2. Copy the files over the network to /boot directory and set the `firmware_update` u-boot environment variable to `true`
 
 The files themselves are:
 
-1. A u-boot script. Depending on the hardware type, the name can be `hmx_boot.scr`, `flashmx5.scr` or `*_hmupdate.img`. This scripts is able to update all software components (Linux kernel, u-boot, file-system(distribution), co-processor firmware).
+1. A u-boot script. Depending on the platform type, the name can be `hmx_boot.scr` for HMX, `flashmx5.scr` for [#MX-V] or `*_hmupdate.img` for [#mx-4-t30-and-mx-4-c61] and CT(t20_*). This scripts is able to update all software components (Linux kernel, u-boot, file-system(distribution), co-processor firmware).
 2. The image file, named `hmx-image.wic.gz`, `mx5-image.wic.gz`, etc. *For the `*_hmupdate.img` script case, the image file can be baked into the script itself.*
 
 
@@ -59,7 +59,7 @@ The files themselves are:
 
 #### MX-V
 
-* copy and rename 'mobility-image-***.wic.gz' into mx5-image.wic.gz on the USB drive,
+* copy and rename for example 'mobility-image-***.wic.gz' into mx5-image.wic.gz on the USB drive,
 * copy flashmx5.scr to the USB drive,
 * plug the USB drive into the MX-V,
 * push and hold the reset button for 1 sec,
@@ -67,31 +67,31 @@ The files themselves are:
 
 #### HMX (imx8mp-var-dart-hmx1)
 
-* copy and rename '*-hostmobility-image-***.wic.gz' into hmx-image.wic.gz on the USB drive or copy to /boot in linux(only reset needs to be pushed),
-* copy hmx_boot.scr to the USB drive or copy to /boot in linux(only reset needs to be pushed),
-* plug the USB drive into the hmx,
-* push and hold the reset button and the USB_BOOT, release the reset button and.
-* hold the USB_BOOT button down for 3 more second.
-* the unit shall now start to flash a white led in the middle off the box (blink in 1 sec and when it start to perform the flash it blinks three times faster)
-* wait 1–2 min until finished (led in the middle off the box should go back to blue then green when it is up and running in linux, if the this led goes red it has failed and will reset itself after 10sec).
+* copy and rename '*-hostmobility-image-***.wic.gz' into hmx-image.wic.gz on the USB drive or copy to `/boot` in linux (only reset needs to be pushed),
+* copy `hmx_boot.scr` to the USB drive or copy to `/boot` on the Linux file system (only reset needs to be pushed),
+* plug the USB drive into the HMX,
+* push and hold the reset button and the USB_BOOT, release the reset button and
+* hold the USB_BOOT button down for 3 more seconds.
+* The unit shall now start to flash a white LED in the middle off the box (blink 1 sec and when it start to perform the flash it blinks three times faster)
+* Wait 1–2 min until finished (the LED in the middle of the box should go back to blue, then green when it is up and running in Linux. If the this LED goes red it has failed and will reset itself after 10 s).
 
-#### MX-4 t30 and MX-4 c61
+#### MX-4 T30 and MX-4 C61
 
 * start build image with help of mx4-deploy
-* the result file is a vf_hmupdate.img(c61) or t30_hmupdate.img(t30) in deploy-(machine) folder.
-* copy '**hmupdate.img' into hmx-image.wic.gz on the USB drive
-* push and hold the reset button for 1 sec,(all leds will blink green if the system has started with the reflash)
-* wait 1–2 min until finished (until the pwr LED is green or blink green/orange).
+* the resulting file is a `vf_hmupdate.img` (C61) or `t30_hmupdate.img` (T30) in the deploy-(machine) directory
+* copy the image to the USB drive and insert it into the MX-4 machine
+* push and hold the reset button for 1 sec (all LEDs will blink green if the system has started with the reflash)
+* wait 1–2 min until finished (until the power LED is green or blink green/orange).
 
-#### Using a post install script with USB memory
+#### Using a post-install script with USB memory
 
-* You can add a autoboot.sh script to the USB memory on the first boot after flash to perform post installation.
+* You can add an autoboot.sh script to the USB memory on the first boot after flash to perform post installation.
 
-### Method 2. Copy the files over the network(remote install)
+### Method 2. Copy the files over the network (remote install)
 
 #### Remote install overview
 
-The files can be put in /boot in a number of ways. In the case of using ssh(secure shell) access, you can use the `~/.ssh/config` file like this:
+The files can be put in `/boot` in a number of ways. In the case of using secure shell (SSH), you can use the `~/.ssh/config` file like this:
 
 *Assign the unit connected with USB cable to name dut*
 ```
