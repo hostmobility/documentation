@@ -13,11 +13,11 @@ tags:
 
 ## Build scripts
 
-Building with Yocto requires many software tools and those tools need have correct versions. To create this build environment, Docker can be used to great advantage. 
+Building with Yocto requires many software tools and those need to have correct versions. To create this build environment, Docker can be used to great advantage. 
 
-To help launching a build in Docker, we provide a couple of scripts in [mobility-poky-platform/scripts](https://github.com/hostmobility/mobility-poky-platform/tree/master/scripts) which automates much of the build tasks.
+To help launching a build in Docker, we provide a couple of scripts in [mobility-poky-platform/scripts](https://github.com/hostmobility/mobility-poky-platform/tree/master/scripts) that automate much of the build tasks.
 
-This requires only installation of Docker before starting the build
+This requires only installation of Docker before starting the build.
 
 ### [bygg](https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bygg) script example
 ```bash

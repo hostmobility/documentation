@@ -1,5 +1,5 @@
 ---
-title: Software Development Kits (SDKs)
+title: Software development kits (SDKs)
 tags:
   - HMX
   - MX-4
@@ -16,11 +16,11 @@ tags:
 Reference SDKs are available at 
 [hostmobility.org/sdk](https://hostmobility.org/sdk). 
 
-Legacy toolchains are available at [hostmobility.org:8008/tools](http://hostmobility.org:8008/tools/)
+Legacy toolchains are available at [hostmobility.org:8008/tools](http://hostmobility.org:8008/tools/).
 
 ## Building
 
-SDKs are built against the image it will be used with using `bitbake -c populate_sdk <image-name>`. See [sdk](sdk.md).
+SDKs are built for a specific system image using `bitbake -c populate_sdk <image-name>`. See [sdk](sdk.md).
 
 ## Installation
 
@@ -29,16 +29,17 @@ The SDK is installed by running the installer from the build step above. An inst
 ## Usage
 
 Source the `enviroment-setup` folder where you installed the SDK
-*example*
+
+Example:
 ```bash
 . ~/sdk/hmx-kirkstone/environment-setup-armv8a-fslc-linux 
 ```
 
-This will set the enviroment variables for compiler, linker etc.
+This will set the environment variables for the compiler, linker, etc.
 
 For example, the kernel headers can be found in `SDKTARGETSYSROOT` (the option needs to be set in the image).
 
-*access kernel headers e.g. when compiling external modules*
+Access kernel headers, e.g. when compiling external modules:
 ```bash
 export KDIR=$SDKTARGETSYSROOT/usr/src/kernel
 ```
