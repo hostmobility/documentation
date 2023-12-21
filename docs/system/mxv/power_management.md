@@ -19,9 +19,9 @@ Set to 1 to activate wakeup on channel:
 - modem-ring-active
     - Not supported
 - rtc-int-active
-    - activate this with rtc alarm.
+    - activate this with RTC alarm.
 - uart-active
-    - support Rs-232 and Rs-485
+    - support RS-232 and RS-485
 
 #### Enter suspend
 ```
@@ -30,11 +30,11 @@ systemctl suspend
 
 ### Deep sleep
 
-TODO...For developers at Hostmobility check more information [MX-V coprocessor](https://gitlab.com/hostmobility/mx5-cocpu)
+TODO: For developers at Host Mobility, see [MX-V coprocessor](https://gitlab.com/hostmobility/mx5-cocpu) for more information.
 
 ### Shutdown
 
-Shutdown/cutoff state turns the system off with close to zero power consumption. And it will only work if both internal and external [Start signals](../../interfaces/hmx/start_signal.md) are LOW/off.
+Shutdown/cutoff state turns the system off with close to zero power consumption. It will only work if both the internal and external [start signals](../../interfaces/hmx/start_signal.md) are LOW/off.
 
 ```bash
 shutdown -h now

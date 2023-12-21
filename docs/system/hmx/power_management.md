@@ -6,7 +6,7 @@ tags:
 ---
 ## Overview
 
-This platform support this types of wake up signals and to wake up on them check [wake up](#wake-up) links.
+This platform supports suspend and a long range of wake-up signals. See the individual [wake up](#wake-up) links below.
 ### Suspend
 
 #### Wake up
@@ -41,12 +41,12 @@ echo gpio-keys > /sys/bus/platform/drivers/gpio-keys/unbind
 ```
 #### CAN
 
-To activate wake up on CAN you will need to set up the channel and go bus on, if not it is disabled.
-Wake up on individual CAN frame is teoretical supported.
+To enable wake on CAN you will need to set up the channel and go bus on, unless disabled.
+Wake on individual CAN frame is supported theoretically but has not been tested by us.
 
 #### Accelerometer
 
-This has been tested to use [triggers](../../interfaces/hmx/accelerometer.md#activate-triggers) but currently not able to wake up main cpu.
+The use of [triggers](../../interfaces/hmx/accelerometer.md#activate-triggers) has been tested, but it's currently not possible to wake up the main CPU.
 
 #### Real time clock
 

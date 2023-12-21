@@ -8,19 +8,19 @@ tags:
 ---
 ## Overview
 
-Most of or platform has at least three different operating modes:
+The majority of platforms have at least three different operating modes:
 - Running
-    - Running is the default operating state where we have full functionality.
+    - The default operating state where we have full functionality.
 - Sleep/Suspend
-    - Main processor are suspend to ram. This a power saving
+    - Main processor is suspended to RAM. This is a power-saving
 mode where as much as possible is powered down to minimize the power consumption and
 fast resume time (around 1 second) to running state.
 - Deep Sleep
-    - Main processor are power cut off and only coprocessor are running in low power mode.
-- Shutdown/Cutoff
-    - the platform has almost no power consumption the main regulator is turned off. See [start signal](interfaces/start_signal.md)
+    - The main processor is powered off and only the coprocessor is running in low-power mode.
+- Shutdown/Cut-off
+    - The machine has almost no power consumption as the main regulator is turned off. See [start signal](interfaces/start_signal.md)
 
-The platform can wake-up from different sources where Real time clock and CAN is often used. List of wake up sources is platform specific and depending on the sleep mode. For example for `Shutdown/Cutoff` only start signal input is supported.
+The machine can wake up from different sources but the Real time clock and CAN are most often used. The list of wake-up sources is platform specific and depending on the sleep mode. For `Shutdown/Cutoff`, for example, only start signal input is supported.
 
 ## Platform specific
 - [HMX](mx4/power_management.md)
