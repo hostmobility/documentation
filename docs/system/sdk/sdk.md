@@ -1,22 +1,18 @@
 ---
 title: Software development kits (SDKs)
 tags:
+  - SDK
+  - Development
   - HMX
-  - MX-4
-  - CT
   - MX-V
   - T30
   - T30 FR
   - C61
-  - Development
 ---
 
 ## Overview
 
-Reference SDKs are available at 
-[hostmobility.org/sdk](https://hostmobility.org/sdk). 
-
-Legacy toolchains are available at [hostmobility.org:8008/tools](http://hostmobility.org:8008/tools/).
+Reference SDKs are soon available at [hostmobility.org/sdk](https://hostmobility.org/sdk).
 
 ## Building
 
@@ -31,6 +27,13 @@ The installer has now been built. Its name is based on the architechture, image 
 version. In this case, the name is
 `poky-glibc-x86_64-console-hostmobility-image-cortexa53-crypto-imx8mp-var-dart-hmx1-toolchain-4.0.13.sh`
 
+**Note:** the console-hostmobility-image should include more packages for more debugging purpose:
+- IMAGE_INSTALL
+    - gdb, for debug on target machine
+    - gdbserver, for debug on target machine
+    - glibc-dbg, for debug on target machine
+    - packagegroup-sdk-target
+
 ## Installation
 
 The SDK is installed by running the installer from the build step above. 
@@ -43,12 +46,12 @@ chmod +x poky-glibc-x86_64-console-hostmobility-image-cortexa53-crypto-imx8mp-va
 
 *Run the installer*
 ```bash
-./poky-glibc-x86_64-console-hostmobility-image-cortexa53-crypto-imx8mp-var-dart-hmx1-toolchain-4.0.13.sh 
+./poky-glibc-x86_64-console-hostmobility-image-cortexa53-crypto-imx8mp-var-dart-hmx1-toolchain-4.0.13.sh
 ```
 
 
 *Select folder where to install the SDK*
-``` 
+```
 Poky (Yocto Project Reference Distro) SDK installer version 4.0.13
 ==================================================================
 Enter target directory for SDK (default: /opt/poky/4.0.13): ~/sdk/
@@ -79,7 +82,7 @@ int main(int argc, char *argv[])
 *Source the `enviroment-setup` folder where you installed the SDK.*
 
 ```bash
-. ~/sdk/hmx-kirkstone/environment-setup-armv8a-fslc-linux 
+. ~/sdk/hmx-kirkstone/environment-setup-armv8a-fslc-linux
 ```
 
 *run make*
