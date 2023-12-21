@@ -43,9 +43,9 @@ repo sync --force-sync
 ```
 
 Set up environment variables:
-```
+```bash
 export DIR_WORK=$PWD/../
-export BUILD_TAG=*yourTag*
+export BUILD_TAG=*optional build Tag*
 export PLATFORM_VERSION="$(git -C $DIR_WORK.repo/manifests rev-parse --short HEAD)"
 export PLATFORM_VERSION_DETAILS="$(repo forall -c 'echo $REPO_PATH\nLREV: $REPO_LREV\nRREV: $REPO_RREV; git diff --stat -b $REPO_LREV..HEAD ; echo -n "Commit: " ; git rev-parse HEAD ; echo -n "Uncommited changes: " ; git status -b -s ; git diff --stat -b ; echo ')"
 echo "building with repo versions: $PLATFORM_VERSION"
