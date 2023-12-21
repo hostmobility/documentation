@@ -1,13 +1,7 @@
 ---
-title: System Update
+title: System Update (T30)
 tags:
-  - HMX
-  - MX-4
   - CT
-  - MX-V
-  - T30
-  - T30 FR
-  - C61
   - Updating
 ---
 
@@ -163,3 +157,5 @@ scp "$image" dut:/boot/ && \
 /opt/hm/fw_env/fw_setenv firmware_update true && \
 ssh dut reboot
 ```
+
+

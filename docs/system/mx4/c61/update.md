@@ -1,71 +1,39 @@
 ---
-title: System Update
+title: System Update (C61)
 tags:
-  - HMX
-  - MX-4
-  - CT
-  - MX-V
-  - T30
-  - T30 FR
   - C61
   - Updating
 ---
 
-## Overview
+## Upgrade procedure
 
-Updating the software in Host Mobility hardware falls into two main categories:
+### Prepare upgrade
 
-1. Installation or upgrade of specific software.
-2. System installation or re-installation.
- 
-##  Installation or upgrade of specific software
+* Copy `vf_hmupdate.img` to the USB drive or to `/boot` on the Linux file system
 
-###  Opkg package manager
+### *If USB method is used*
 
-`opkg` is used  to install extra packages that are not installed with the original image.
+* You can add an autoboot.sh script to the USB memory on the first boot after flash to perform post installation.
+* Plug the USB drive into the hardware.
+* Push and hold the reset button for 1 sec (all LEDs will blink green if the system has started with the reflash).
 
-*To use it, first update the package lists*
+### *If /boot method is used*
+
+* Reset or reboot the unit
+
+### Wait for upgrade to finish
+
+* The unit shall now start to flash a white LED in the middle off the box (blink 1 sec and when it start to perform the flash it blinks three times faster)
+* Wait 1–2 min until finished (the LED in the middle of the box should go back to blue, then green when it is up and running in Linux. If the this LED goes red it has failed and will reset itself after 10 s).
+
+
+*Upgrade example using /boot*
 ```bash
-opkg update
-opkg list
+image=console-hostmobility-image-imx8mp-var-dart-hmx1.wic.gz
+scp "$image" dut:/boot/hmx-image.wic.gz && \
+scp hmx_boot.scr dut:/boot/ && \
+ssh dut reboot
 ```
-
-*Example: install rsync*
-```bash
-opkg install rsync
-```
-
-### Editing package feeds
-
-The files under `/etc/opkg/*` define where to get extra software. You can edit them to point to the server of your choice.
-**NOTE: Make sure that the package repository you add is compatible and secure to use**
-
-## System installation or re-installation
-
-### System image
-
-Host Mobility hardware is able to update itself with two methods using files created by the build system:
-
-1. Put files on a USB memory stick. , plug it into the machine and press `reset-button`. *On the HMX, the USB-upgrade button must be held down during reset as well*
-2. Copy the files over the network to /boot directory. and set the `firmware_update` u-boot environment variable to `true`
-
-The files can be put in `/boot` in a number of ways. In the case of using secure shell (SSH), you can use the `~/.ssh/config` file like this:
-
-*Assign the unit connected with USB cable to name dut*
-```
-Host dut
-  HostName 192.168.250.1
-  User roothmx
-  StrictHostKeyChecking No
-```
-
-Depending on the hardware, the upgrade procedures are then slightly different:
-
-* [System upgrade (HMX)](hmx/update.md)
-* [System upgrade (MXV)](system-upgrade-mxv.md)
-* [System upgrade (MX-4 T30)](system-upgrade-mx4-t30.md)
-* [System upgrade (MX-4 C61)](system-upgrade-mx4-c61.md)
-* [System upgrade (MX-4 CT)](system-upgrade-mx4-ct.md)
 
 The files themselves are:
 
