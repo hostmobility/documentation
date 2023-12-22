@@ -1,7 +1,7 @@
 ---
-title: System Update (MXV)
+title: System update (MX-V)
 tags:
-  - Updating
+  - System update
   - MX-V
 ---
 
@@ -10,12 +10,12 @@ tags:
 ### Prepare upgrade
 
 * Copy the file `*-image-mx5-pt*.rootfs.wic.gz` to `mx5-image.wic.gz`
-* Copy `flashmx5.scr` & `mx5-image.wic.gz` to the USB drive or to `/boot` on the Linux file system
+* Copy `flashmx5.scr` and `mx5-image.wic.gz` to a USB memory or to `/boot` on the Linux file system
 
 ### If USB method is used
 
 * You can add an [autoboot.sh](../update.md#usb-method-autobootsh) script to the USB memory on the first boot after flash to perform post installation.
-* Plug the USB drive into the hardware.
+* Plug the USB memory into the hardware.
 * Press and hold the `RESET` button for 1 second.
 
 ### If /boot method is used

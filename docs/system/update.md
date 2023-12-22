@@ -1,7 +1,7 @@
 ---
-title: System Update
+title: System update
 tags:
-  - Updating
+  - System update
   - HMX
   - MX-4
   - CT
@@ -69,7 +69,7 @@ To trigger a firmware update on certain MX-4 hardware types, a U-Boot variable n
 /opt/hm/fw_env/fw_setenv firmware_update true
 ```
 
-**Setting `firmware_update` to `true` will enable USB update as well if an image is present on the USB drive.**
+**Setting `firmware_update` to `true` will enable USB update as well if an image is present on the USB memory.**
 
 ### USB method autoboot.sh
 

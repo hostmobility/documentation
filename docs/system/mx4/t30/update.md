@@ -1,7 +1,7 @@
 ---
-title: System Update (T30)
+title: System update (T30)
 tags:
-  - Updating
+  - System update
   - T30
 ---
 
@@ -9,19 +9,19 @@ tags:
 
 ### Prepare upgrade
 
-* Copy `t30_hmupdate.img` to the USB drive or to `/boot` on the Linux file system
+* Copy `t30_hmupdate.img` to a USB memory or to `/boot` on the Linux file system
 
 ### If USB method is used
 
 * You can add an [autoboot.sh](../../update.md#usb-method-autobootsh) script to the USB memory on the first boot after flash to perform post installation.
-* Plug the USB drive into the hardware.
+* Plug the USB memory into the hardware.
 * Press and hold the reset button for 1 sec (all LEDs will blink green if the system has started with the reflash).
 
 ### If /boot method is used
 
 * Set [firmware update u-boot variable](../../update.md#firmware-update-uboot-variable)
 
-**Setting `firmware_update` to `true` will enable USB update as well if an image is present on the USB drive.**
+**Setting `firmware_update` to `true` will enable USB update as well if an image is present on the USB memory.**
 * Reboot the unit
 
 ### Wait for upgrade to finish
