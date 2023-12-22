@@ -2,7 +2,7 @@
 title: Wake up cause
 tags:
   - Wake up cause
-  - Power Management
+  - Power management
   - MX-4
 ---
 
