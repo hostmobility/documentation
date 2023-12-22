@@ -1,5 +1,5 @@
 ---
-title: Legacy Build System
+title: Legacy build system
 tags:
   - Development
   - MX-4
@@ -11,17 +11,17 @@ tags:
 
 ## Overview
 
-For build old [mx4](https://github.com/hostmobility/mx4) repo.
+To build, see the old [mx4](https://github.com/hostmobility/mx4) repo.
 
-## Build Environment
+## Build environment
 
-Before buildning, be aware of:
-- To have approximately 30 GB amount of free space on your hard drive
-- That an SSD will make the build process go faster
-- We recommend having 4 GB of RAM
-- To have at least 2 cores, but we recommend 4 cores or more
+Before building, we recommend having
+- approximately 30 GB of free disk space,
+- an SSD (it will make the build process go faster),
+- at least 4 GB of RAM,
+- at least 4 CPU cores (2 cores is a minimum).
 
-### Setup Docker
+### Set up docker
 
 Install Docker: [Docker Install] <br />
 Create Dockerfile: touch Dockerfile <br />
@@ -91,12 +91,12 @@ docker build -t hostmobility/mx4 .
 sudo docker run -it -u <b>1000</b> --privileged -v ~/.ssh:/home/<b>username</b>/.ssh -v ~/project:/home/<b>username</b>/<b>project</b> hostmobility/mx4
 ```
 
-### Example to setup environment for MX-4 CT, branch BSP-v1.5.x
+### Example of how to set up an environment for MX-4 CT, branch BSP-v1.5.x
 
 #### Git clone from repository
 
 ```bash
-# If SSH key is associated correctly with your account on github, run the following commands:
+# If SSH key is associated correctly with your GitHub account, run the following commands:
 git clone git@github.com:hostmobility/mx4 -b mx4-bsp-v1.5.x
 git clone git@github.com:hostmobility/mx4-pic -b mx4-bsp-v1.5.x mx4/pic
 # If not correctly associated, run follow commands:
@@ -115,7 +115,7 @@ cd mx4/t20
 
 ### Building other platforms
 
-The needed repositories and branch names can be seen here: https://github.com/hostmobility/mx4#source-structure
+Please consult [mx4#source-structure](https://github.com/hostmobility/mx4#source-structure) for the required repositories and branch names. 
 
 ### GTT v1.5.x
 
@@ -142,13 +142,13 @@ git clone git@github.com:hostmobility/mx4 -b mx4-2.0
 git clone git@github.com:hostmobility/mx4-pic -b mx4-2.0 mx4/pic
 
 
-# Below are only required for products who have Linux and U-boot
+# Below are only required for products that have Linux and U-boot
 # outside of the mx4 repository
 git clone git@github.com:hostmobility/linux-toradex.git -b hm_vf_4.4 mx4/t20/linux_vf
 git clone git@github.com:hostmobility/u-boot-toradex.git -b 2015.04-hm mx4/t20/u-boot_vf
 ```
 
-### Example to build Board Support Package for MX-4 V61
+### Example of how to build Board Support Package (BSP) for MX-4 V61
 
 ```bash
 cd mx4/t20
@@ -157,9 +157,9 @@ cd mx4/t20
 ./make_system.sh -t v61 -r /home/username/project/rootfs/v61 -d /home/username/project/ -u -k -j $(nproc) -g
 ```
 
-List of supported distros can be found at http://www.yoctoproject.org/docs/1.4.1/ref-manual/ref-manual.html#detailed-supported-distros
+See the [List of supported distros](http://www.yoctoproject.org/docs/1.4.1/ref-manual/ref-manual.html#detailed-supported-distros).
 
-Following packages need to be installed. Below example is Ubuntu 14.10
+The following packages need to be installed (the example below is for Ubuntu 14.10).
 ```
 sudo apt-get install subversion git u-boot-tools cbootimage curl gawk wget \
 git-core diffstat unzip texinfo build-essential chrpath autoconf flex bison \

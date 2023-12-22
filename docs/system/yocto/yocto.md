@@ -41,7 +41,7 @@ scripts/bygg \
 
 * You can also build using a [native build environment](yocto-build-manually.md) (without Docker).
 
-## Packages and Images
+## Packages and images
 
 The Yocto system takes care of building software and its dependecies from recipe files in the meta- folders. The results are:
 
@@ -70,7 +70,7 @@ Recipes for use by bitbake that have a "meta-" prefix.
 
 ### Versioned build system
 
-Xml files with recipe repo versions.
+XML files with recipe repo versions.
 
 * [mobility-poky-platform](https://github.com/hostmobility/mobility-poky-platform) – manifest files for Poky
 * [hostmobility-bsp-platform](https://github.com/hostmobility/hostmobility-bsp-platform) – legacy manifest files for Ångström

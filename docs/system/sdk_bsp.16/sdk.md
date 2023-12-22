@@ -1,5 +1,5 @@
 ---
-title: Legacy Software Development Kits (SDKs)
+title: Legacy software development kits (SDKs)
 tags:
   - Legacy SDK
   - Development
@@ -13,11 +13,11 @@ tags:
 ## Overview
 
 Legacy toolchains are available at [hostmobility.org:8008/tools](http://hostmobility.org:8008/tools/).
-**Note:** This giude is for use with bsp 1.6/1.5 or older.
+**Note:** This guide is for use with BSP 1.6/1.5 or older.
 
 Main software components:
 
-- Tool-chain
+- Toolchain
 	- Tegra2: Linaro GCC 4.7-2013.09 (http://releases.linaro.org/13.09/components/toolchain/gcc-linaro/4.7)
 - Linux (Tegra2: 3.1.10)
 - U-boot (Tegra2: 2011.06)
