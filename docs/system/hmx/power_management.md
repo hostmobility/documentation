@@ -9,7 +9,7 @@ tags:
 This platform supports suspend and a long range of wake-up signals. See the individual [wake up](#wake-up) links below.
 ### Suspend
 
-Click on target interface to read more about how to set up the sleep and wake up.
+Click on the target interface to read more about how to set up sleep and wake up.
 
 #### Wake up
 
@@ -44,7 +44,7 @@ systemctl suspend
 ```
 ### Shutdown
 
-Shutdown/cutoff state turns the system off with close to zero power consumption. And it will only work if both internal and external [Start signals](../../interfaces/hmx/start_signal.md) are LOW/off.
+Shutdown/cut-off state turns the system off with close to zero power consumption. It will only work if both internal and external [Start signals](../../interfaces/hmx/start_signal.md) are LOW/off.
 
 ```bash
 shutdown -h now

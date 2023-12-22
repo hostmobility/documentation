@@ -55,8 +55,8 @@ The unit has fault detection that goes high if a fault is detected.
 
 ## Sleep and wake up
 
-For Digital in, wake-up is default on if you want to disable the inputs. one way is to change the device tree when buildding the image, the other way is to unbind the gpio-keys.
+For Digital in, wake-up is default on. If you want to disable the inputs one way is to change the device tree when building the image, the other is to unbind the gpio-keys.
 ```
 echo gpio-keys > /sys/bus/platform/drivers/gpio-keys/unbind
 ```
-when wake it up bind it again if you want to use the gpio-keys.
+After waking up, you can bind it again if you want to use the gpio-keys.

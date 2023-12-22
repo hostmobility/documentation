@@ -19,8 +19,7 @@ The `eth0`, `eth1`, `eth2` and `eth3` Ethernet interfaces are configured to requ
 
 ## Sleep and wake up
 
-Only T1 (eth2 and eth3) ethernet was supposed to have wake-up function to wake up the system from suspend/sleep.
-The current hardware does not support it. There where not T1 ethernet phy that provide both 100BASE-TX and 1000BASE-T1.
+Not supported by the current hardware revision. T1 Ethernet (`eth2` and `eth3`) wake from suspend/sleep is planned for a later revision.
 
 
 
