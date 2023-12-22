@@ -37,7 +37,7 @@ The ADC conversions are managed by the co-processor and the values are exposed a
 
 
 ```bash
-root@mx4-gtt:~# ls /opt/hm/pic_attributes/ | grep -i analog
+# ls /opt/hm/pic_attributes/ | grep -i analog
 analog_1_calibration_u
 analog_1_uA
 analog_2_calibration_u
@@ -64,11 +64,11 @@ Calibration files are not be used by end users.
 #### Example reading input voltage
 
 ```bash
-root@mx4-gtt:~# cat /opt/hm/pic_attributes/input_voltage
+cat /opt/hm/pic_attributes/input_voltage
 14917
 ```
 
-#### Example when Vref (adc reference voltage) is turned off.
+#### Example of when Vref (ADC reference voltage) is turned off.
 
 Vref should normally always be on but it is turned off when entering sleep
 ([go_to_sleep.sh](https://github.com/hostmobility/mx4/blob/master/scripts/mx4/go_to_sleep.sh)).
@@ -76,7 +76,7 @@ So should you poll adc values while entering you will get some errors after Vref
 has been turned off.
 
 ```bash
-root@mx4-gtt:~# echo 0 > /sys/class/gpio/gpio243/value
-root@mx4-gtt:~# cat /opt/hm/pic_attributes/input_voltage
+# echo 0 > /sys/class/gpio/gpio243/value
+# cat /opt/hm/pic_attributes/input_voltage
 cat: read error: Operation not permitted
 ```

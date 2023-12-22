@@ -1,5 +1,5 @@
 ---
-title: Analog Inputs (ADC)
+title: Analog inputs (ADC)
 tags:
   - ADC
   - C61
@@ -11,8 +11,7 @@ tags:
 ---
 
 ## Overview
-Many of our platforms has analog inputs and beside **MX4** we use standard iio more about it can be found from this link [Industrial Input/Output (iio) framework](https://wiki.analog.com/software/linux/docs/iio/iio).
-You can access the adc from `sysfs` with typycal path /sys/bus/iio/devices/iio\:device*/
+Many of our products have analog inputs. On the MX-4 platform they are accessible under `/opt/hm/pic_attributes/` (see below). Otherwise we use the standard [Linux Industrial I/O Subsystem](https://wiki.analog.com/software/linux/docs/iio/iio). You can then access the ADC from `sysfs`, typically `/sys/bus/iio/devices/iio\:device*/`.
 
 ## Platform specific
 
@@ -28,7 +27,7 @@ IIO
 ```
 cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_8_raw
 ```
-MX4
+MX-4
 ```
 cat /opt/hm/pic_attributes/analog_1
 ```

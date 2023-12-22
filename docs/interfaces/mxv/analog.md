@@ -11,7 +11,7 @@ This platform uses IIO for read adc. The raw value is in mili volt and the list 
 
 ## List of supported Analog inputs
 
-DIG is also [digital input](digital_io.md) and KL15 is [start signals](start_signal.md) and KL30 is input power.
+DIG is also [digital input](digital_io.md), KL15 is [start signals](start_signal.md), and KL30 is input power.
 
 - in_voltage0_AN_IN_AN_1_label
 - in_voltage0_AN_IN_AN_1_offset

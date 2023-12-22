@@ -8,8 +8,8 @@ tags:
 
 ## Overview
 
-This product has two analog inputs that is combined with two digital outputs available and two digital inputs on the same two connector pins.
-This analog in can be used to detect short circuit or to just monitor some signal between the supported voltage range of the platform. 
+This platform has two analog inputs that are combined with two digital outputs on the same connector pins.
+Analog In can be used to detect short-circuits or to monitor certain signals within the supported voltage range of the platform.
 
 ## Digital In and Out
 
