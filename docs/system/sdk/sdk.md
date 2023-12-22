@@ -12,7 +12,7 @@ tags:
 
 ## Overview
 
-Reference SDKs are soon available at [hostmobility.org/sdk](https://hostmobility.org/sdk).
+Reference SDKs are to be made available at [hostmobility.org/sdk](https://hostmobility.org/sdk).
 
 ## Building
 
@@ -50,7 +50,7 @@ chmod +x poky-glibc-x86_64-console-hostmobility-image-cortexa53-crypto-imx8mp-va
 ```
 
 
-*Select folder where to install the SDK*
+*Select directory where to install the SDK*
 ```
 Poky (Yocto Project Reference Distro) SDK installer version 4.0.13
 ==================================================================
@@ -65,7 +65,7 @@ Each time you wish to use the SDK in a new shell session, you need to source the
 
 ## Usage and test
 
-To get a sample application, Do a `cat >>program.c*`, paste the following and press `CTRL-d`
+To get generate source code for a sample application, save the following in a file named `program.c`.
 
 ```C
 #include <stdio.h>
@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
 ```
 
 
-*Source the `enviroment-setup` folder where you installed the SDK.*
+*Source the `enviroment-setup` directory where you installed the SDK.*
 
 ```bash
 . ~/sdk/hmx-kirkstone/environment-setup-armv8a-fslc-linux
