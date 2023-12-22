@@ -70,10 +70,11 @@ cat /opt/hm/pic_attributes/input_voltage
 
 #### Example of when Vref (ADC reference voltage) is turned off.
 
-Vref should normally always be on but it is turned off when entering sleep
+Vref should normally be always on but it is turned off when entering sleep
 ([go_to_sleep.sh](https://github.com/hostmobility/mx4/blob/master/scripts/mx4/go_to_sleep.sh)).
-So should you poll adc values while entering you will get some errors after Vref
-has been turned off.
+If you poll ADC values while entering sleep you will get some errors after Vref
+has been turned off. 
+**Note:** Coprocesssor firmware 2.8.2 and later (CT and T30/T30 FR) vref and other power are turned off after main processor by the coprocessor so it should not be any errors even in late state of go_to_sleep.sh. 
 
 ```bash
 # echo 0 > /sys/class/gpio/gpio243/value
