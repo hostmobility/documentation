@@ -13,9 +13,9 @@ The majority of platforms have at least three different operating modes:
     - The default operating state where we have full functionality.
 - Sleep/Suspend
     - Main processor is suspended to RAM. This is a power-saving
-mode where as much as possible is powered down to minimize the power consumption and
-fast resume time (around 1 second) to running state.
-- Deep Sleep
+mode where as much as possible is powered down to minimize the power consumption while maintaining a
+fast resume time (around 1 s) to running state.
+- Deep sleep
     - The main processor is powered off and only the coprocessor is running in low-power mode.
 - Shutdown/Cut-off
     - The machine has almost no power consumption as the main regulator is turned off. See [start signal](interfaces/start_signal.md)

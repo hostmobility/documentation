@@ -6,7 +6,7 @@ tags:
   - MX-4
 ---
 
-Here is a list of possible wake up signals it is used both for enable the wake up mode and to read what mode it was that woke the system.
+Here is a list of possible wake-up signals used both to enable the wake up mode and to read which of the modes that woke up the system.
 
 ## Read
 ```bash
@@ -15,7 +15,7 @@ cat $MX4_SPI_DIR/ctrl_wakeup_cause
 #or
 /opt/hm/wake_up_cause.sh
 ```
-## activate coprocessor wake up source
+## Enable coprocessor wake up source
 ```bash
 MX4_SPI_DIR=/opt/hm/pic_attributes
 echo 0xXX >  $MX4_SPI_DIR/ctrl_wakeup_sources_register

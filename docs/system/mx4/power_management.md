@@ -23,15 +23,15 @@ During sleep/suspend mode:
 **Warning:** The following peripherals lose power and need re-initialization after wakeup:
 
 - SD card (unmount before sleep, re-mount after wake-up)
-- Wifi
-- UARTS
+- WiFi
+- UART
 - CAN (T30 FR can optionally power off/on the CAN transceivers)
 - Ethernet
 - Flexray
 
-## Enter Sleep
+## Enter sleep
 
-A script, `/opt/hm/go_to_sleep.sh`, provided by Host Mobility facilitates entering sleep/suspend mode:
+A script, `/opt/hm/go_to_sleep.sh`, provided by Host Mobility, facilitates entering sleep/suspend mode:
 
 ```bash
 Usage: go_to_sleep.sh options (t:hdcCnsaD)
@@ -54,7 +54,7 @@ Usage: go_to_sleep.sh options (t:hdcCnsaD)
 
 #### Wakeup
 
-The MX-4 platform supports a range of wake-up sources (see below), although not all MX-4 variants support each of the wakeup sources.
+The MX-4 platform supports a range of wake-up sources (see below), although not all MX-4 variants support each of the wake-up sources.
 
 - Digital Inputs (DIGITAL-IN-2 is enabled by default as a wake-up source)
 - Analog Inputs
@@ -75,7 +75,7 @@ For a list of supported digital inputs as wakeup sources, see [](../interfaces/m
 
 **Note:** If `-d` option is specified with -t or without any other wake-up flag (use WAKE_UP_SRC_MODEM_RING bitmask or set -l to a voltage level higher than input voltage), the system will reboot itself. See [Reset Cause](reset_cause.md).
 
-To enable different wakeup sources and set the edge, use the `-p` option with a bitmask (see [wake up cause](wake_up_cause.md)
+To enable different wake-up sources and set the edge, use the `-p` option with a bitmask (see [wake up cause](wake_up_cause.md).
 
 ##### Wake on Analog Inputs
 
