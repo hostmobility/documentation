@@ -43,3 +43,6 @@ while true; do i2cget -f -y 3 0x1e 0x31 ; sleep 1; done;
 ```
 
 
+## Sleep and wake up
+
+The use of [triggers](../../interfaces/hmx/accelerometer.md#activate-triggers) has been tested, but it's currently not possible to wake up the main CPU.
