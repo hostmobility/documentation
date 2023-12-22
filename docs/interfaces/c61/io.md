@@ -2,7 +2,7 @@
 title: IOs (C61)
 tags:
   - ADC
-  - Digital IO
+  - Digital I/O
   - C61
 ---
 
