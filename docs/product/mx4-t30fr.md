@@ -5,7 +5,7 @@ tags:
 ---
 ## Abstract
 
-MX-4 T30 FR is a telematics computer for remote diagnostics and fleet management.
+MX-4 T30 FR is a telematics computer for remote diagnostics and fleet management, very well suited for automotive development.
 
 ## Feature summary for HM005-1
 
@@ -42,11 +42,11 @@ See [Production variant definition](#production-variant-definition).
 | [Sleep-Mode](../power-managment) | Low power sleep mode |
 
 
-## Production Variant Definition
+## Production variant definition
 
 ### List of known products
 
-Contact Hostmobility. All products starts with hmp075 (T20,T30T30 fr).
+Contact Host Mobility. All product variants start with hmp075 (T20, T30, T30 FR).
 
 
 ## Connectors and buttons
