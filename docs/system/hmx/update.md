@@ -1,8 +1,8 @@
 ---
 title: System Update (HMX)
 tags:
-  - HMX
   - Updating
+  - HMX
 ---
 
 
@@ -15,10 +15,10 @@ tags:
 
 ### *If USB method is used*
 
-* Plug the USB drive into the HMX,
+* Plug the USB drive into the HMX
 * Press and hold the `USB_BOOT` button
 * Press and release the the `RESET` button while holding the `USB_BOOT` button 
-* You can add an autoboot.sh script to the USB memory on the first boot after flash to perform post installation.
+* You can add an [autoboot.sh](../update.md#usb-method-autobootsh) script to the USB memory on the first boot after flash to perform post installation.
 
 ### *If /boot method is used*
 
