@@ -10,7 +10,7 @@
       
       
       
-        <link rel="next" href="documentation-howto/">
+        <link rel="next" href="tags/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -23,6 +23,9 @@
     
     
       <link rel="stylesheet" href="assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -51,7 +54,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     
@@ -63,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hardware" class="md-skip">
+        <a href="#hardware-platforms" class="md-skip">
           Skip to content
         </a>
       
@@ -81,8 +91,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="Host Mobility Documentation" class="md-header__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="assets/hm-logo-grey-on-transparent.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -105,6 +114,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
     
@@ -173,8 +208,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="." title="Host Mobility Documentation" class="md-nav__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="assets/hm-logo-grey-on-transparent.svg" alt="logo">
 
     </a>
     Host Mobility Documentation
@@ -195,8 +229,17 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
         
@@ -208,26 +251,77 @@
 
       </a>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="documentation-howto/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    Writing Host Mobility Product Documentation
-  </span>
-  
 
-      </a>
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware platforms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-and-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation and power
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system" class="md-nav__link">
+    <span class="md-ellipsis">
+      System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interfaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tags
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -269,8 +363,68 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware platforms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-and-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation and power
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system" class="md-nav__link">
+    <span class="md-ellipsis">
+      System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interfaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tags
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -285,48 +439,43 @@
                   
 
 
-<h1 id="hardware">Hardware</h1>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="hardware/host-monitor-x">Host Monitor X</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="hardware/mx4-t30fr">MX4-T30FR</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="hardware/mx4-c61">MX4-C61</a></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+  <h1>Index</h1>
+
+<p><img alt="bild" src="assets/hm-logo-grey-on-transparent.svg" /></p>
+<h2 id="hardware-platforms">Hardware platforms</h2>
 <ul>
-<li><a href="tags">Product Specific Tags</a></li>
-<li><a href="documentation-howto">Documentation Howto</a></li>
+<li><a href="tags/#hmx">Host Monitor X</a></li>
+<li><a href="tags/#c61">MX-4 C61</a></li>
+<li><a href="tags/#t30">MX-4 T30</a></li>
+<li><a href="tags/#t30-fr">MX-4 T30FR</a></li>
+<li><a href="tags/#ct">MX-4 CT</a></li>
+<li><a href="tags/#ct-gl">MX-4 CTGL</a></li>
+<li><a href="tags/#mx-v">MX-V</a></li>
 </ul>
-<h1 id="installation">Installation</h1>
+<h2 id="installation-and-power">Installation and power</h2>
 <ul>
 <li><a href="installation">Installation</a></li>
 </ul>
-<h1 id="system">System</h1>
+<h2 id="system">System</h2>
 <ul>
 <li><a href="login/">Login</a></li>
+<li><a href="system/development/">Development</a></li>
 </ul>
-<h1 id="interfaces">Interfaces</h1>
+<h2 id="interfaces">Interfaces</h2>
 <ul>
 <li><a href="interfaces/accelerometer">Accelerometer</a></li>
 <li><a href="interfaces/digital_io">Digital I/O</a></li>
 <li><a href="interfaces/can">CAN</a></li>
 <li><a href="interfaces/leds/">LEDs</a></li>
 <li><a href="interfaces/networking/">Networking</a></li>
+</ul>
+<h2 id="writing-documentation">Writing documentation</h2>
+<ul>
+<li><a href="documentation-howto">Documentation Howto</a></li>
+</ul>
+<h2 id="tags">Tags</h2>
+<ul>
+<li><a href="tags/">Tags</a></li>
 </ul>
 
 
@@ -366,7 +515,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "content.code.copy"], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="assets/javascripts/bundle.cd18aaf1.min.js"></script>

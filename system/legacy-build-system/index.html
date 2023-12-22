@@ -1,0 +1,640 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Legacy build system - Host Mobility Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Host Mobility Documentation" class="md-header__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
+      
+  <img src="../../assets/hm-logo-grey-on-transparent.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Host Mobility Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Legacy build system
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Host Mobility Documentation" class="md-nav__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
+      
+  <img src="../../assets/hm-logo-grey-on-transparent.svg" alt="logo">
+
+    </a>
+    Host Mobility Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-up-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up docker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-docker-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Docker image
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-docker-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Docker image
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-of-how-to-set-up-an-environment-for-mx-4-ct-branch-bsp-v15x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of how to set up an environment for MX-4 CT, branch BSP-v1.5.x
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example of how to set up an environment for MX-4 CT, branch BSP-v1.5.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-clone-from-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git clone from repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-ct-bsp-v15x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build CT-BSP-v1.5.x
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-other-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building other platforms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gtt-v15x" class="md-nav__link">
+    <span class="md-ellipsis">
+      GTT v1.5.x
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gtt-t30-v14x" class="md-nav__link">
+    <span class="md-ellipsis">
+      GTT-T30 v1.4.x
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-to-setup-environment-for-mx-4-v61" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example to setup environment for MX-4 V61
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-of-how-to-build-board-support-package-bsp-for-mx-4-v61" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of how to build Board Support Package (BSP) for MX-4 V61
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tags/#development" class="md-tag">Development</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#mx-4" class="md-tag">MX-4</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#ct" class="md-tag">CT</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#t30" class="md-tag">T30</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#t30-fr" class="md-tag">T30 FR</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#c61" class="md-tag">C61</a>
+    
+  
+</nav>
+
+
+
+  <h1>Legacy build system</h1>
+
+<h2 id="overview">Overview</h2>
+<p>To build, see the old <a href="https://github.com/hostmobility/mx4">mx4</a> repo.</p>
+<h2 id="build-environment">Build environment</h2>
+<p>Before building, we recommend having
+- approximately 30 GB of free disk space,
+- an SSD (it will make the build process go faster),
+- at least 4 GB of RAM,
+- at least 4 CPU cores (2 cores is a minimum).</p>
+<h3 id="set-up-docker">Set up docker</h3>
+<p>Install Docker: [Docker Install] <br />
+Create Dockerfile: touch Dockerfile <br />
+Copy this template into the Dockerfile and edit it:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">debian</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c"># Edit Your Name and ”your@mail.com”</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">MAINTAINER</span><span class="w"> </span><span class="s">&lt;b&gt;Your Name&lt;/b&gt; &quot;&lt;b&gt;your@mail.com&lt;/b&gt;&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c"># Edit your username</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">ARG</span><span class="w"> </span><span class="nv">user</span><span class="o">=</span>&lt;b&gt;your<span class="w"> </span>username&lt;/b&gt;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c"># Edit your group, mostly the same as username</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">ARG</span><span class="w"> </span><span class="nv">group</span><span class="o">=</span>&lt;b&gt;your<span class="w"> </span>group&lt;/b&gt;<span class="w"> </span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c"># Edit your user id. Command to see user id, id -u $username</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">ARG</span><span class="w"> </span><span class="nv">uid</span><span class="o">=</span>&lt;b&gt;your<span class="w"> </span>user<span class="w"> </span>id&lt;/b&gt;
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c"># Edit your group id. Command to see group id, id -g $username</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">ARG</span><span class="w"> </span><span class="nv">gid</span><span class="o">=</span>&lt;b&gt;your<span class="w"> </span>group<span class="w"> </span>id&lt;/b&gt;
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c"># We need to change to root to be able to install with apt-get </span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">USER</span><span class="w"> </span><span class="s">root</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>gawk<span class="w"> </span>wget<span class="w"> </span>git-core<span class="w"> </span>sudo<span class="w"> </span>cpio<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>diffstat<span class="w"> </span>unzip<span class="w"> </span>texinfo<span class="w"> </span>gcc-multilib<span class="w"> </span>u-boot-tools<span class="w"> </span>rsync<span class="w"> </span>cbootimage<span class="w"> </span>bc<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>build-essential<span class="w"> </span>kmod<span class="w"> </span>chrpath<span class="w"> </span>socat<span class="w"> </span>mtd-utils<span class="w"> </span>device-tree-compiler<span class="w"> </span>mtools<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>lzop<span class="w"> </span>dosfstools<span class="w"> </span>parted<span class="w"> </span>libncurses5-dev<span class="w"> </span>patchutils<span class="w"> </span>tmux<span class="w"> </span>vim<span class="w"> </span>curl<span class="w"> </span>python<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>libsdl1.2-dev<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="k">ENV</span><span class="w"> </span>USER_HOME<span class="w"> </span>/home/<span class="si">${</span><span class="nv">user</span><span class="si">}</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="k">RUN</span><span class="w"> </span>groupadd<span class="w"> </span>-g<span class="w"> </span><span class="si">${</span><span class="nv">gid</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">group</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="o">&amp;&amp;</span><span class="w"> </span>useradd<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER_HOME</span><span class="s2">&quot;</span><span class="w"> </span>-u<span class="w"> </span><span class="si">${</span><span class="nv">uid</span><span class="si">}</span><span class="w"> </span>-g<span class="w"> </span><span class="si">${</span><span class="nv">gid</span><span class="si">}</span><span class="w"> </span>-m<span class="w"> </span>-s<span class="w"> </span>/bin/bash<span class="w"> </span><span class="si">${</span><span class="nv">user</span><span class="si">}</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c"># Edit username to your username</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="k">RUN</span><span class="w"> </span>adduser<span class="w"> </span>&lt;b&gt;username&lt;/b&gt;<span class="w"> </span>sudo
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="c"># Edit username to your username</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="k">RUN</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&lt;b&gt;username&lt;/b&gt; ALL=(ALL) NOPASSWD: ALL&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/sudoers
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="c"># Switch to user</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="k">USER</span><span class="w"> </span><span class="s">${user}</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">${USER_HOME}</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="c"># Creates project folder. Returns no error if folder already exists</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="k">RUN</span><span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>&lt;b&gt;project&lt;/b&gt;
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="c"># Edit &quot;your@mail.com&quot;</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="k">RUN</span><span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;&lt;b&gt;your@mail.com&lt;/b&gt;&quot;</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="c"># Edit &quot;Your Name&quot;</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="k">RUN</span><span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;&lt;b&gt;Your Name&lt;/b&gt;&quot;</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="k">RUN</span><span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>push.default<span class="w"> </span>simple
+</code></pre></div>
+<h4 id="build-docker-image">Build Docker image</h4>
+<p>Build the docker image using the Dockerfile and name it hostmobility/mx4
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>hostmobility/mx4<span class="w"> </span>.
+</code></pre></div></p>
+<h4 id="run-docker-image">Run Docker image</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Edit user id 1000 with your user id. </span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># Edit username with your username (both in ssh- and project path).</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Edit path to the project /home/username/project if needed.</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># The project folder is the link between your environment and the Docker environment.</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># Everything you put in the project folder from the Docker will be accessible outside the Docker.</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># To make --privileged to work, it assumes that you have a SSH key associated with your github account.</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># If SSH key is not set up correctly, you will be asked for username and password during the git clone process.</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>-u<span class="w"> </span>&lt;b&gt;1000&lt;/b&gt;<span class="w"> </span>--privileged<span class="w"> </span>-v<span class="w"> </span>~/.ssh:/home/&lt;b&gt;username&lt;/b&gt;/.ssh<span class="w"> </span>-v<span class="w"> </span>~/project:/home/&lt;b&gt;username&lt;/b&gt;/&lt;b&gt;project&lt;/b&gt;<span class="w"> </span>hostmobility/mx4
+</code></pre></div>
+<h3 id="example-of-how-to-set-up-an-environment-for-mx-4-ct-branch-bsp-v15x">Example of how to set up an environment for MX-4 CT, branch BSP-v1.5.x</h3>
+<h4 id="git-clone-from-repository">Git clone from repository</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># If SSH key is associated correctly with your GitHub account, run the following commands:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:hostmobility/mx4<span class="w"> </span>-b<span class="w"> </span>mx4-bsp-v1.5.x
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:hostmobility/mx4-pic<span class="w"> </span>-b<span class="w"> </span>mx4-bsp-v1.5.x<span class="w"> </span>mx4/pic
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># If not correctly associated, run follow commands:</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/hostmobility/mx4/<span class="w"> </span>-b<span class="w"> </span>mx4-bsp-v1.5.x
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/hostmobility/mx4-pic<span class="w"> </span>-b<span class="w"> </span>mx4-bsp-v1.5.x<span class="w"> </span>mx4/pic
+</code></pre></div>
+<h4 id="build-ct-bsp-v15x">Build CT-BSP-v1.5.x</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>mx4/t20
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># Remember to edit username to your own username and project if you</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># named your project folder to something else.</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># edit $(nproc) to number of cores you want to use while building.</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>./make_system.sh<span class="w"> </span>-t<span class="w"> </span>ct<span class="w"> </span>-r<span class="w"> </span>/home/&lt;b&gt;username&lt;/b&gt;/&lt;b&gt;project&lt;/b&gt;/rootfs/CT<span class="w"> </span>-d<span class="w"> </span>/home/&lt;b&gt;username&lt;/b&gt;/&lt;b&gt;project&lt;/b&gt;/yocto-1.5.x<span class="w"> </span>-g<span class="w"> </span>-k<span class="w"> </span>-u<span class="w"> </span>-j<span class="w"> </span>&lt;b&gt;<span class="k">$(</span>nproc<span class="k">)</span>&lt;/b&gt;<span class="w"> </span>-m<span class="w"> </span>-T<span class="w"> </span><span class="m">512</span>
+</code></pre></div>
+<h3 id="building-other-platforms">Building other platforms</h3>
+<p>Please consult <a href="https://github.com/hostmobility/mx4#source-structure">mx4#source-structure</a> for the required repositories and branch names. </p>
+<h3 id="gtt-v15x">GTT v1.5.x</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/hostmobility/mx4/<span class="w"> </span>-b<span class="w"> </span>mx4-bsp-v1.5.x
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/hostmobility/mx4-pic<span class="w"> </span>-b<span class="w"> </span>mx4-bsp-v1.5.x<span class="w"> </span>mx4/pic
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>./make_system.sh<span class="w"> </span>-t<span class="w"> </span>gtt<span class="w"> </span>-r<span class="w"> </span>&lt;b&gt;UNIQUE_ROOTFS_PATH&lt;/b&gt;<span class="w"> </span>-d<span class="w"> </span>&lt;b&gt;YOCTO_1.5.x_TEMP_PATH&lt;/b&gt;<span class="w"> </span>-g<span class="w"> </span>-k<span class="w"> </span>-u<span class="w"> </span>-j<span class="w"> </span>&lt;b&gt;<span class="k">$(</span>nproc<span class="k">)</span>&lt;/b&gt;<span class="w"> </span>-m<span class="w"> </span>-T<span class="w"> </span><span class="m">512</span>
+</code></pre></div>
+<h3 id="gtt-t30-v14x">GTT-T30 v1.4.x</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/hostmobility/mx4/<span class="w"> </span>-b<span class="w"> </span>mx4-bsp-v1.4.x-ultra
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/hostmobility/mx4-pic<span class="w"> </span>-b<span class="w"> </span>mx4-bsp-v1.4.x<span class="w"> </span>mx4/pic
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/hostmobility/linux-toradex.git<span class="w"> </span>-b<span class="w"> </span>mx4-bsp-v1.4.x-tegra<span class="w"> </span>mx4/t20/linux_vf
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/hostmobility/u-boot-toradex.git<span class="w"> </span>-b<span class="w"> </span>mx4-bsp-v1.4.x<span class="w"> </span>mx4/t20/u-boot_vf
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>./make_system.sh<span class="w"> </span>-t<span class="w"> </span>t30<span class="w"> </span>-r<span class="w"> </span>UNIQUE_ROOTFS_PATH<span class="w"> </span>-d<span class="w"> </span>YOCTO_1.4.x_TEMP_PATH<span class="w"> </span>-g<span class="w"> </span>-k<span class="w"> </span>-u<span class="w"> </span>-j<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span>
+</code></pre></div>
+<h3 id="example-to-setup-environment-for-mx-4-v61">Example to setup environment for MX-4 V61</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># All products use mx4 and mx4-pic repository</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:hostmobility/mx4<span class="w"> </span>-b<span class="w"> </span>mx4-2.0
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:hostmobility/mx4-pic<span class="w"> </span>-b<span class="w"> </span>mx4-2.0<span class="w"> </span>mx4/pic
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1"># Below are only required for products that have Linux and U-boot</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># outside of the mx4 repository</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:hostmobility/linux-toradex.git<span class="w"> </span>-b<span class="w"> </span>hm_vf_4.4<span class="w"> </span>mx4/t20/linux_vf
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:hostmobility/u-boot-toradex.git<span class="w"> </span>-b<span class="w"> </span><span class="m">2015</span>.04-hm<span class="w"> </span>mx4/t20/u-boot_vf
+</code></pre></div>
+<h3 id="example-of-how-to-build-board-support-package-bsp-for-mx-4-v61">Example of how to build Board Support Package (BSP) for MX-4 V61</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cd</span><span class="w"> </span>mx4/t20
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># edit $(nproc) to number of cores you want to use while building.</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="o">[</span>work<span class="w"> </span><span class="k">in</span><span class="w"> </span>progress<span class="o">]</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>./make_system.sh<span class="w"> </span>-t<span class="w"> </span>v61<span class="w"> </span>-r<span class="w"> </span>/home/username/project/rootfs/v61<span class="w"> </span>-d<span class="w"> </span>/home/username/project/<span class="w"> </span>-u<span class="w"> </span>-k<span class="w"> </span>-j<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span><span class="w"> </span>-g
+</code></pre></div>
+<p>See the <a href="http://www.yoctoproject.org/docs/1.4.1/ref-manual/ref-manual.html#detailed-supported-distros">List of supported distros</a>.</p>
+<p>The following packages need to be installed (the example below is for Ubuntu 14.10).
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo apt-get install subversion git u-boot-tools cbootimage curl gawk wget \
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>git-core diffstat unzip texinfo build-essential chrpath autoconf flex bison \
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>device-tree-compiler mtd-utils lzop
+</code></pre></div></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>

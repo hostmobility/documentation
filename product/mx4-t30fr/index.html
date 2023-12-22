@@ -1,0 +1,890 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Platform MX-4 T30 FR - Host Mobility Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#abstract" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Host Mobility Documentation" class="md-header__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
+      
+  <img src="../../assets/hm-logo-grey-on-transparent.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Host Mobility Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Platform MX-4 T30 FR
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Host Mobility Documentation" class="md-nav__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
+      
+  <img src="../../assets/hm-logo-grey-on-transparent.svg" alt="logo">
+
+    </a>
+    Host Mobility Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstract
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-summary-for-hm005-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature summary for HM005-1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-variant-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Production variant definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Production variant definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-of-known-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of known products
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectors-and-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connectors and buttons
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connectors and buttons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dsub-15-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dsub 15 connector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsub-25-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dsub 25 connector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsub-9-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dsub 9 Connector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-connector-and-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other connector and buttons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical specification
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tags/#t30-fr" class="md-tag">T30 FR</a>
+    
+  
+</nav>
+
+
+
+  <h1>Platform MX-4 T30 FR</h1>
+
+<h2 id="abstract">Abstract</h2>
+<p>MX-4 T30 FR is a telematics computer for remote diagnostics and fleet management, very well suited for automotive development.</p>
+<h2 id="feature-summary-for-hm005-1">Feature summary for HM005-1</h2>
+<p>See <a href="#production-variant-definition">Production variant definition</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU (main)</td>
+<td>ARM Cortex-A9 CPU, Up to 1.4 GHz, Quad Core</td>
+</tr>
+<tr>
+<td>Coprocessor</td>
+<td>PIC24</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>1GB flash, 1 GB RAM</td>
+</tr>
+<tr>
+<td>Operating System</td>
+<td>Yocto Kirkstone, Linux kernel 6.1 (and 3.1.10)</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/modem/">Modem</a></td>
+<td>Europa or USA 4G module</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/modem/#gps">GPS</a></td>
+<td>Included in modem, external antenna</td>
+</tr>
+<tr>
+<td>Aux-Linux</td>
+<td>2x 3pol aux for Linux Headphone L and R and mic</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/wifi/">WIFI</a></td>
+<td>802.11 b/g/n WiFi</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/ethernet/">Ethernet</a></td>
+<td>2x 10BASE-T and 100BASE-TX Ethernet</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/usb/">USB</a></td>
+<td>1 x USB 2.0 high-speed host/device (auto detect)</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/usb/">USB</a></td>
+<td>1 x USB 2.0 high-speed host</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/can/">CAN</a></td>
+<td>6 x CAN 2.0 B</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/flexray/">Flexray</a></td>
+<td>1 x Flexray 2.1 / 2.1RevA</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/lin/">LIN</a></td>
+<td>2 x LIN buses</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/digital_io/">Digital inputs</a></td>
+<td>6 x Digital inputs</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/digital_io/">Digital outputs</a></td>
+<td>6 x Digital outputs</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/analog/">Analog inputs</a></td>
+<td>2 x Analog inputs 0-32 VDC (including the start signal)</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/tachometer/">Tachometer</a></td>
+<td>1x Puls counter</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/start_signal/">Start Signals</a></td>
+<td>1 x Start signal input (to boot the system using external signal)</td>
+</tr>
+<tr>
+<td>Buzzer</td>
+<td>1x internal buzzer</td>
+</tr>
+<tr>
+<td>uSD-card</td>
+<td>µSD-card interface</td>
+</tr>
+<tr>
+<td>SuperCap</td>
+<td>Super Capacitor</td>
+</tr>
+<tr>
+<td>Battery</td>
+<td>Internal Lithium battery: 1050mAh, -20 to +60°C (can be removed)</td>
+</tr>
+<tr>
+<td>Operating Temperature</td>
+<td>Wide operating temperature: -40 to +85°C</td>
+</tr>
+<tr>
+<td>Operating voltage</td>
+<td>Wide input voltage range, 8-36 VDC</td>
+</tr>
+<tr>
+<td>Nominal Voltage</td>
+<td>12-24V</td>
+</tr>
+<tr>
+<td><a href="../power-managment">Sleep-Mode</a></td>
+<td>Low power sleep mode</td>
+</tr>
+</tbody>
+</table>
+<h2 id="production-variant-definition">Production variant definition</h2>
+<h3 id="list-of-known-products">List of known products</h3>
+<p>Contact Host Mobility. All product variants start with hmp075 (T20, T30, T30 FR).</p>
+<h2 id="connectors-and-buttons">Connectors and buttons</h2>
+<p><img alt="front and back" src="mx4-t30-connector-image.png" /></p>
+<h3 id="dsub-15-connector">Dsub 15 connector</h3>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Function</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>CAN-1-H</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>CAN-1-L</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>CAN-2-H</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>CAN-2-L</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>CAN-3-H</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>CAN-3-L</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>INPUT-POWER</td>
+<td>Tied to pin 14</td>
+</tr>
+<tr>
+<td>8</td>
+<td>GND</td>
+<td>Reference for INPUT-POWER</td>
+</tr>
+<tr>
+<td>9</td>
+<td>CAN-4-H</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>CAN-4-L</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>CAN-5-H</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>CAN-5-L</td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>START-SIGNAL</td>
+<td>Must be high for the unit to start, tied to pin 23 in other D-sub</td>
+</tr>
+<tr>
+<td>14</td>
+<td>INPUT-POWER</td>
+<td>Tied to pin 7</td>
+</tr>
+<tr>
+<td>15</td>
+<td>GND</td>
+<td>Reference for INPUT-POWER</td>
+</tr>
+<tr>
+<td>SH</td>
+<td>GND</td>
+<td>Shield is also connected to the common GND</td>
+</tr>
+<tr>
+<td>general-purpose GND</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="dsub-25-connector">Dsub 25 connector</h3>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Function</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td>Reference for all I/O and communication buses</td>
+</tr>
+<tr>
+<td>2</td>
+<td>CAN-6-H</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>CAN-6-L</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>DIG-INPUT-1</td>
+<td>Internal pull-up</td>
+</tr>
+<tr>
+<td>5</td>
+<td>DIG-INPUT-2</td>
+<td>Internal pull-up</td>
+</tr>
+<tr>
+<td>6</td>
+<td>DIG-INPUT-3</td>
+<td>Internal pull-up</td>
+</tr>
+<tr>
+<td>7</td>
+<td>DIG-INPUT-4</td>
+<td>Internal pull-up</td>
+</tr>
+<tr>
+<td>8</td>
+<td>DIG-INPUT-5</td>
+<td>Internal pull-down</td>
+</tr>
+<tr>
+<td>9</td>
+<td>DIG-INPUT-6</td>
+<td>Internal pull-down</td>
+</tr>
+<tr>
+<td>10</td>
+<td>PULSE-COUNTER</td>
+<td>Input for tachometer</td>
+</tr>
+<tr>
+<td>11</td>
+<td>DIG-OUTPUT-5V</td>
+<td>Digital 5V output, for peripherals</td>
+</tr>
+<tr>
+<td>12</td>
+<td>GND</td>
+<td>Reference for all I/O and communication buses</td>
+</tr>
+<tr>
+<td>13</td>
+<td>GND</td>
+<td>Reference for all I/O and communication buses</td>
+</tr>
+<tr>
+<td>14</td>
+<td>LIN-1</td>
+<td>LIN bus 1</td>
+</tr>
+<tr>
+<td>15</td>
+<td>LIN-2</td>
+<td>LIN bus 2</td>
+</tr>
+<tr>
+<td>16</td>
+<td>DIG-OUTPUT-1</td>
+<td>Sourcing current</td>
+</tr>
+<tr>
+<td>17</td>
+<td>DIG-OUTPUT-2</td>
+<td>Sourcing current</td>
+</tr>
+<tr>
+<td>18</td>
+<td>DIG-OUTPUT-3</td>
+<td>Sourcing current</td>
+</tr>
+<tr>
+<td>19</td>
+<td>DIG-OUTPUT-4</td>
+<td>Sourcing current</td>
+</tr>
+<tr>
+<td>20</td>
+<td>DIG-OUTPUT-5</td>
+<td>Sinking current</td>
+</tr>
+<tr>
+<td>21</td>
+<td>DIG-OUTPUT-6</td>
+<td>Sinking current</td>
+</tr>
+<tr>
+<td>22</td>
+<td>ANALOG-IN-1</td>
+<td>0-32 V input</td>
+</tr>
+<tr>
+<td>23</td>
+<td>START-SIGNAL</td>
+<td>Must be high for the unit to start, tied to pin 13 in other D-sub</td>
+</tr>
+<tr>
+<td>24</td>
+<td>VOLTAGE-OUTPUT</td>
+<td>Outputs the input voltage, not controllable, current limited</td>
+</tr>
+<tr>
+<td>25</td>
+<td>GND</td>
+<td>Reference for all I/O and communication buses</td>
+</tr>
+<tr>
+<td>SH</td>
+<td>GND</td>
+<td>Shield is also connected to the common GND</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dsub-9-connector">Dsub 9 Connector</h3>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Function</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>NC</td>
+<td>Not connected</td>
+</tr>
+<tr>
+<td>2</td>
+<td>FRAY1-BM</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>GND</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>NC</td>
+<td>Not activated</td>
+</tr>
+<tr>
+<td>5</td>
+<td>NC</td>
+<td>Not connected</td>
+</tr>
+<tr>
+<td>6</td>
+<td>NC</td>
+<td>Not connected</td>
+</tr>
+<tr>
+<td>7</td>
+<td>FRAY1-BP</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>FRAY2-BM</td>
+<td>Not activated</td>
+</tr>
+<tr>
+<td>9</td>
+<td>NC</td>
+<td>Not connected</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other-connector-and-buttons">Other connector and buttons</h3>
+<ul>
+<li>Fakra red LTE/4G</li>
+<li>Fakra blue GPS</li>
+<li>RJ45</li>
+<li>Audio &amp; mic</li>
+<li>Reset button</li>
+<li><a href="../../interfaces/mx4/leds/">LEDs</a></li>
+</ul>
+<h2 id="technical-specification">Technical specification</h2>
+<p>Contact <a href="../../support/">support</a> to receive the technical specification (1301-HM005-Technical-description) for this hardware.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,516 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>PIC attributes (coprocessor) (MX-4) - Host Mobility Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#list-of-all-pic_attributes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Host Mobility Documentation" class="md-header__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/hm-logo-grey-on-transparent.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Host Mobility Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PIC attributes (coprocessor) (MX-4)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Host Mobility Documentation" class="md-nav__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/hm-logo-grey-on-transparent.svg" alt="logo">
+
+    </a>
+    Host Mobility Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-all-pic_attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of all pic_attributes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../../tags/#c61" class="md-tag">C61</a>
+    
+  
+    
+    
+    
+      <a href="../../../tags/#mx-4" class="md-tag">MX-4</a>
+    
+  
+    
+    
+    
+      <a href="../../../tags/#t30" class="md-tag">T30</a>
+    
+  
+    
+    
+    
+      <a href="../../../tags/#t30-fr" class="md-tag">T30 FR</a>
+    
+  
+    
+    
+    
+      <a href="../../../tags/#ct" class="md-tag">CT</a>
+    
+  
+</nav>
+
+
+
+  <h1>PIC attributes (coprocessor) (MX-4)</h1>
+
+<h2 id="list-of-all-pic_attributes">List of all pic_attributes</h2>
+<ul>
+<li>analog_1</li>
+<li>analog_1_calibration_u</li>
+<li>analog_1_offset</li>
+<li>analog_1_threshold_high</li>
+<li>analog_1_threshold_low</li>
+<li>analog_2</li>
+<li>analog_2_calibration_u</li>
+<li>analog_2_offset</li>
+<li>analog_2_threshold_high</li>
+<li>analog_2_threshold_low</li>
+<li>analog_3</li>
+<li>analog_3_calibration_u</li>
+<li>analog_3_offset</li>
+<li>analog_3_threshold_high</li>
+<li>analog_3_threshold_low</li>
+<li>analog_4</li>
+<li>analog_4_calibration_u</li>
+<li>analog_4_offset</li>
+<li>analog_4_threshold_high</li>
+<li>analog_4_threshold_low</li>
+<li>analog_5</li>
+<li>analog_5_calibration_u</li>
+<li>analog_5_offset</li>
+<li>analog_5_threshold_high</li>
+<li>analog_5_threshold_low</li>
+<li>analog_out_1</li>
+<li>analog_out_1_calibration_u</li>
+<li>analog_out_1_offset</li>
+<li>analog_out_2</li>
+<li>analog_out_2_calibration_u</li>
+<li>analog_out_2_offset</li>
+<li>analog_out_3</li>
+<li>analog_out_3_calibration_u</li>
+<li>analog_out_3_offset</li>
+<li>analog_out_4</li>
+<li>analog_out_4_calibration_u</li>
+<li>analog_out_4_offset</li>
+<li>buzzer</li>
+<li>c3_counter</li>
+<li>ctrl_bl_version</li>
+<li>ctrl_goto_sleep</li>
+<li>ctrl_gpio_suspend_state</li>
+<li>ctrl_hw_rev</li>
+<li>ctrl_j1708_enable</li>
+<li>ctrl_led_power_off</li>
+<li>ctrl_modem_emg</li>
+<li>ctrl_modem_ign</li>
+<li>ctrl_modem_on</li>
+<li>ctrl_modem_status</li>
+<li>ctrl_on_4v</li>
+<li>ctrl_on_battery</li>
+<li>ctrl_pic_reset_cause</li>
+<li>ctrl_power_state</li>
+<li>ctrl_product_id</li>
+<li>ctrl_reset_pic_sw</li>
+<li>ctrl_rs422_loopback</li>
+<li>ctrl_rs422_mode</li>
+<li>ctrl_rs485_enable</li>
+<li>ctrl_serial_nr</li>
+<li>ctrl_system_state</li>
+<li>ctrl_version</li>
+<li>ctrl_wakeup_cause</li>
+<li>ctrl_wakeup_sources_register</li>
+<li>debug_data</li>
+<li>debug_k_line</li>
+<li>driver/</li>
+<li>drv_remove_exported_gpios</li>
+<li>fuse</li>
+<li>fuse_calibration_u</li>
+<li>fuse_offset</li>
+<li>fuse_threshold_high</li>
+<li>fuse_threshold_low</li>
+<li>gpio/</li>
+<li>input_battery</li>
+<li>input_battery_calibration_u</li>
+<li>input_battery_offset</li>
+<li>input_battery_threshold_high</li>
+<li>input_battery_threshold_low</li>
+<li>input_temperature_calibration_u</li>
+<li>input_temperature_mC</li>
+<li>input_voltage</li>
+<li>input_voltage_2</li>
+<li>input_voltage_2_calibration_u</li>
+<li>input_voltage_2_offset</li>
+<li>input_voltage_calibration_u</li>
+<li>input_voltage_offset</li>
+<li>input_voltage_threshold_high</li>
+<li>input_voltage_threshold_low</li>
+<li>led_2</li>
+<li>led_3</li>
+<li>led_4</li>
+<li>legacy_input_voltage_a_calibration_u</li>
+<li>legacy_input_voltage_b_calibration_u</li>
+<li>modalias</li>
+<li>pin_select_can2_h</li>
+<li>pin_select_can2_l</li>
+<li>pin_select_can3_h</li>
+<li>pin_select_can3_l</li>
+<li>pin_select_k_line</li>
+<li>pin_select_l_line</li>
+<li>pin_select_register</li>
+<li>power/</li>
+<li>power_5v_perm</li>
+<li>rtc_day</li>
+<li>rtc_dow</li>
+<li>rtc_hour</li>
+<li>rtc_minute</li>
+<li>rtc_month</li>
+<li>rtc_second</li>
+<li>rtc_year</li>
+<li>start_pic_bootloader_mode</li>
+<li>start_signal</li>
+<li>start_signal_calibration_u</li>
+<li>start_signal_offset</li>
+<li>start_signal_threshold_high</li>
+<li>start_signal_threshold_low</li>
+<li>subsystem/</li>
+<li>super_cap</li>
+<li>super_cap_calibration_u</li>
+<li>super_cap_offset</li>
+<li>trap_iec_trace</li>
+<li>trap_ifs_trace</li>
+<li>trap_location</li>
+<li>trap_location_prev</li>
+<li>uevent</li>
+<li>usb_port_otg</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>

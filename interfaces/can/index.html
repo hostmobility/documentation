@@ -16,11 +16,14 @@
     
     
       
-        <title>CAN (Controller Area Network) - Host Mobility Documentation</title>
+        <title>CAN - Host Mobility Documentation</title>
       
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -49,7 +52,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     
@@ -61,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuration" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -79,8 +89,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Host Mobility Documentation" class="md-header__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../assets/hm-logo-grey-on-transparent.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -97,12 +106,38 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CAN (Controller Area Network)
+              CAN
             
           </span>
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
     
@@ -171,8 +206,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Host Mobility Documentation" class="md-nav__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../assets/hm-logo-grey-on-transparent.svg" alt="logo">
 
     </a>
     Host Mobility Documentation
@@ -192,26 +226,6 @@
   
   <span class="md-ellipsis">
     Index
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation-howto/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Writing Host Mobility Product Documentation
   </span>
   
 
@@ -265,32 +279,41 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration
+      Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuration">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform specific
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-though-systemd-networkd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration though Systemd-Networkd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual configuration">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#persistent-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Persistent configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-bit-rate-of-one-specific-can-controller" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure bit rate of one specific CAN controller
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#query-a-device-for-its-current-configuration" class="md-nav__link">
@@ -370,87 +393,136 @@
       <a href="../../tags/#can" class="md-tag">CAN</a>
     
   
+    
+    
+    
+      <a href="../../tags/#hmx" class="md-tag">HMX</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#c61" class="md-tag">C61</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#mx-4" class="md-tag">MX-4</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#mx-v" class="md-tag">MX-V</a>
+    
+  
 </nav>
 
 
 
-  <h1>CAN (Controller Area Network)</h1>
+  <h1>CAN</h1>
 
-<p>The <a href="https://en.wikipedia.org/wiki/CAN_bus">CAN</a> interfaces on the Host
-Mobility Hardware accessed with the
-<a href="https://www.kernel.org/doc/html/v4.19/networking/can.html">SocketCAN</a> API.
-This means that a CAN interface is implemented as a type of network interface.
-They can utilize the Linux network stack and present a programming model
-similar to TCP/IP.</p>
-<h2 id="configuration">Configuration</h2>
-<p>Being a network interface, a CAN device is typically configured with the <code>ip
-link</code> command in the
-<a href="https://wiki.linuxfoundation.org/networking/iproute2">iproute2</a> utilities.</p>
-<p>Supported option are shown by the <code>ip</code> <code>help</code> subcommand</p>
-<pre><code class="language-bash">    $ ip link set can0 type can help  
-    Usage: ip link set DEVICE type can
-            [ bitrate BITRATE [ sample-point SAMPLE-POINT] ] |
-            [ tq TQ prop-seg PROP_SEG phase-seg1 PHASE-SEG1
-              phase-seg2 PHASE-SEG2 [ sjw SJW ] ]
-
-              dphase-seg2 PHASE-SEG2 [ dsjw SJW ] ]
-
-            [ loopback { on | off } ]
-            [ listen-only { on | off } ]
-            [ triple-sampling { on | off } ]
-            [ one-shot { on | off } ]
-            [ berr-reporting { on | off } ]
-            [ fd { on | off } ]
-            [ fd-non-iso { on | off } ]
-            [ presume-ack { on | off } ]
-
-            [ restart-ms TIME-MS ]
-            [ restart ]
-
-            Where: BITRATE  := { 1..1000000 }
-                      SAMPLE-POINT  := { 0.000..0.999 }
-                      TQ            := { NUMBER }
-                      PROP-SEG      := { 1..8 }
-                      PHASE-SEG1    := { 1..8 }
-                      PHASE-SEG2    := { 1..8 }
-                      SJW           := { 1..4 }
-                      RESTART-MS    := { 0 | NUMBER }
-</code></pre>
-<h3 id="persistent-configuration">Persistent configuration</h3>
-<p>CAN bus parameters can be set in systemd-networkd configuration files.</p>
+<h2 id="overview">Overview</h2>
+<p><a href="https://en.wikipedia.org/wiki/CAN_bus">CAN (Controller Area Network)</a> is a bus type network where all nodes on a single bus communicates directly with each other. </p>
+<p>Host Mobility Hardware all have a number of CAN channels.</p>
+<p>In Linux, CAN channels are implemented as network interfaces. They can utilize the Linux network stack and present a programming model similar to TCP/IP. Applications use the <a href="https://www.kernel.org/doc/html/v4.19/networking/can.html">SocketCAN</a> API, either directly or though a higher level library.</p>
+<h2 id="platform-specific">Platform specific</h2>
+<ul>
+<li><a href="../hmx/can/">HMX</a></li>
+<li><a href="../mx4/can/">MX-4</a></li>
+<li><a href="../mxv/can/">MX-V</a></li>
+<li><a href="../c61/can/">C61</a></li>
+</ul>
+<h2 id="configuration-though-systemd-networkd">Configuration though Systemd-Networkd</h2>
+<p><strong>Note:</strong> Not for BSP release 1.6/1.5 and older</p>
+<p>Bus parameters can be set in systemd-networkd configuration files. </p>
 <p>Example:</p>
-<p>Edit or create <code>/lib/systemd/network/80-can.network</code></p>
-<pre><code>[Match]
-Name=can*
-
-[CAN]
-BitRate=500K
-RestartSec=2000ms
-DataBitRate=4000000
-FDMode=True
-</code></pre>
-<h3 id="configure-bit-rate-of-one-specific-can-controller">Configure bit rate of one specific CAN controller</h3>
-<pre><code class="language-bash">    $ ifconfig can0 down
-    $ ip link set can0 type can bitrate 250000
-    $ ifconfig can0 up
-</code></pre>
+<p>Edit or create <code>/lib/systemd/network/80-can.network</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Match]
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Name=can*
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>[CAN]
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>BitRate=500K
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>RestartSec=2000ms
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>DataBitRate=4000000
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>FDMode=True
+</code></pre></div></p>
+<h2 id="manual-configuration">Manual configuration</h2>
+<p>Use <code>ip link</code> to configure the bus parameters manually. This is a standard utility(<a href="https://wiki.linuxfoundation.org/networking/iproute2">iproute2</a>)</p>
+<p>Supported options are shown by the <code>ip</code> <code>help</code> subcommand</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span>$<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>can0<span class="w"> </span><span class="nb">type</span><span class="w"> </span>can<span class="w"> </span><span class="nb">help</span><span class="w">  </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span>Usage:<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>DEVICE<span class="w"> </span><span class="nb">type</span><span class="w"> </span>can
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">            </span><span class="o">[</span><span class="w"> </span>bitrate<span class="w"> </span>BITRATE<span class="w"> </span><span class="o">[</span><span class="w"> </span>sample-point<span class="w"> </span>SAMPLE-POINT<span class="o">]</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">|</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">            </span><span class="o">[</span><span class="w"> </span>tq<span class="w"> </span>TQ<span class="w"> </span>prop-seg<span class="w"> </span>PROP_SEG<span class="w"> </span>phase-seg1<span class="w"> </span>PHASE-SEG1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">              </span>phase-seg2<span class="w"> </span>PHASE-SEG2<span class="w"> </span><span class="o">[</span><span class="w"> </span>sjw<span class="w"> </span>SJW<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">              </span>dphase-seg2<span class="w"> </span>PHASE-SEG2<span class="w"> </span><span class="o">[</span><span class="w"> </span>dsjw<span class="w"> </span>SJW<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">            </span><span class="o">[</span><span class="w"> </span>loopback<span class="w"> </span><span class="o">{</span><span class="w"> </span>on<span class="w"> </span><span class="p">|</span><span class="w"> </span>off<span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">            </span><span class="o">[</span><span class="w"> </span>listen-only<span class="w"> </span><span class="o">{</span><span class="w"> </span>on<span class="w"> </span><span class="p">|</span><span class="w"> </span>off<span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">            </span><span class="o">[</span><span class="w"> </span>triple-sampling<span class="w"> </span><span class="o">{</span><span class="w"> </span>on<span class="w"> </span><span class="p">|</span><span class="w"> </span>off<span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="o">[</span><span class="w"> </span>one-shot<span class="w"> </span><span class="o">{</span><span class="w"> </span>on<span class="w"> </span><span class="p">|</span><span class="w"> </span>off<span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="o">[</span><span class="w"> </span>berr-reporting<span class="w"> </span><span class="o">{</span><span class="w"> </span>on<span class="w"> </span><span class="p">|</span><span class="w"> </span>off<span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">            </span><span class="o">[</span><span class="w"> </span>fd<span class="w"> </span><span class="o">{</span><span class="w"> </span>on<span class="w"> </span><span class="p">|</span><span class="w"> </span>off<span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="o">[</span><span class="w"> </span>fd-non-iso<span class="w"> </span><span class="o">{</span><span class="w"> </span>on<span class="w"> </span><span class="p">|</span><span class="w"> </span>off<span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">            </span><span class="o">[</span><span class="w"> </span>presume-ack<span class="w"> </span><span class="o">{</span><span class="w"> </span>on<span class="w"> </span><span class="p">|</span><span class="w"> </span>off<span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">            </span><span class="o">[</span><span class="w"> </span>restart-ms<span class="w"> </span>TIME-MS<span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">            </span><span class="o">[</span><span class="w"> </span>restart<span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">            </span>Where:<span class="w"> </span>BITRATE<span class="w">  </span>:<span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="m">1</span>..1000000<span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">                      </span>SAMPLE-POINT<span class="w">  </span>:<span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="m">0</span>.000..0.999<span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">                      </span>TQ<span class="w">            </span>:<span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"> </span>NUMBER<span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">                      </span>PROP-SEG<span class="w">      </span>:<span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="m">1</span>..8<span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">                      </span>PHASE-SEG1<span class="w">    </span>:<span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="m">1</span>..8<span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">                      </span>PHASE-SEG2<span class="w">    </span>:<span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="m">1</span>..8<span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">                      </span>SJW<span class="w">           </span>:<span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="m">1</span>..4<span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">                      </span>RESTART-MS<span class="w">    </span>:<span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>NUMBER<span class="w"> </span><span class="o">}</span>
+</code></pre></div>
+<p><em>Example : Set Standard (2.0) CAN with a bitrate of 500 kbit/s and listen-only mode.</em>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ip link set can0 down
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ip link set can0 up type can bitrate 500000 listen-only on
+</code></pre></div></p>
+<p><em>Example : Set up CAN-FD with a bitrate of 500/4000 kbit/s in normal mode.</em>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>can0<span class="w"> </span>down
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>can0<span class="w"> </span>up<span class="w"> </span><span class="nb">type</span><span class="w"> </span>can<span class="w"> </span>bitrate<span class="w"> </span><span class="m">500000</span><span class="w"> </span>dbitrate<span class="w"> </span><span class="m">4000000</span><span class="w"> </span>fd<span class="w"> </span>on
+</code></pre></div></p>
 <h3 id="query-a-device-for-its-current-configuration">Query a device for its current configuration</h3>
-<pre><code>$ ip -d link show can0
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ip<span class="w"> </span>-d<span class="w"> </span>link<span class="w"> </span>show<span class="w"> </span>can0
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="m">8</span>:<span class="w"> </span>can0:<span class="w"> </span>&lt;NOARP,UP,LOWER_UP,ECHO&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">72</span><span class="w"> </span>qdisc<span class="w"> </span>pfifo_fast<span class="w"> </span>state<span class="w"> </span>UP<span class="w"> </span>mode<span class="w"> </span>DEFAULT<span class="w"> </span>group<span class="w"> </span>default<span class="w"> </span>qlen<span class="w"> </span><span class="m">10</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span>link/can<span class="w">  </span>promiscuity<span class="w"> </span><span class="m">0</span><span class="w"> </span>minmtu<span class="w"> </span><span class="m">0</span><span class="w"> </span>maxmtu<span class="w"> </span><span class="m">0</span><span class="w"> </span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span>can<span class="w"> </span>&lt;FD&gt;<span class="w"> </span>state<span class="w"> </span>ERROR-PASSIVE<span class="w"> </span><span class="o">(</span>berr-counter<span class="w"> </span>tx<span class="w"> </span><span class="m">0</span><span class="w"> </span>rx<span class="w"> </span><span class="m">127</span><span class="o">)</span><span class="w"> </span>restart-ms<span class="w"> </span><span class="m">0</span><span class="w"> </span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">      </span>bitrate<span class="w"> </span><span class="m">500000</span><span class="w"> </span>sample-point<span class="w"> </span><span class="m">0</span>.875
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">      </span>tq<span class="w"> </span><span class="m">25</span><span class="w"> </span>prop-seg<span class="w"> </span><span class="m">34</span><span class="w"> </span>phase-seg1<span class="w"> </span><span class="m">35</span><span class="w"> </span>phase-seg2<span class="w"> </span><span class="m">10</span><span class="w"> </span>sjw<span class="w"> </span><span class="m">1</span><span class="w"> </span>brp<span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">      </span>m_can:<span class="w"> </span>tseg1<span class="w"> </span><span class="m">2</span>..256<span class="w"> </span>tseg2<span class="w"> </span><span class="m">2</span>..128<span class="w"> </span>sjw<span class="w"> </span><span class="m">1</span>..128<span class="w"> </span>brp<span class="w"> </span><span class="m">1</span>..512<span class="w"> </span>brp_inc<span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span>dbitrate<span class="w"> </span><span class="m">4000000</span><span class="w"> </span>dsample-point<span class="w"> </span><span class="m">0</span>.700
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">      </span>dtq<span class="w"> </span><span class="m">25</span><span class="w"> </span>dprop-seg<span class="w"> </span><span class="m">3</span><span class="w"> </span>dphase-seg1<span class="w"> </span><span class="m">3</span><span class="w"> </span>dphase-seg2<span class="w"> </span><span class="m">3</span><span class="w"> </span>dsjw<span class="w"> </span><span class="m">1</span><span class="w"> </span>dbrp<span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">      </span>m_can:<span class="w"> </span>dtseg1<span class="w"> </span><span class="m">1</span>..32<span class="w"> </span>dtseg2<span class="w"> </span><span class="m">1</span>..16<span class="w"> </span>dsjw<span class="w"> </span><span class="m">1</span>..16<span class="w"> </span>dbrp<span class="w"> </span><span class="m">1</span>..32<span class="w"> </span>dbrp_inc<span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">      </span>clock<span class="w"> </span><span class="m">40000000</span><span class="w"> </span>numtxqueues<span class="w"> </span><span class="m">1</span><span class="w"> </span>numrxqueues<span class="w"> </span><span class="m">1</span><span class="w"> </span>gso_max_size<span class="w"> </span><span class="m">65536</span><span class="w"> </span>gso_max_segs<span class="w"> </span><span class="m">65535</span><span class="w"> </span>parentbus<span class="w"> </span>spi<span class="w"> </span>parentdev<span class="w"> </span>spi3.0<span class="w"> </span>
+</code></pre></div>
 <h3 id="query-a-device-for-statistics">Query a device for statistics</h3>
-<pre><code>$ ip -s link show can0
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ip<span class="w"> </span>-s<span class="w"> </span>link<span class="w"> </span>show<span class="w"> </span>can0
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="m">8</span>:<span class="w"> </span>can0:<span class="w"> </span>&lt;NOARP,UP,LOWER_UP,ECHO&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">72</span><span class="w"> </span>qdisc<span class="w"> </span>pfifo_fast<span class="w"> </span>state<span class="w"> </span>UP<span class="w"> </span>mode<span class="w"> </span>DEFAULT<span class="w"> </span>group<span class="w"> </span>default<span class="w"> </span>qlen<span class="w"> </span><span class="m">10</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span>link/can<span class="w"> </span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span>RX:<span class="w">  </span>bytes<span class="w"> </span>packets<span class="w"> </span>errors<span class="w"> </span>dropped<span class="w">  </span>missed<span class="w">   </span>mcast<span class="w">           </span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">             </span><span class="m">0</span><span class="w">       </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">       </span><span class="m">0</span><span class="w">       </span><span class="m">0</span><span class="w">       </span><span class="m">0</span><span class="w"> </span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span>TX:<span class="w">  </span>bytes<span class="w"> </span>packets<span class="w"> </span>errors<span class="w"> </span>dropped<span class="w"> </span>carrier<span class="w"> </span>collsns<span class="w">           </span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">             </span><span class="m">0</span><span class="w">       </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">       </span><span class="m">0</span><span class="w">       </span><span class="m">0</span><span class="w">       </span><span class="m">0</span><span class="w"> </span>
+</code></pre></div>
 <h2 id="can-utils">CAN-utils</h2>
 <p><a href="https://github.com/linux-can/can-utils">can-utils</a> is a collection of CAN-tools that
 can be used to debug CAN networks and applications. They can be very useful as a source of
 inspiration if you are to write your own application that interacts with a CAN
 network.</p>
 <h3 id="dump-all-incoming-data">Dump all incoming data</h3>
-<pre><code class="language-bash">$ candump -c -l any,0:0,#FFFFFFFF    (log error frames and also all data frames)
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$<span class="w"> </span>candump<span class="w"> </span>-c<span class="w"> </span>-l<span class="w"> </span>any,0:0,#FFFFFFFF<span class="w">    </span><span class="o">(</span>log<span class="w"> </span>error<span class="w"> </span>frames<span class="w"> </span>and<span class="w"> </span>also<span class="w"> </span>all<span class="w"> </span>data<span class="w"> </span>frames<span class="o">)</span>
+</code></pre></div>
 <h3 id="send-a-single-can-frame">Send a single CAN frame</h3>
-<pre><code class="language-bash">$ cansend can0 123#DEADBEEF
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$<span class="w"> </span>cansend<span class="w"> </span>can0<span class="w"> </span><span class="m">123</span><span class="c1">#DEADBEEF</span>
+</code></pre></div>
 
 
 
@@ -489,7 +561,7 @@ network.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>

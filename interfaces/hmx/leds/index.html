@@ -16,11 +16,14 @@
     
     
       
-        <title>Leds - Host Mobility Documentation</title>
+        <title>LEDs (HMX) - Host Mobility Documentation</title>
       
     
     
       <link rel="stylesheet" href="../../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -49,7 +52,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     
@@ -61,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-following-leds-are-available-on-hmx" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -79,8 +89,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Host Mobility Documentation" class="md-header__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../../assets/hm-logo-grey-on-transparent.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -97,12 +106,38 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Leds
+              LEDs (HMX)
             
           </span>
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
     
@@ -171,8 +206,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Host Mobility Documentation" class="md-nav__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../../assets/hm-logo-grey-on-transparent.svg" alt="logo">
 
     </a>
     Host Mobility Documentation
@@ -192,26 +226,6 @@
   
   <span class="md-ellipsis">
     Index
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../documentation-howto/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Writing Host Mobility Product Documentation
   </span>
   
 
@@ -265,11 +279,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#the-following-leds-are-available-on-hmx" class="md-nav__link">
     <span class="md-ellipsis">
       The following leds are available on HMX
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -292,82 +321,101 @@
     
     
     
-      <a href="../../../tags/#hmx" class="md-tag">hmx</a>
+      <a href="../../../tags/#led" class="md-tag">LED</a>
+    
+  
+    
+    
+    
+      <a href="../../../tags/#hmx" class="md-tag">HMX</a>
     
   
 </nav>
 
 
 
-  <h1>Leds</h1>
+  <h1>LEDs (HMX)</h1>
 
+<h2 id="overview">Overview</h2>
+<p>This platform has red, green and yellow light-emitting diodes (LEDs) as well as special-function LEDs that are external and can be used with an external LED or other type hardware that needs an signal. See the technical specification for more details</p>
+<p>It also features an RGB LED called "indicator" that in the current design (HM010-xxxXx-V6B) is hidden from view. If you can see it, it is blue in U-Boot and green when running Linux. Flashing in white indicates BSP re-flashing and red that something has got wrong with the flashing, see <a href="../../../system/update/">update</a>.</p>
+<p>The yellow:power is set up from device tree with heartbeat trigger and will blink if the system is running.</p>
 <h3 id="the-following-leds-are-available-on-hmx">The following leds are available on HMX</h3>
 <table>
 <thead>
 <tr>
 <th>Name</th>
+<th>Use Case</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>red:func</td>
-</tr>
-<tr>
-<td>:pwr_out_led_2</td>
-</tr>
-<tr>
-<td>:pwr_out_buzzer</td>
-</tr>
-<tr>
-<td>green:gps</td>
-</tr>
-<tr>
-<td>red:gps</td>
-</tr>
-<tr>
-<td>red:wlan</td>
+<td>blue:indicator</td>
+<td>Indicator RGB LED</td>
 </tr>
 <tr>
 <td>green:func</td>
+<td>Functional LED</td>
 </tr>
 <tr>
-<td>mmc2::</td>
-</tr>
-<tr>
-<td>green:wan</td>
-</tr>
-<tr>
-<td>blue:indicator</td>
-</tr>
-<tr>
-<td>:pwr_out_equipment</td>
-</tr>
-<tr>
-<td>yellow:power</td>
-</tr>
-<tr>
-<td>red:wan</td>
-</tr>
-<tr>
-<td>red:indicator</td>
-</tr>
-<tr>
-<td>green:wlan</td>
+<td>green:gps</td>
+<td>GPS-related LED</td>
 </tr>
 <tr>
 <td>green:indicator</td>
+<td>Indicator RGB LED</td>
 </tr>
 <tr>
-<td>:pwr_out_led_1</td>
+<td>green:wan</td>
+<td>WAN-related LED</td>
 </tr>
 <tr>
-<td>mmc1::</td>
+<td>green:wlan</td>
+<td>WLAN-related LED</td>
 </tr>
 <tr>
 <td>:pwr_out_active</td>
+<td>External LED Output</td>
 </tr>
 <tr>
-<td>mmc0::</td>
+<td>:pwr_out_buzzer</td>
+<td>External/Internal Buzzer</td>
+</tr>
+<tr>
+<td>:pwr_out_equipment</td>
+<td>External Output</td>
+</tr>
+<tr>
+<td>:pwr_out_led_1</td>
+<td>External LED Output</td>
+</tr>
+<tr>
+<td>:pwr_out_led_2</td>
+<td>External LED Output</td>
+</tr>
+<tr>
+<td>red:func</td>
+<td>Functional LED</td>
+</tr>
+<tr>
+<td>red:gps</td>
+<td>GPS-related LED</td>
+</tr>
+<tr>
+<td>red:indicator</td>
+<td>Indicator RGB LED</td>
+</tr>
+<tr>
+<td>red:wan</td>
+<td>WAN-related LED</td>
+</tr>
+<tr>
+<td>red:wlan</td>
+<td>WLAN-related LED</td>
+</tr>
+<tr>
+<td>yellow:power</td>
+<td>Power-related LED</td>
 </tr>
 </tbody>
 </table>
@@ -409,7 +457,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>

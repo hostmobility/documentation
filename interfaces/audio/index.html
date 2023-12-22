@@ -1,0 +1,538 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Audio - Host Mobility Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Host Mobility Documentation" class="md-header__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
+      
+  <img src="../../assets/hm-logo-grey-on-transparent.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Host Mobility Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Audio
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Host Mobility Documentation" class="md-nav__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
+      
+  <img src="../../assets/hm-logo-grey-on-transparent.svg" alt="logo">
+
+    </a>
+    Host Mobility Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t30-fr-and-t30" class="md-nav__link">
+    <span class="md-ellipsis">
+      T30 FR and T30
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ct-and-ct-gl" class="md-nav__link">
+    <span class="md-ellipsis">
+      CT and CT GL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mx-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      MX-V
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c61" class="md-nav__link">
+    <span class="md-ellipsis">
+      C61
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-linux-31-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Linux 3.1 system
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tags/#audio" class="md-tag">Audio</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#t30" class="md-tag">T30</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#t30-fr" class="md-tag">T30 FR</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#ct" class="md-tag">CT</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#ct-gl" class="md-tag">CT GL</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#c61" class="md-tag">C61</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#mx-v" class="md-tag">MX-V</a>
+    
+  
+</nav>
+
+
+
+  <h1>Audio</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Many of our platforms feature audio output and microphone input at the operating system level and, in some cases, via the on-board modem. To see if modem audio is supported, please consult the platform-specific <a href="modem.md">modem</a> pages.</p>
+<p>On the Linux side we use standard <a href="https://www.alsa-project.org">ALSA</a>.</p>
+<h3 id="t30-fr-and-t30">T30 FR and T30</h3>
+<p>This product comes with one 3.5 stereo phone jack with analog stereo audio out and one 3.5 stereo phone jack with mono in (microphone) interface.
+See technical specification for more information regarding the connectors.</p>
+<h3 id="ct-and-ct-gl">CT and CT GL</h3>
+<p>This product comes with a JAE IL-AG5-14P-D3L2 with analog stereo audio out and with mono in (microphone) interface.
+See technical specification for more information regarding the connectors.</p>
+<h3 id="mx-v">MX-V</h3>
+<p>This product comes with a 2x34PIN MINI50 2-BAY 90DEG PIN HEADER with analog stereo audio out and a mono in (microphone) interface. It's also possible to use HDMI audio from the DVI connector. See the technical specification for more information regarding the connectors.</p>
+<h3 id="c61">C61</h3>
+<p>This product comes with one 2.5 stereo phone jack with analog stereo audio out and with mono in (microphone) interface. See the technical specification for more information regarding the connectors.</p>
+<p><strong>Note:</strong> This feature is currently untested for modern BSPs.</p>
+<h2 id="examples">Examples</h2>
+<ul>
+<li>
+<p>Example on how to create a loop back (activate mic and hear yourself)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>arecord<span class="w"> </span>-d<span class="w"> </span><span class="m">5</span><span class="w"> </span>-D<span class="w"> </span>plughw:1<span class="w"> </span>-f<span class="w"> </span>dat<span class="w"> </span>output.wav<span class="w"> </span><span class="p">&amp;</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>aplay<span class="w"> </span>-D<span class="w"> </span>plughw:1<span class="w"> </span>output.wav<span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>recording<span class="w"> </span>and<span class="w"> </span>audio<span class="w"> </span>output
+</code></pre></div></p>
+</li>
+<li>
+<p>Test audio with a sinus tone at 997Hz.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>speaker-test<span class="w"> </span>-D<span class="w"> </span>plughw:1<span class="w"> </span>-t<span class="w"> </span>sine<span class="w"> </span>-r<span class="w"> </span><span class="m">997</span><span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span>-l<span class="w"> </span><span class="m">2</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>speaker-test<span class="w"> </span>-D<span class="w"> </span>plughw:1,0<span class="w"> </span>-t<span class="w"> </span>sine<span class="w"> </span>-r<span class="w"> </span><span class="m">997</span><span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span>-l<span class="w"> </span><span class="m">2</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>list devices with <code>aplay -L</code> or <code>aplay --list-devices</code> (example from MX-V)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>card<span class="w"> </span><span class="m">0</span>:<span class="w"> </span>imxhdmisoc<span class="w"> </span><span class="o">[</span>imx-hdmi-soc<span class="o">]</span>,<span class="w"> </span>device<span class="w"> </span><span class="m">0</span>:<span class="w"> </span>i.MX<span class="w"> </span>HDMI<span class="w"> </span>Audio<span class="w"> </span>Tx<span class="w"> </span>i2s-hifi-0<span class="w"> </span><span class="o">[]</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span>Subdevices:<span class="w"> </span><span class="m">1</span>/1
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span>Subdevice<span class="w"> </span><span class="c1">#0: subdevice #0</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>card<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>Audiotlv320aic3<span class="w"> </span><span class="o">[</span>Audio-tlv320aic310x<span class="o">]</span>,<span class="w"> </span>device<span class="w"> </span><span class="m">0</span>:<span class="w"> </span><span class="m">2028000</span>.ssi-tlv320aic3x-hifi<span class="w"> </span>tlv320aic3x-hifi-0<span class="w"> </span><span class="o">[]</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span>Subdevices:<span class="w"> </span><span class="m">1</span>/1
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span>Subdevice<span class="w"> </span><span class="c1">#0: subdevice #0</span>
+</code></pre></div></p>
+</li>
+</ul>
+<h2 id="for-linux-31-system">For Linux 3.1 system</h2>
+<p><strong>Note:</strong> for BSP release 1.6/1.5 and older</p>
+<p>To direct line-in to line-out:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>amixer<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s1">&#39;Left HP Mixer Line Bypass&#39;</span><span class="w"> </span>on
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>amixer<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s1">&#39;Right HP Mixer Line Bypass&#39;</span><span class="w"> </span>on
+</code></pre></div>
+<p>Playback HDMI:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>aplay<span class="w"> </span>-D<span class="w"> </span><span class="s1">&#39;default:CARD=tegra&#39;</span><span class="w"> </span>bach.au
+</code></pre></div>
+<p>Playback:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>amixer<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s1">&#39;Headphone&#39;</span><span class="w"> </span><span class="m">8</span><span class="w"> </span>on
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>amixer<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s1">&#39;Left HP Mixer PCM&#39;</span><span class="w"> </span>on
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>amixer<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s1">&#39;Right HP Mixer PCM&#39;</span><span class="w"> </span>on
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>aplay<span class="w"> </span>-D<span class="w"> </span><span class="s1">&#39;default:CARD=T20&#39;</span><span class="w"> </span>output2.wav
+</code></pre></div>
+<p>Record from line-in:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>amixer<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s1">&#39;Left Capture Select&#39;</span><span class="w"> </span><span class="s1">&#39;Line&#39;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>amixer<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s1">&#39;Right Capture Select&#39;</span><span class="w"> </span><span class="s1">&#39;Line&#39;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>amixer<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s1">&#39;Capture ADC&#39;</span><span class="w"> </span>on
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>arecord<span class="w"> </span>-D<span class="w"> </span><span class="s1">&#39;default:CARD=T20&#39;</span><span class="w"> </span>-v<span class="w"> </span>-f<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>output2.wav
+</code></pre></div>
+<p>Record from mic:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>amixer<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s1">&#39;Left Capture Select&#39;</span><span class="w"> </span><span class="s1">&#39;Mic&#39;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>amixer<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s1">&#39;Right Capture Select&#39;</span><span class="w"> </span><span class="s1">&#39;Mic&#39;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>amixer<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s1">&#39;Capture ADC&#39;</span><span class="w"> </span>on
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>amixer<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s1">&#39;Left HP Mixer Mic Sidetone&#39;</span><span class="w"> </span>on
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>amixer<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s1">&#39;Right HP Mixer Mic Sidetone&#39;</span><span class="w"> </span>on
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>arecord<span class="w"> </span>-D<span class="w"> </span><span class="s1">&#39;default:CARD=T20&#39;</span><span class="w"> </span>-v<span class="w"> </span>-f<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>output2.wav
+</code></pre></div>
+<p>Please note that the two numbers at the end specify which ALSA card and device to use for audio (e.g. alsasink device=hw:1,0 for SPDIF through HDMI and alsasink device=hw:2,0 for WM9715L AC97 through headphone).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>aplay<span class="w"> </span>-L
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>null
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span>Discard<span class="w"> </span>all<span class="w"> </span>samples<span class="w"> </span><span class="o">(</span>playback<span class="o">)</span><span class="w"> </span>or<span class="w"> </span>generate<span class="w"> </span>zero<span class="w"> </span>samples<span class="w"> </span><span class="o">(</span>capture<span class="o">)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>default:CARD<span class="o">=</span>tegra<span class="w"> </span>//<span class="w"> </span>HDMI
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span>tegra,
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span>Default<span class="w"> </span>Audio<span class="w"> </span>Device
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>default:CARD<span class="o">=</span>T20<span class="w"> </span>//<span class="w"> </span>AC97
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span>Toradex<span class="w"> </span>Colibri<span class="w"> </span>T20,
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span>Default<span class="w"> </span>Audio<span class="w"> </span>Device
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,729 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Platform Host Monitor X - Host Mobility Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#abstract" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Host Mobility Documentation" class="md-header__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
+      
+  <img src="../../assets/hm-logo-grey-on-transparent.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Host Mobility Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Platform Host Monitor X
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Host Mobility Documentation" class="md-nav__button md-logo" aria-label="Host Mobility Documentation" data-md-component="logo">
+      
+  <img src="../../assets/hm-logo-grey-on-transparent.svg" alt="logo">
+
+    </a>
+    Host Mobility Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstract
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-summary-for-hm010-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature summary for HM010-****1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-variant-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Production variant definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Production variant definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processor-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processor module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modem-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modem module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#micro-sd-card-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Micro SD Card module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sim-card-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIM Card module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customer customization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-of-known-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of known products
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectors-and-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connectors and buttons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical specification
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tags/#hmx" class="md-tag">HMX</a>
+    
+  
+</nav>
+
+
+
+  <h1>Platform Host Monitor X</h1>
+
+<h2 id="abstract">Abstract</h2>
+<p>Host Monitor X is the next generation telematics computer for modern automotive development.</p>
+<h2 id="feature-summary-for-hm010-1">Feature summary for HM010-****1</h2>
+<p>See <a href="#production-variant-definition">Production Variant Definition</a></p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>NXP i.MX 8M Plus (64 bit) with Cortex M7 co-processor</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/accelerometer/">Accelerometer</a></td>
+<td>3-axis</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/digital_io/">Buzzer</a></td>
+<td>Internal and power for external</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/can/">CAN</a></td>
+<td>6x CAN-FD</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/ethernet/">Ethernet</a></td>
+<td>2x 100/1000 Base-T1 (Rosenberger), 2x 100-BaseTx (RJ45 and MX34)</td>
+</tr>
+<tr>
+<td>External Logging</td>
+<td>µSD Card</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/hmx/modem/">GPS</a></td>
+<td>Included in modem, external antenna</td>
+</tr>
+<tr>
+<td>Housing</td>
+<td>Aluminium/plastic</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/start_signal/">Start Signals</a></td>
+<td>External input, 2.5-36V (5 inputs)</td>
+</tr>
+<tr>
+<td>Internal Storage</td>
+<td>64 GB eMMC</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/leds/">LEDs</a></td>
+<td>5 red+green (yellow in combination), 1 RGB</td>
+</tr>
+<tr>
+<td><a href="../interfaces/modem.md">Modem</a></td>
+<td>5G or 4G, M2 connector</td>
+</tr>
+<tr>
+<td>Nominal Voltage</td>
+<td>12-24V</td>
+</tr>
+<tr>
+<td>Operating Temperature</td>
+<td>-40C to +65C</td>
+</tr>
+<tr>
+<td>Operating System</td>
+<td>Yocto Kirkstone, Linux kernel 6.1</td>
+</tr>
+<tr>
+<td>Power Consumption @12V</td>
+<td>&lt; 1 mA in "Off", 25 mA  in "Suspend to RAM"</td>
+</tr>
+<tr>
+<td>Protection</td>
+<td>IP30</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>4 GB DDR4</td>
+</tr>
+<tr>
+<td><a href="../interfaces/">Real Time Clock</a></td>
+<td>Yes, backed up by CR2032 coin cell battery</td>
+</tr>
+<tr>
+<td>SIM</td>
+<td>nanoSIM</td>
+</tr>
+<tr>
+<td>Low power mode</td>
+<td>Suspend to RAM. Wakes on CAN, digital inputs, accelerometer, RTC, and start signals</td>
+</tr>
+<tr>
+<td>Size without connectors</td>
+<td>164x164x30mm</td>
+</tr>
+<tr>
+<td>UPS</td>
+<td>3 seconds supercap power</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/hmx/usb/">USB</a></td>
+<td>USB 3.0 OTG type C, USB 2.0 host type A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="production-variant-definition">Production variant definition</h2>
+<p>The production part numbers start with HM010-*****-revision, read from left to right. For the first variant number, the processor module is followed by the modem. If no other parameters are stated, the part number will be HM010-00011-revision.</p>
+<h3 id="processor-module">Processor module</h3>
+<table>
+<thead>
+<tr>
+<th>Processor ID</th>
+<th>Module Part Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>No module</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>hMOD0009-R1A (Arena)</td>
+<td>i.MX 8M Plus with Quad Core CPU, 4GB DRAM and 64GB EMMC</td>
+</tr>
+<tr>
+<td>2</td>
+<td>TBD (Arena)</td>
+<td>i.MX 8M Plus with Quad Core CPU, 4GB DRAM, 64GB EMMC and Wi-Fi.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modem-module">Modem module</h3>
+<table>
+<thead>
+<tr>
+<th>Modem ID</th>
+<th>Module Part Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>No module</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>hMOD0010-03 (Arena)</td>
+<td>4G global modem</td>
+</tr>
+<tr>
+<td>2</td>
+<td>TBD (Arena)</td>
+<td>5G global modem</td>
+</tr>
+<tr>
+<td>n…</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="micro-sd-card-module">Micro SD Card module</h3>
+<table>
+<thead>
+<tr>
+<th>Micro SD Card ID</th>
+<th>Module Part Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>No SD card</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>hBMT0003 (Arena)</td>
+<td>Samsung uSDHC EVO 32GB Class 10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>hBMT0002 (Arena)</td>
+<td>32GB Sandisk UHS Class 1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sim-card-module">SIM Card module</h3>
+<table>
+<thead>
+<tr>
+<th>SIM Card ID</th>
+<th>Module Part Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>No module</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td><Reserved></td>
+<td>Reserved for customer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="customer-customization">Customer customization</h3>
+<p>This is for customers that want extra installation of software, additional labels or similar within design limitations.</p>
+<table>
+<thead>
+<tr>
+<th>Customer ID</th>
+<th>Customer Tweaks</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Default</td>
+<td>No customization, only delivered with our reference BSP</td>
+</tr>
+<tr>
+<td>1</td>
+<td><Reserved></td>
+<td>Reserved for customer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-of-known-products">List of known products</h3>
+<table>
+<thead>
+<tr>
+<th>Products</th>
+<th>Product part number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>HM010-00111-V6B</td>
+<td>4G modem and SD card, only delivered with our reference BSP</td>
+</tr>
+<tr>
+<td><Reserved></td>
+<td>HM010-11111-V6B</td>
+<td>Reserved for customer with 4G modem, SIM card, SD card and customization</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> For Host Mobility employees, update this page after making changes to internal document FILE-000768 (800155-HMX-Product label spec).</p>
+<h2 id="connectors-and-buttons">Connectors and buttons</h2>
+<p>See <a href="../../assets/800125_HMX%20connectors%20and%20buttons.PDF">Connectors and buttons (pdf)</a></p>
+<h2 id="technical-specification">Technical specification</h2>
+<p>Please contact <a href="../../support/">support</a> to receive detailed technical specification for this hardware.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>
