@@ -1,7 +1,7 @@
 ---
-title: System Update (C61)
+title: System update (C61)
 tags:
-  - Updating
+  - System update
   - C61
 ---
 
@@ -9,12 +9,12 @@ tags:
 
 ### Prepare upgrade
 
-* Copy `vf_hmupdate.img` to the USB drive or to `/boot` on the Linux file system
+* Copy `vf_hmupdate.img` to a USB memory or to `/boot` on the Linux file system
 
 ### If USB method is used
 
 * You can add an [autoboot.sh](../../update.md#usb-method-autobootsh) script to the USB memory on the first boot after flash to perform post installation.
-* Plug the USB drive into the hardware.
+* Plug the USB memory into the hardware.
 * Press and hold the reset button for 1 sec (all LEDs will blink green if the system has started with the reflash).
 
 ### If /boot method is used
