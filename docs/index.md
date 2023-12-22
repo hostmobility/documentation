@@ -11,7 +11,7 @@ title: Index
 * [Host Monitor X](tags.md#hmx)
 * [MX-4 C61](tags.md#c61)
 * [MX-4 T30](tags.md#t30)
-* [MX-4 T30FR](tags.md#t30-fr)
+* [MX-4 T30 FR](tags.md#t30-fr)
 * [MX-4 CT](tags.md#ct)
 * [MX-4 CTGL](tags.md#ct-gl)
 * [MX-V](tags.md#mx-v)
