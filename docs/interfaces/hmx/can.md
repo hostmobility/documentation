@@ -45,3 +45,12 @@ polling limit with:
 ```bash
 echo 50> /sys/module/spi_imx/parameters/polling_limit_us
 ```
+
+## Sleep and wake up
+
+To enable wake on CAN you will need to set up the channel and go bus on, unless disabled.
+Wake on individual CAN frame is supported theoretically for CAN1 and CAN2 but has not been tested by us. Current driver does not support it.
+
+
+
+

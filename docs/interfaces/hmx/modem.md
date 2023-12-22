@@ -61,4 +61,17 @@ Bus 001 Device 007: ID 2c7c:030a Quectel Wireless Solutions Co., Ltd. Quectel EM
 
 ## [Use WvDial to get a broadband connection](../modem/quectel.md#use-wvdial-to-get-a-broadband-connection)
 
+## Sleep and wake up
+
+When the modem has a URC to report, WOWWAN# pin signal will wake up the host.
+To be able to power down the modem set QSCLK to 1
+```bash
+echo -ne "AT+QSCLK=1\r\n" | microcom -X /dev/ttyUSB2 -t 100
+```
+
+**Note:** Not verified to work, support case issued where this pin never go from state low to high.
+
+
+
+
 
