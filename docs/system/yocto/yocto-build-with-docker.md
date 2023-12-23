@@ -5,6 +5,7 @@ tags:
   - HMX
   - MX-4
   - CT
+  - CT GL
   - MX-V
   - T30
   - T30 FR

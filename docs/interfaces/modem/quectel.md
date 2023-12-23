@@ -1,7 +1,5 @@
 ---
 title: Quectel EG25/EM05
-tags:
-    - MX-V
 ---
 
 ## Test SIM card

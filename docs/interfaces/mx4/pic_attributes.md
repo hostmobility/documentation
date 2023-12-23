@@ -6,6 +6,7 @@ tags:
   - T30
   - T30 FR
   - CT
+  - CT GL
 ---
 
 ## List of all pic_attributes

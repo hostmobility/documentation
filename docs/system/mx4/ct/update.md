@@ -3,6 +3,7 @@ title: System update (CT)
 tags:
   - System update
   - CT
+  - CT GL
 ---
 
 ## Upgrade procedure

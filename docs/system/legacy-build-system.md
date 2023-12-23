@@ -4,6 +4,7 @@ tags:
   - Development
   - MX-4
   - CT
+  - CT GL
   - T30
   - T30 FR
   - C61

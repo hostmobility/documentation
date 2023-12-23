@@ -1,12 +1,13 @@
 ---
 title: Accelerometer (MX-4)
 tags:
-    - C61
-    - MX-4
-    - MX-V
-    - T30
-    - T30 FR
-    - CT
+  - C61
+  - MX-4
+  - MX-V
+  - T30
+  - T30 FR
+  - CT
+  - CT GL
 ---
 
 ## Overview

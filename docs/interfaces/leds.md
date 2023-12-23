@@ -9,6 +9,7 @@ tags:
   - T30
   - T30 FR
   - CT
+  - CT GL
 ---
 
 ## Overview

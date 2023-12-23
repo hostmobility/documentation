@@ -20,7 +20,7 @@ The modems in Host Mobility's products typically provide support for both mobile
 
 [MX-V](../mxv/modem.md)
 
-[CT_GL](../ctgl/modem.md)
+[CT GL](../ctgl/modem.md)
 
 [C61](../c61/modem.md)
 
