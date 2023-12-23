@@ -1,7 +1,8 @@
 ---
 title:  Host Monitor X start signals
 tags:
-    - HMX
+  - Start signals
+  - HMX
 ---
 
 ## Overview

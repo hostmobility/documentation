@@ -1,12 +1,13 @@
 ---
 title:  MX-4 Start signals
 tags:
-    - T30
-    - T30 FR
-    - MX-4
-    - CT
-    - CT GL
-    - C61
+  - Start signals
+  - T30
+  - T30 FR
+  - MX-4
+  - CT
+  - CT GL
+  - C61
 ---
 
 ## Read start signal

@@ -1,14 +1,15 @@
 ---
 title:  Start signals
 tags:
-    - MX-V
-    - T30
-    - T30 FR
-    - MX-4
-    - CT
-    - CT GL
-    - C61
-    - HMX
+  - Start signals
+  - MX-V
+  - T30
+  - T30 FR
+  - MX-4
+  - CT
+  - CT GL
+  - C61
+  - HMX
 ---
 
 ## Overview
