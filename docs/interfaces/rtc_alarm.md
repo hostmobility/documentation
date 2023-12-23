@@ -1,6 +1,7 @@
 ---
 title: Wake on Real Time Clock (set alarm)
 tags:
+  - Real Time Clock
   - HMX
   - MX-V
   - C61
