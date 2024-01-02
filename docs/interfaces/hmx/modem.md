@@ -1,7 +1,8 @@
 ---
 title: HMX Modem
 tags:
-    - HMX
+  - Modem
+  - HMX
 ---
 
 ## Overview 

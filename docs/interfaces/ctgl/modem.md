@@ -1,7 +1,8 @@
 ---
 title: CT GL Modem
 tags:
-    - CT GL
+  - Modem
+  - CT GL
 ---
 
 ## Overview 

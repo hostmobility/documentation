@@ -1,7 +1,8 @@
 ---
 title: MX-V Modem
 tags:
-    - MX-V
+  - Modem
+  - MX-V
 ---
 
 ## Overview 

@@ -1,9 +1,10 @@
 ---
 title: MX4 Modem
 tags:
-    - CT
-    - T30
-    - T30 FR
+  - Modem
+  - CT
+  - T30
+  - T30 FR
 ---
 
 ## Overview 

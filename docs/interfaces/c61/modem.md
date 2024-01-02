@@ -1,7 +1,8 @@
 ---
 title: C61 Modem
 tags:
-    - C61
+  - Modem
+  - C61
 ---
 
 ## Overview 
