@@ -3,6 +3,7 @@ title: Platform MX-4 T30 FR
 tags:
   - T30 FR
 ---
+![](mx4-t30fr-box.png)
 ## Abstract
 
 MX-4 T30 FR is a telematics computer for remote diagnostics and fleet management, very well suited for automotive development.
