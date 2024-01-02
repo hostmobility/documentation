@@ -69,7 +69,7 @@ By default, DIGITAL-IN-2 (rising edge) is enabled as a wake-up source, mostly du
 
 On some platforms, DIGITAL-IN-2 is the only digital input capable of waking up the system.
 
-For a list of supported digital inputs as wakeup sources, see [](../interfaces/mx4/digital_io.md#list-of-ios).
+For a list of supported digital inputs as wakeup sources, see [](../../interfaces/mx4/digital_io.md#list-of-ios).
 
 **Note:** If `-d` option is not specified, it will always set bit 4 in the wake-up mask, regardless of what you passed.
 

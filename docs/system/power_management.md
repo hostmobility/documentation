@@ -18,7 +18,7 @@ fast resume time (around 1 s) to running state.
 - Deep sleep
     - The main processor is powered off and only the coprocessor is running in low-power mode.
 - Shutdown/Cut-off
-    - The machine has almost no power consumption as the main regulator is turned off. See [start signal](interfaces/start_signal.md)
+    - The machine has almost no power consumption as the main regulator is turned off. See [start signal](../interfaces/start_signal.md)
 
 The machine can wake up from different sources but the Real time clock and CAN are most often used. The list of wake-up sources is platform specific and depending on the sleep mode. For `Shutdown/Cutoff`, for example, only start signal input is supported.
 
