@@ -41,6 +41,8 @@ See [Production variant definition](#production-variant-definition).
 | Operating voltage | Wide input voltage range, 8-36 VDC |
 | Nominal Voltage | 12-24V |
 | [Sleep-Mode](../system/power_management.md) | Low power sleep mode |
+| [Real Time Clock](../interfaces/rtc.md) | Yes, backed up by coin cell battery
+
 
 
 

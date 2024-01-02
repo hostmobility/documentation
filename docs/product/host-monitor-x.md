@@ -32,7 +32,7 @@ See [Production Variant Definition](#production-variant-definition)
 | Power Consumption @12V | < 1 mA in "Off", 25 mA  in "Suspend to RAM"
 | Protection | IP30
 | RAM | 4 GB DDR4
-| [Real Time Clock](../interfaces/) | Yes, backed up by CR2032 coin cell battery
+| [Real Time Clock](../interfaces/rtc.md) | Yes, backed up by CR2032 coin cell battery
 | SIM | nanoSIM
 | Low power mode | Suspend to RAM. Wakes on CAN, digital inputs, accelerometer, RTC, and start signals
 | Size without connectors | 164x164x30mm
