@@ -1,11 +1,16 @@
+---
+title: Platform MX-V
+tags:
+    - MX-V
+---
 ## Overview and installation
-
+![](mx-v-above-view.jpg)
 
 ### Connectors
 
 The MX-V has the following connectors accessible from the outside.
 
-![connectors](images/MX-V_connectors.png)
+![connectors](mx-v-connectors.jpg)
 
 1. DVI connector for display
 2. two RJ45 Ethernet ports
@@ -15,12 +20,11 @@ The MX-V has the following connectors accessible from the outside.
 6. 34-pin I/O connector, including power and CAN, see below
 7. SDHC card slot
 8. SIM card slot
-
-<<<
+9. Optional M12 connectors for ethernet (can not be combine with RJ45 ports)
 
 ### I/O connectors
 
-![molex](images/MX-V_molex_connectors.png)
+![molex](mx-v-molex-connectors.png)
 
 #### Power
 
@@ -39,8 +43,6 @@ sinking connects the channel to ground.
 The (5+8) analog/digital in channels can measure voltages up to 32V. The
 difference lies in the hardware filtering where analog is filtered at 25Hz
 and digital at 250Hz.
-
-<<<
 
 ### Initial setup
 
