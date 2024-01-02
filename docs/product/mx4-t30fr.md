@@ -7,7 +7,7 @@ tags:
 
 MX-4 T30 FR is a telematics computer for remote diagnostics and fleet management, very well suited for automotive development.
 
-## Feature summary for HM005-1
+## Feature summary for HMP075 (flexray variant)
 
 See [Production variant definition](#production-variant-definition).
 
@@ -133,4 +133,4 @@ general-purpose GND                   |
 
 ## Technical specification
 
-Contact [support](../support.md) to receive the technical specification (1301-HM005-Technical-description) for this hardware.
+Contact [support](../support.md) to receive the technical specification (1301-HMP075-*-Technical-description) for this hardware. * is the variant you have bought.
