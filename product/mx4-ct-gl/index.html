@@ -16,7 +16,7 @@
     
     
       
-        <title>Platform Host Monitor X - Host Mobility Documentation</title>
+        <title>Platform CT GL - Host Mobility Documentation</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Platform Host Monitor X
+              Platform CT GL
             
           </span>
         </div>
@@ -288,9 +288,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#feature-summary-for-hm010-1" class="md-nav__link">
+  <a href="#feature-summary-for-hm001-ct-gl" class="md-nav__link">
     <span class="md-ellipsis">
-      Feature summary for HM010-****1
+      Feature summary for HM001 (CT GL)
     </span>
   </a>
   
@@ -305,51 +305,6 @@
   
     <nav class="md-nav" aria-label="Production variant definition">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#processor-module" class="md-nav__link">
-    <span class="md-ellipsis">
-      Processor module
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#modem-module" class="md-nav__link">
-    <span class="md-ellipsis">
-      Modem module
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#micro-sd-card-module" class="md-nav__link">
-    <span class="md-ellipsis">
-      Micro SD Card module
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sim-card-module" class="md-nav__link">
-    <span class="md-ellipsis">
-      SIM Card module
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#customer-customization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customer customization
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#list-of-known-products" class="md-nav__link">
@@ -371,6 +326,48 @@
       Connectors and buttons
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Connectors and buttons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connector-digital-and-analog-io" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connector – Digital and Analog I/O
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connector-power-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connector – Power &amp; Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connector-audio-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connector – Audio &amp; CAN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-connector-and-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other connector and buttons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -402,20 +399,25 @@
     
     
     
-      <a href="../../tags/#hmx" class="md-tag">HMX</a>
+      <a href="../../tags/#ct-gl" class="md-tag">CT GL</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#ct" class="md-tag">CT</a>
     
   
 </nav>
 
 
 
-  <h1>Platform Host Monitor X</h1>
+  <h1>Platform CT GL</h1>
 
-<p><img alt="" src="../hmx-box.png" /></p>
 <h2 id="abstract">Abstract</h2>
-<p>Host Monitor X is the next generation telematics computer for modern automotive development.</p>
-<h2 id="feature-summary-for-hm010-1">Feature summary for HM010-****1</h2>
-<p>See <a href="#production-variant-definition">Production Variant Definition</a></p>
+<p>MX-4 CT GL is a telematics computer for remote diagnostics and fleet management. This product can no longer be bought and similar functionality can be found on other products from us. So this page is for those that already have bought the CT GL product.</p>
+<h2 id="feature-summary-for-hm001-ct-gl">Feature summary for HM001 (CT GL)</h2>
+<p>See <a href="#production-variant-definition">Production variant definition</a>.</p>
 <table>
 <thead>
 <tr>
@@ -425,100 +427,124 @@
 </thead>
 <tbody>
 <tr>
-<td>CPU</td>
-<td>NXP i.MX 8M Plus (64 bit) with Cortex M7 co-processor</td>
+<td>CPU (main)</td>
+<td>ARM Cortex-A9 CPU, Up to 1 GHz, dual Core</td>
 </tr>
 <tr>
-<td><a href="../../interfaces/accelerometer/">Accelerometer</a></td>
-<td>3-axis</td>
+<td>Coprocessor</td>
+<td>PIC24</td>
 </tr>
 <tr>
-<td><a href="../../interfaces/digital_io/">Buzzer</a></td>
-<td>Internal and power for external</td>
+<td>RAM</td>
+<td>1GB SLC NAND flash, 512 MB RAM</td>
 </tr>
 <tr>
-<td><a href="../../interfaces/can/">CAN</a></td>
-<td>6x CAN-FD</td>
+<td>Operating System</td>
+<td>Ångstrom distribution built with yocto , Linux kernel  3.1.10</td>
 </tr>
 <tr>
-<td><a href="../../interfaces/ethernet/">Ethernet</a></td>
-<td>2x 100/1000 Base-T1 (Rosenberger), 2x 100-BaseTx (RJ45 and MX34)</td>
+<td>HDMI</td>
+<td>1920x1080</td>
 </tr>
 <tr>
-<td>External Logging</td>
-<td>µSD Card</td>
+<td>VGA</td>
+<td>1400x1050</td>
 </tr>
 <tr>
-<td><a href="../../interfaces/hmx/modem/">GPS</a></td>
+<td><a href="../../interfaces/mx4/modem/">Modem</a></td>
+<td>Global modem 4G (or for CT Europa or USA 4G module)</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/modem/#gps">GPS</a></td>
 <td>Included in modem, external antenna</td>
 </tr>
 <tr>
-<td>Housing</td>
-<td>Aluminium/plastic</td>
+<td><a href="../../interfaces/modem/quectel/#audio">Modem audio</a></td>
+<td>Modem Headphone L and R and mono mic</td>
 </tr>
 <tr>
-<td><a href="../../interfaces/start_signal/">Start Signals</a></td>
-<td>External input, 2.5-36V (5 inputs)</td>
+<td>Linux audio</td>
+<td>Linux Headphone L and R and mono mic</td>
 </tr>
 <tr>
-<td>Internal Storage</td>
-<td>64 GB eMMC</td>
+<td><a href="../../interfaces/mx4/wifi/">WIFI</a></td>
+<td>802.11 b/g/n WiFi</td>
 </tr>
 <tr>
-<td><a href="../../interfaces/leds/">LEDs</a></td>
-<td>5 red+green (yellow in combination), 1 RGB</td>
+<td><a href="../../interfaces/mx4/ethernet/">Ethernet</a></td>
+<td>1x 10BASE-T and 100BASE-TX Ethernet</td>
 </tr>
 <tr>
-<td><a href="../interfaces/modem.md">Modem</a></td>
-<td>5G or 4G, M2 connector</td>
+<td><a href="../../interfaces/mx4/ethernet/">Ethernet</a></td>
+<td>1x 100BASE-TX and 1000BASE-T Ethernet, limit by USB 2.0 transfer</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/usb/">USB</a></td>
+<td>1 x USB 2.0 high-speed host/device (auto detect)</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/usb/">USB</a></td>
+<td>1 x USB 2.0 high-speed host</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/can/">CAN</a></td>
+<td>3 x CAN 2.0 B</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/j1708/">J1708</a></td>
+<td>1 x J1708 bus</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/serial/">RS-232</a></td>
+<td>2 x RS-232 bus</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/serial/">RS-485</a></td>
+<td>1 x RS-485 bus</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/digital_io/">Digital inputs</a></td>
+<td>6 x Digital inputs</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/digital_io/">Digital outputs</a></td>
+<td>7 x Digital outputs sink and source (older CT includes less functionality)</td>
+</tr>
+<tr>
+<td>Digital output 5V</td>
+<td>1 x Digital output 5V</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/tachometer/">Tachometer</a></td>
+<td>1x Puls counter</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/analog/">Analog inputs</a></td>
+<td>1 x Analogue inputs (4-20 mA)</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/analog/">Analog inputs</a></td>
+<td>4 x Analog inputs 0-32 VDC (including the start signal)</td>
+</tr>
+<tr>
+<td><a href="../../interfaces/mx4/start_signal/">Start Signals</a></td>
+<td>1 x Start signal input (to boot the system using external signal)</td>
+</tr>
+<tr>
+<td>SD-card</td>
+<td>SD-card interface</td>
+</tr>
+<tr>
+<td>Operating Temperature</td>
+<td>Wide operating temperature: -40 to +70°C</td>
+</tr>
+<tr>
+<td>Operating voltage</td>
+<td>Wide input voltage range, 8-32 VDC</td>
 </tr>
 <tr>
 <td>Nominal Voltage</td>
 <td>12-24V</td>
-</tr>
-<tr>
-<td>Operating Temperature</td>
-<td>-40C to +65C</td>
-</tr>
-<tr>
-<td>Operating System</td>
-<td>Yocto Kirkstone, Linux kernel 6.1</td>
-</tr>
-<tr>
-<td>Power Consumption @12V</td>
-<td>&lt; 1 mA in "Off", 25 mA  in "Suspend to RAM"</td>
-</tr>
-<tr>
-<td>Protection</td>
-<td>IP30</td>
-</tr>
-<tr>
-<td>RAM</td>
-<td>4 GB DDR4</td>
-</tr>
-<tr>
-<td><a href="../interfaces/">Real Time Clock</a></td>
-<td>Yes, backed up by CR2032 coin cell battery</td>
-</tr>
-<tr>
-<td>SIM</td>
-<td>nanoSIM</td>
-</tr>
-<tr>
-<td>Low power mode</td>
-<td>Suspend to RAM. Wakes on CAN, digital inputs, accelerometer, RTC, and start signals</td>
-</tr>
-<tr>
-<td>Size without connectors</td>
-<td>164x164x30mm</td>
-</tr>
-<tr>
-<td>UPS</td>
-<td>3 seconds supercap power</td>
-</tr>
-<tr>
-<td><a href="../../interfaces/hmx/usb/">USB</a></td>
-<td>USB 3.0 OTG type C, USB 2.0 host type A</td>
 </tr>
 <tr>
 <td><a href="../../system/power_management/">Sleep-Mode</a></td>
@@ -527,165 +553,332 @@
 </tbody>
 </table>
 <h2 id="production-variant-definition">Production variant definition</h2>
-<p>The production part numbers start with HM010-*****-revision, read from left to right. For the first variant number, the processor module is followed by the modem. If no other parameters are stated, the part number will be HM010-00011-revision.</p>
-<h3 id="processor-module">Processor module</h3>
-<table>
-<thead>
-<tr>
-<th>Processor ID</th>
-<th>Module Part Number</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>No module</td>
-<td></td>
-</tr>
-<tr>
-<td>1</td>
-<td>hMOD0009-R1A (Arena)</td>
-<td>i.MX 8M Plus with Quad Core CPU, 4GB DRAM and 64GB EMMC</td>
-</tr>
-<tr>
-<td>2</td>
-<td>TBD (Arena)</td>
-<td>i.MX 8M Plus with Quad Core CPU, 4GB DRAM, 64GB EMMC and Wi-Fi.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="modem-module">Modem module</h3>
-<table>
-<thead>
-<tr>
-<th>Modem ID</th>
-<th>Module Part Number</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>No module</td>
-<td></td>
-</tr>
-<tr>
-<td>1</td>
-<td>hMOD0010-03 (Arena)</td>
-<td>4G global modem</td>
-</tr>
-<tr>
-<td>2</td>
-<td>TBD (Arena)</td>
-<td>5G global modem</td>
-</tr>
-<tr>
-<td>n…</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="micro-sd-card-module">Micro SD Card module</h3>
-<table>
-<thead>
-<tr>
-<th>Micro SD Card ID</th>
-<th>Module Part Number</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>No SD card</td>
-<td></td>
-</tr>
-<tr>
-<td>1</td>
-<td>hBMT0003 (Arena)</td>
-<td>Samsung uSDHC EVO 32GB Class 10</td>
-</tr>
-<tr>
-<td>2</td>
-<td>hBMT0002 (Arena)</td>
-<td>32GB Sandisk UHS Class 1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="sim-card-module">SIM Card module</h3>
-<table>
-<thead>
-<tr>
-<th>SIM Card ID</th>
-<th>Module Part Number</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>No module</td>
-<td></td>
-</tr>
-<tr>
-<td>1</td>
-<td><Reserved></td>
-<td>Reserved for customer</td>
-</tr>
-</tbody>
-</table>
-<h3 id="customer-customization">Customer customization</h3>
-<p>This is for customers that want extra installation of software, additional labels or similar within design limitations.</p>
-<table>
-<thead>
-<tr>
-<th>Customer ID</th>
-<th>Customer Tweaks</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Default</td>
-<td>No customization, only delivered with our reference BSP</td>
-</tr>
-<tr>
-<td>1</td>
-<td><Reserved></td>
-<td>Reserved for customer</td>
-</tr>
-</tbody>
-</table>
 <h3 id="list-of-known-products">List of known products</h3>
+<p>Contact Host Mobility.
+All product of CT GL variants start with HM001.
+Older Products called CT starts with HMP069.</p>
+<h2 id="connectors-and-buttons">Connectors and buttons</h2>
+<p><img alt="front and back" src="../ct-gl-connectors-image.png" /></p>
+<h3 id="connector-digital-and-analog-io">Connector – Digital and Analog I/O</h3>
+<p><img alt="JAE-22" src="../ct-gl-jae-22-connector.png" /></p>
 <table>
 <thead>
 <tr>
-<th>Products</th>
-<th>Product part number</th>
-<th>Description</th>
+<th>Pin</th>
+<th>Function</th>
+<th>Comment</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Default</td>
-<td>HM010-00111-V6B</td>
-<td>4G modem and SD card, only delivered with our reference BSP</td>
+<td>1</td>
+<td>CAN-1-H</td>
+<td></td>
 </tr>
 <tr>
-<td><Reserved></td>
-<td>HM010-11111-V6B</td>
-<td>Reserved for customer with 4G modem, SIM card, SD card and customization</td>
+<td>2</td>
+<td>CAN-1-L</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>CAN-2-H</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>CAN-2-L</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>DIG-OUTPUT-6</td>
+<td>400mA current limitation</td>
+</tr>
+<tr>
+<td>6</td>
+<td>4-20mA-PWR</td>
+<td>Digital output 5, 400mA current limitation</td>
+</tr>
+<tr>
+<td>7</td>
+<td>DIG-OUTPUT-1</td>
+<td>400mA current limitation</td>
+</tr>
+<tr>
+<td>8</td>
+<td>DIG-OUTPUT-2</td>
+<td>400mA current limitation</td>
+</tr>
+<tr>
+<td>9</td>
+<td>DIG-OUTPUT-3</td>
+<td>400mA current limitation</td>
+</tr>
+<tr>
+<td>10</td>
+<td>DIG-OUTPUT-4</td>
+<td>400mA current limitation</td>
+</tr>
+<tr>
+<td>11</td>
+<td>DIG-INPUT-1</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>DIG-INPUT-2</td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>DIG-INPUT-3</td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>DIG-INPUT-4</td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>DIG-INPUT-5</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>DIG-INPUT-6</td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td>DIG-OUTPUT-7</td>
+<td>400mA current limitation</td>
+</tr>
+<tr>
+<td>18</td>
+<td>ANALOG-IN-1A</td>
+<td>0-32 V input, either “A” or “B” must be high for the unit to start</td>
+</tr>
+<tr>
+<td>19</td>
+<td>ANALOG-IN-2</td>
+<td>4-20 mA input</td>
+</tr>
+<tr>
+<td>20</td>
+<td>ANALOG-IN-3</td>
+<td>0-32 V input</td>
+</tr>
+<tr>
+<td>21</td>
+<td>ANALOG-IN-4</td>
+<td>0-32 V input</td>
+</tr>
+<tr>
+<td>22</td>
+<td>PULSE-COUNTER</td>
+<td>Input for tachometer</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> For Host Mobility employees, update this page after making changes to internal document FILE-000768 (800155-HMX-Product label spec).</p>
-<h2 id="connectors-and-buttons">Connectors and buttons</h2>
-<p>See <a href="../../assets/800125_HMX%20connectors%20and%20buttons.PDF">Connectors and buttons (pdf)</a></p>
+<h3 id="connector-power-communication">Connector – Power &amp; Communication</h3>
+<p><img alt="JAE-18" src="../ct-gl-jae-18-connector.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Function</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>RS485-A</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>RS485-B</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>J1708-A</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>J1708-B</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>DIG-OUTPUT-5V</td>
+<td>Digital 5V output, for peripherals, 500mA current limitation</td>
+</tr>
+<tr>
+<td>6</td>
+<td>GND</td>
+<td>Digital Ground</td>
+</tr>
+<tr>
+<td>7</td>
+<td>GND</td>
+<td>Digital Ground</td>
+</tr>
+<tr>
+<td>8</td>
+<td>INPUT-POWER</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>GND</td>
+<td>Return for INPUT-POWER, connected to Digital Ground</td>
+</tr>
+<tr>
+<td>10</td>
+<td>ANALOG-IN-1B</td>
+<td>0-32 V input, either “A” or “B” must be high for the unit to start</td>
+</tr>
+<tr>
+<td>11</td>
+<td>ANALOG-IN-5</td>
+<td>0-32V Input</td>
+</tr>
+<tr>
+<td>12</td>
+<td>RS232-2-RXD</td>
+<td>RS-232 no. 2 - Data input</td>
+</tr>
+<tr>
+<td>13</td>
+<td>RS232-2-TXD</td>
+<td>RS-232 no. 2 - Data output</td>
+</tr>
+<tr>
+<td>14</td>
+<td>GND</td>
+<td>Digital Ground</td>
+</tr>
+<tr>
+<td>15</td>
+<td>RS232-1-TXD</td>
+<td>RS-232 no. 1 - Data output</td>
+</tr>
+<tr>
+<td>16</td>
+<td>RS232-1-RTS</td>
+<td>RS-232 no. 1 - RTS output</td>
+</tr>
+<tr>
+<td>17</td>
+<td>RS232-1-CTS</td>
+<td>RS-232 no. 1 - CTS input</td>
+</tr>
+<tr>
+<td>18</td>
+<td>RS232-1-RXD</td>
+<td>RS-232 no. 1 - Data input</td>
+</tr>
+</tbody>
+</table>
+<h3 id="connector-audio-can">Connector – Audio &amp; CAN</h3>
+<p><img alt="JAE-14" src="../ct-gl-jae-14-connector.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Function</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>MODEM-IN+</td>
+<td>Modem voice input positive</td>
+</tr>
+<tr>
+<td>2</td>
+<td>CAN-3-H</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>CAN-3-L</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>N/A</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>N/A</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>GND</td>
+<td>Analog measurement references, connected to Digital Ground</td>
+</tr>
+<tr>
+<td>7</td>
+<td>MODEM-IN -</td>
+<td>Modem voice input negative</td>
+</tr>
+<tr>
+<td>8</td>
+<td>MODEM-OUT+</td>
+<td>Modem voice output positive, (optional AUDIO-OUT-R)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>MODEM-OUT-</td>
+<td>Modem voice output negative</td>
+</tr>
+<tr>
+<td>10</td>
+<td>GND-A</td>
+<td>Reference for Linux platform audio, isolated from Digital Ground</td>
+</tr>
+<tr>
+<td>11</td>
+<td>AUDIO-IN-MIC</td>
+<td>Linux platform audio input, with biasing voltage for microphone</td>
+</tr>
+<tr>
+<td>12</td>
+<td>AUDIO-IN-LINE</td>
+<td>Linux platform audio input, without biasing voltage</td>
+</tr>
+<tr>
+<td>13</td>
+<td>AUDIO-OUT-R</td>
+<td>Linux platform audio output, right</td>
+</tr>
+<tr>
+<td>14</td>
+<td>AUDIO-OUT-L</td>
+<td>Linux platform audio output, left</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other-connector-and-buttons">Other connector and buttons</h3>
+<ul>
+<li>Fakra red LTE/4G</li>
+<li>Fakra red rx-diversity LTE/4G</li>
+<li>Fakra blue GPS</li>
+<li>RJ45</li>
+<li>Reset button</li>
+<li><a href="../../interfaces/mx4/leds/">LEDs</a></li>
+</ul>
 <h2 id="technical-specification">Technical specification</h2>
-<p>Please contact <a href="../../support/">support</a> to receive detailed technical specification for this hardware.</p>
+<p>Contact <a href="../../support/">support</a> to receive the technical specification (1301-HM001-<em>-Technical-description or older CT 1301-HMP069-</em>-Technical-description) for this hardware. * is the variant you have bought.</p>
 
 
 
