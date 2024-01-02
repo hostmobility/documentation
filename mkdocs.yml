@@ -3,7 +3,6 @@ site_name: Host Mobility Documentation
 theme:
   name: material
   features:
-    - navigation.instant
     - toc.integrate
     - header.autohide
     - content.code.copy
@@ -51,9 +50,7 @@ nav:
     - interfaces/mx4/lin.md
     - interfaces/modem/modem.md
     - interfaces/networking.md
-    - RS-232:
-      - interfaces/serial.md
-    - RS-485:
+    - RS-232 and RS-485:
       - interfaces/serial.md
     - Real Time Clock:
       - interfaces/rtc.md
