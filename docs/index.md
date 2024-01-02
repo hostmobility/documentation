@@ -23,7 +23,7 @@ Or you can click on the links of both new and old platforms to get to the tags p
 * [MX-4 CT GL](tags.md#ct-gl)
 * [MX-V](tags.md#mx-v)
 
-## Power Managment and LEDs
+## Power Management and LEDs
 
 Include how to get the unit to start up, sleep and set wake-up signals.
 
@@ -45,7 +45,7 @@ Here you can find more information about how to login, how to build the system a
 Here is a list of all interfaces we support over all platforms. Not all platforms have all interfaces to see that go to product pages.
 
 - [ADC](tags.md#adc)
-- [Accelerometer](interfaces/accelerometer)
+- [Accelerometer](tags.md#accelerometer)
 - [Audio](tags.md#audio)
 - [Digital I/O](tags.md#digital-io)
 - [Flexray](tags.md#flexray)
