@@ -1,6 +1,7 @@
 ---
 title: Accelerometer (MX-4)
 tags:
+  - Accelerometer
   - C61
   - MX-4
   - MX-V

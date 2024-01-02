@@ -1,7 +1,8 @@
 ---
 title: HMX Accelerometer
 tags:
-    - HMX
+  - Accelerometer
+  - HMX
 ---
 
 ## Overview
