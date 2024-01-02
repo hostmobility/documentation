@@ -37,7 +37,7 @@ See [Production variant definition](#production-variant-definition).
 | uSD-card | µSD-card interface |
 | SuperCap | Super Capacitor |
 | Battery | Internal Lithium battery: 1050mAh, -20 to +60°C (can be removed) |
-| Operating Temperature | Wide operating temperature: -40 to +85°C |
+| Operating Temperature | Wide operating temperature: -40 to +70°C |
 | Operating voltage | Wide input voltage range, 8-36 VDC |
 | Nominal Voltage | 12-24V |
 | [Sleep-Mode](../power-managment) | Low power sleep mode |
