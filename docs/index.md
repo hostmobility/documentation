@@ -62,3 +62,7 @@ Here is a list of all interfaces we support over all platforms. Not all platform
     - [RS-485](tags.md#rs-485)
 - [Tachometer](tags.md#tachometer)
 - [Start signals](tags.md#start-signals)
+
+## Support
+
+Contact [support](support.md#customer-support)
