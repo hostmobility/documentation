@@ -174,6 +174,7 @@ A simple XOR checksum of all bytes in the message including message length.
 
     status:
     Defined statuses:
+
 ```c
 #define STATUS_OK 0
 #define STATUS_RECV_ERROR 1
