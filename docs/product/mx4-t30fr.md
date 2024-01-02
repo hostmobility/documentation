@@ -53,7 +53,7 @@ Contact Host Mobility. All product variants start with hmp075 (T20, T30, T30 FR)
 
 ## Connectors and buttons
 
-![front and back](mx4-t30-connector-image.png)
+![front and back](mx4-t30fr-connector-image.png)
 
 ### Dsub 15 connector
 
