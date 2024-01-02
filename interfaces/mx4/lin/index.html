@@ -954,48 +954,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#define-status_ok-0" class="md-nav__link">
-    <span class="md-ellipsis">
-      define STATUS_OK 0
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#define-status_recv_error-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      define STATUS_RECV_ERROR 1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#define-status_recv_no_data-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      define STATUS_RECV_NO_DATA 2
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#define-status_master_request-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      define STATUS_MASTER_REQUEST 3
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="define STATUS_MASTER_REQUEST 3">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#status-message" class="md-nav__link">
     <span class="md-ellipsis">
@@ -1410,6 +1368,8 @@
 
 
 
+  <h1>LIN (MX-4)</h1>
+
 <h2 id="deactivate-lin">Deactivate LIN<a class="headerlink" href="#deactivate-lin" title="Permanent link">⚓︎</a></h2>
 <p>Local Interconnect Network (LIN) is enabled by default but you can disable it by writing a zero to
 <code>LIN enabled</code> and/or <code>LIN2 enabled</code>. See <a href="../../digital_io/">Digital IO</a> on how use the Linux GPIO API.</p>
@@ -1581,12 +1541,11 @@ message start | length of message | message type 7 | status| data | checksum
 status:
 Defined statuses:
 </code></pre></div>
-<p>```c</p>
-<h1 id="define-status_ok-0">define STATUS_OK 0<a class="headerlink" href="#define-status_ok-0" title="Permanent link">⚓︎</a></h1>
-<h1 id="define-status_recv_error-1">define STATUS_RECV_ERROR 1<a class="headerlink" href="#define-status_recv_error-1" title="Permanent link">⚓︎</a></h1>
-<h1 id="define-status_recv_no_data-2">define STATUS_RECV_NO_DATA 2<a class="headerlink" href="#define-status_recv_no_data-2" title="Permanent link">⚓︎</a></h1>
-<h1 id="define-status_master_request-3">define STATUS_MASTER_REQUEST 3<a class="headerlink" href="#define-status_master_request-3" title="Permanent link">⚓︎</a></h1>
-<p>```
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#define STATUS_OK 0</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#define STATUS_RECV_ERROR 1</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cp">#define STATUS_RECV_NO_DATA 2</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="cp">#define STATUS_MASTER_REQUEST 3</span>
+</code></pre></div>
     STATUS_RECV_ERROR indicates that data has been read on the bus, but no valid LIN frame were found. Just all the data is returned for debugging purposes.
     STATUS_RECV_NO_DATA activity on the bus but no data found.
     STATUS_MASTER_REQUEST message with only one byte data found. This is a
