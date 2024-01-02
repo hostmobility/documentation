@@ -21,7 +21,7 @@ See [Production variant definition](#production-variant-definition).
 | Operating System | Ångstrom distribution built with yocto , Linux kernel  3.1.10 |
 | HDMI | 1920x1080 |
 | VGA | 1400x1050 |
-| [Modem](../interfaces/mx4/modem.md) | Global modem 4G (or for CT Europa or USA 4G module) |
+| [Modem](../interfaces/modem/modem.md) | Global modem 4G (or for CT Europa or USA 4G module) |
 | [GPS](../interfaces/mx4/modem.md#gps) | Included in modem, external antenna |
 | [Modem audio](../interfaces/modem/quectel.md#audio) | Modem Headphone L and R and mono mic |
 | Linux audio | Linux Headphone L and R and mono mic |

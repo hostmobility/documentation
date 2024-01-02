@@ -18,7 +18,7 @@ See [Production variant definition](#production-variant-definition).
 | Coprocessor | PIC24 |
 | RAM | 1GB flash, 1 GB RAM |
 | Operating System | Yocto Kirkstone, Linux kernel 6.1 (and 3.1.10) |
-| [Modem](../interfaces/mx4/modem.md) | Europa or USA 4G module |
+| [Modem](../interfaces/modem/modem.md) | Europa or USA 4G module |
 | [GPS](../interfaces/mx4/modem.md#gps) | Included in modem, external antenna |
 | Aux-Linux | 2x 3pol aux for Linux Headphone L and R and mic |
 | [WIFI](../interfaces/mx4/wifi.md) | 802.11 b/g/n WiFi |

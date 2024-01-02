@@ -56,6 +56,7 @@ Here is a list of all interfaces we support over all platforms. Not all platform
     - [Ethernet](tags.md#ethernet)
     - [USB](tags.md#usb)
     - [WiFi](tags.md#wifi)
+    - [Modem](tags.md#Modem)
 - [Real Time Clock](tags.md#real-time-clock)
 - [Serial communication](tags.md#serial-communication)
     - [RS-232](tags.md#rs-232)

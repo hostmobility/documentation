@@ -25,7 +25,7 @@ See [Production Variant Definition](#production-variant-definition)
 | [Start Signals](../interfaces/start_signal.md) | External input, 2.5-36V (5 inputs)
 | Internal Storage | 64 GB eMMC
 | [LEDs](../interfaces/leds.md) | 5 red+green (yellow in combination), 1 RGB
-| [Modem](../interfaces/modem.md) | 5G or 4G, M2 connector
+| [Modem](../interfaces/modem/modem.md) | 5G or 4G, M2 connector
 | Nominal Voltage | 12-24V
 | Operating Temperature | -40C to +65C
 | Operating System | Yocto Kirkstone, Linux kernel 6.1

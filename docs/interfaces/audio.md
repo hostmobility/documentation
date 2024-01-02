@@ -11,7 +11,7 @@ tags:
 ---
 ## Overview
 
-Many of our platforms feature audio output and microphone input at the operating system level and, in some cases, via the on-board modem. To see if modem audio is supported, please consult the platform-specific [modem](modem.md) pages.
+Many of our platforms feature audio output and microphone input at the operating system level and, in some cases, via the on-board modem. To see if modem audio is supported, please consult the platform-specific [modem](modem/modem.md) pages.
 
 On the Linux side we use standard [ALSA](https://www.alsa-project.org).
 
