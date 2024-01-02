@@ -38,6 +38,8 @@ See [Production Variant Definition](#production-variant-definition)
 | Size without connectors | 164x164x30mm
 | UPS | 3 seconds supercap power
 | [USB](../interfaces/hmx/usb.md) | USB 3.0 OTG type C, USB 2.0 host type A
+| [Sleep-Mode](../system/power_management.md) | Low power sleep mode |
+
 
 ## Production variant definition
 
