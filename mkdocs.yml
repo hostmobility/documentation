@@ -3,8 +3,11 @@ site_name: Host Mobility Documentation
 theme:
   name: material
   features:
+    - navigation.instant
+    - toc.integrate
     - header.autohide
     - content.code.copy
+    - navigation.top
   logo: assets/hm-logo-grey-on-transparent.svg
   palette: 
     # Palette toggle for light mode
@@ -20,6 +23,46 @@ theme:
         name: Switch to light mode
 nav:
   - index.md
+  - Platforms:
+    - product/host-monitor-x.md
+    - product/mx4-c61.md
+    - product/mx4-t30fr.md
+    - product/mx4-ct-gl.md
+    - product/mx-v.md
+  - Power Management and LEDs:
+    - system/power_management.md
+    - interfaces/leds.md
+    - Mx4:
+      - system/mx4/reset_cause.md
+      - system/mx4/wake_up_cause.md
+  - System:
+    - login.md
+    - system/update.md
+    - system/development.md
+  - Interfaces:
+    - interfaces/accelerometer.md
+    - interfaces/analog.md
+    - interfaces/audio.md
+    - interfaces/can.md
+    - interfaces/digital_io.md
+    - interfaces/ethernet.md
+    - interfaces/mx4/flexray.md
+    - interfaces/j1708.md
+    - interfaces/mx4/lin.md
+    - interfaces/modem/modem.md
+    - interfaces/networking.md
+    - RS-232:
+      - interfaces/serial.md
+    - RS-485:
+      - interfaces/serial.md
+    - Real Time Clock:
+      - interfaces/rtc.md
+      - interfaces/rtc_alarm.md
+    - interfaces/start_signal.md
+    - interfaces/tachometer.md
+    - interfaces/usb.md
+    - interfaces/wifi.md
+  - support.md
   - tags.md
 
 plugins:
@@ -32,4 +75,9 @@ plugins:
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
-  - pymdownx.superfences
+      linenums: false
+  - pymdownx.superfences:
+  - toc:
+      title: On this page
+      permalink: ⚓︎
+      toc_depth: 3
