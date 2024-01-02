@@ -3,6 +3,7 @@ title: Platform Host Monitor X
 tags:
     - HMX
 ---
+![](hmx-box.png)
 ## Abstract
 
 Host Monitor X is the next generation telematics computer for modern automotive development.
