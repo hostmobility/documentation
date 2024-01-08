@@ -31,7 +31,7 @@ nav:
   - Power Management and LEDs:
     - system/power_management.md
     - interfaces/leds.md
-    - Mx4:
+    - MX-4:
       - system/mx4/reset_cause.md
       - system/mx4/wake_up_cause.md
   - System:

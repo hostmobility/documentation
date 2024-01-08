@@ -13,7 +13,7 @@ Analog In can be used to detect short-circuits or to monitor certain signals wit
 
 ## Digital In and Out
 
-[Digital IO (Mx-4)](../mx4/digital_io.md)
+[Digital IO (MX-4)](../mx4/digital_io.md)
 
 ## Analog in
 

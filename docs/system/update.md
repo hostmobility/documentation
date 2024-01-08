@@ -40,10 +40,10 @@ The files under `/etc/opkg/*` define where to get extra software. You can edit t
 
 Host Mobility hardware is able to update itself with two methods using files created by the build system:
 
-1. Put files on a USB memory stick. , plug it into the machine and press `reset-button`. *On the HMX, the USB-upgrade button must be held down during reset as well*
-2. Copy the files over the network to /boot directory. and set the `firmware_update` u-boot environment variable to `true`
+1. Put files on a USB memory stick, plug it into the machine and press `reset-button`. *On the HMX, the USB-upgrade button must be held down during reset as well*
+2. Copy the files over the network to `/boot` directory and set the `firmware_update` u-boot environment variable to `true`
 
-The files can be put in `/boot` in a number of ways. In the case of using secure shell (SSH), you can use the `~/.ssh/config` file like this:
+The files can be put in `/boot` in a number of ways. In the case of using secure shell (SSH), you can edit the `~/.ssh/config` file like this:
 
 *Assign the unit connected with USB cable to name dut*
 ```
@@ -74,17 +74,14 @@ To trigger a firmware update on certain MX-4 hardware types, a U-Boot variable n
 
 ### USB method autoboot.sh
 
-If a file named `autoboot.sh` is found on the USB memory the first after upgrade, it will be executed. 
+If a file named `autoboot.sh` is found on the USB memory the first thing after upgrade, it will be executed.
 
 This can be used to re-install and configure the unit after update.
 
 ### Persistent partition /mnt/config and run-parts
 
-On some bulids, files stored in `/mnt/config` are kept across system re-installations.
+On some builds, files stored in `/mnt/config` are kept across system re-installations.
 
-If this is included, all executable files in `/mnt/config/update-hooks` are executed using `run-parts` on first boot. 
+If this is included, all executable files in `/mnt/config/update-hooks` are executed using `run-parts` on first boot.
 
-This can be used to re-install and configure the unit after update when updating from `/boot` directory.
-
-
-
+This can be used to re-install and configure the unit after performing an update from the `/boot` directory.
