@@ -231,7 +231,7 @@
         
   
   <span class="md-ellipsis">
-    Welcome to Host Mobilitys Documentation
+    Welcome to Host Mobility's Documentation
   </span>
   
 
@@ -491,7 +491,7 @@
             
   
   <span class="md-ellipsis">
-    Mx4
+    MX-4
   </span>
   
 
@@ -501,7 +501,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
-            Mx4
+            MX-4
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1438,10 +1438,10 @@
 <h3 id="system-image-also-known-as-firmware">System image also known as firmware<a class="headerlink" href="#system-image-also-known-as-firmware" title="Permanent link">⚓︎</a></h3>
 <p>Host Mobility hardware is able to update itself with two methods using files created by the build system:</p>
 <ol>
-<li>Put files on a USB memory stick. , plug it into the machine and press <code>reset-button</code>. <em>On the HMX, the USB-upgrade button must be held down during reset as well</em></li>
-<li>Copy the files over the network to /boot directory. and set the <code>firmware_update</code> u-boot environment variable to <code>true</code></li>
+<li>Put files on a USB memory stick, plug it into the machine and press <code>reset-button</code>. <em>On the HMX, the USB-upgrade button must be held down during reset as well</em></li>
+<li>Copy the files over the network to <code>/boot</code> directory and set the <code>firmware_update</code> u-boot environment variable to <code>true</code></li>
 </ol>
-<p>The files can be put in <code>/boot</code> in a number of ways. In the case of using secure shell (SSH), you can use the <code>~/.ssh/config</code> file like this:</p>
+<p>The files can be put in <code>/boot</code> in a number of ways. In the case of using secure shell (SSH), you can edit the <code>~/.ssh/config</code> file like this:</p>
 <p><em>Assign the unit connected with USB cable to name dut</em>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Host dut
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  HostName 192.168.250.1
@@ -1463,12 +1463,12 @@
 </code></pre></div></p>
 <p><strong>Setting <code>firmware_update</code> to <code>true</code> will enable USB update as well if an image is present on the USB memory.</strong></p>
 <h3 id="usb-method-autobootsh">USB method autoboot.sh<a class="headerlink" href="#usb-method-autobootsh" title="Permanent link">⚓︎</a></h3>
-<p>If a file named <code>autoboot.sh</code> is found on the USB memory the first after upgrade, it will be executed. </p>
+<p>If a file named <code>autoboot.sh</code> is found on the USB memory the first thing after upgrade, it will be executed.</p>
 <p>This can be used to re-install and configure the unit after update.</p>
 <h3 id="persistent-partition-mntconfig-and-run-parts">Persistent partition /mnt/config and run-parts<a class="headerlink" href="#persistent-partition-mntconfig-and-run-parts" title="Permanent link">⚓︎</a></h3>
-<p>On some bulids, files stored in <code>/mnt/config</code> are kept across system re-installations.</p>
-<p>If this is included, all executable files in <code>/mnt/config/update-hooks</code> are executed using <code>run-parts</code> on first boot. </p>
-<p>This can be used to re-install and configure the unit after update when updating from <code>/boot</code> directory.</p>
+<p>On some builds, files stored in <code>/mnt/config</code> are kept across system re-installations.</p>
+<p>If this is included, all executable files in <code>/mnt/config/update-hooks</code> are executed using <code>run-parts</code> on first boot.</p>
+<p>This can be used to re-install and configure the unit after performing an update from the <code>/boot</code> directory.</p>
 
 
 
