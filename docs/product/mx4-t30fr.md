@@ -10,7 +10,7 @@ MX-4 T30 FR is a telematics computer for remote diagnostics and fleet management
 
 ## Feature summary for HMP075 (flexray variant)
 
-See [Production variant definition](#production-variant-definition).
+See [Product variant definition](#product-variant-definition).
 
 | Feature | Summary |
 |---------|---------|
@@ -46,7 +46,7 @@ See [Production variant definition](#production-variant-definition).
 
 
 
-## Production variant definition
+## Product variant definition
 
 ### List of known products
 
