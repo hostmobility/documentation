@@ -4,13 +4,13 @@ tags:
     - MX-V
 ---
 ## Overview and installation
-![](mx-v-above-view.jpg)
+![](mx-v-above-view.png)
 
 ### Connectors
 
 The MX-V has the following connectors accessible from the outside.
 
-![connectors](mx-v-connectors.jpg)
+![connectors](mx-v-connectors.png)
 
 1. DVI connector for display
 2. two RJ45 Ethernet ports
