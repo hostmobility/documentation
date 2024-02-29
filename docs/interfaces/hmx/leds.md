@@ -34,3 +34,6 @@ It also features an RGB LED called "indicator" that in the current design (HM010
 | red:wan              | WAN-related LED          |
 | red:wlan             | WLAN-related LED         |
 | yellow:power         | Power-related LED        |
+
+
+![leds](../../assets/HMX_LEDS.png)
