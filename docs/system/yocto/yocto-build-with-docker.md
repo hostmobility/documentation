@@ -24,11 +24,12 @@ This requires only installation of Docker before starting the build.
 ```bash
 DL_DIR=/YOCTO_DOWNLOADS 
 scripts/bygg \ 
+  --repo-sync \
   --manifest-file kirkstone \
   --delete-conf \
   --distro poky \
   --machine imx8mp-var-dart-hmx1 \
-  bitbake console-hostmobility-image
+  --image console-hostmobility-image
 ```
 
 ### [bid (build-in-docker)](https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bid) script example
