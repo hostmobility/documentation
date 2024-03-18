@@ -31,8 +31,22 @@ scripts/bygg \
   --machine imx8mp-var-dart-hmx1 \
   --image console-hostmobility-image
 ```
+### [bygg](https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bygg) build with custom distro
 
-### [bid (build-in-docker)](https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bid) script example
+To make it work we recomend use of a manifest-file based on our kirkstone.xml (or newer), with your custom distro layer. In that distro layer you will need to setup a conf file and a bblayer.conf file (the bblayer need to include your distro so the build can include your bb(append) recipes). To start the build you need to target the conf folder with --templateconf if you use the 'bygg' script. Here is an example use case.
+
+```bash
+DL_DIR=$HOME/YOCTO_DOWNLOADS # Store downloads for reuse
+scripts/bygg \
+  --repo-sync \
+  --delete-conf \
+  --manifest-file kirkstone-'custom'.xml \
+  --machine imx8mp-var-dart-hmx1 \
+  --image console-hostmobility-image \
+  --templateconf sources/meta-your-custom-distro/conf/templates/hmx \
+```
+
+### [bid (build-in-docker)](https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bid) script example (older way than bygg)
 
 Usage:
 ```

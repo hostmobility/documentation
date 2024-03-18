@@ -38,6 +38,8 @@ scripts/bygg \
 
 *See [Building with Docker](yocto-build-with-docker.md) for details.*
 
+To get more information about what you can do with it use /script/bygg --help.
+
 ## Native build environment 
 
 * You can also build using a [native build environment](yocto-build-manually.md) (without Docker).
