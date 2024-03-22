@@ -12,23 +12,35 @@ The HMX-specific Digital I/Os are listed below. Check the technical file for mor
 There are four different types of digital outputs.
 
 - outputs with ability to sink a signal to ground
-    - SINK_OUT_1
-    - SINK_OUT_2
-- Activate eth2 network on OBDII cable
-    - Digital_output_ETH2_ACT
-- outputs with ability to source VCC power (they have different maximum current)
-    - SOURCE_Digital_OUT_1
-    - SOURCE_Digital_OUT_2
-    - SOURCE_OUT_3
-    - SOURCE_OUT_4
-    - SOURCE_OUT_5
-    - SOURCE_OUT_6
-    - SOURCE_OUT_7
-    - SOURCE_OUT_8
-    - SOURCE_PWR_OUT_LED_1
-    - SOURCE_PWR_OUT_LED_2
+- outputs with the ability to source VCC power (they have different maximum current), either controlled by software or always on.
 - output with both an internal buzzer and the ability to connect an external buzzer.
-    - SOURCE_PWR_OUT_BUZZER
+
+
+| Hardware Name         | Software Name | Software group | Connected to          | Source Type                          |
+|-----------------------|---------------|----------------|-----------------------|--------------------------------------|
+| SINK_OUT_1            | OUT_SINK1     | gpiod          |                       | Sink                                 |
+| SINK_OUT_2            | OUT_SINK2     | gpiod          |                       | Sink                                 |
+| Digital_output_ETH2_ACT| ETH2_ACT     | gpiod          |                       | Source (Special)                     |
+| SOURCE_Digital_OUT_1  | OUT_SOURCE1   | gpiod          |                       | Source (VCC power)                   |
+| SOURCE_Digital_OUT_2  | OUT_SOURCE2   | gpiod          |                       | Source (VCC power)                   |
+| SOURCE_OUT_3          |               |                | SOURCE_OUT_7          | Source (Always powered)              |
+| SOURCE_OUT_4          | pwr_out_active| gpio-leds      | SOURCE_OUT_5, SOURCE_OUT_6 | Source (VCC power)             |
+| SOURCE_OUT_5          | pwr_out_active| gpio-leds      | SOURCE_OUT_4, SOURCE_OUT_6 | Source (VCC power)             |
+| SOURCE_OUT_6          | pwr_out_active| gpio-leds      | SOURCE_OUT_4, SOURCE_OUT_5 | Source (VCC power)             |
+| SOURCE_OUT_7          |               |                | SOURCE_OUT_3          | Source (Always powered)              |
+| SOURCE_OUT_8          | pwr_out_equipment| gpio-leds   |                       | Source (VCC power)                   |
+| SOURCE_PWR_OUT_LED_1  | pwr_out_led_1 | gpio-leds      |                       | Source (VCC power)                   |
+| SOURCE_PWR_OUT_LED_2  | pwr_out_led_2 | gpio-leds      |                       | Source (VCC power)                   |
+| SOURCE_PWR_OUT_BUZZER | pwr_out_buzzer| gpio-leds      |                       | Source (VCC power, Buzzer)           |
+
+
+Example usage:
+```bash
+#gpio-leds
+echo 1 > /sys/class/leds/:pwr_out_led_1/brightness
+#gpiod
+gpioset $(gpiofind OUT_SINK1)=1
+```
 
 ## List of supported inputs
 
