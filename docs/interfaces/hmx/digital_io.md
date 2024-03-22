@@ -58,13 +58,17 @@ There are two types of digital inputs with pull up or pull down resistor.
 
 ## Fault detection
 
-The unit has fault detection that goes high if a fault is detected.
+The unit has fault detection that goes high if a fault is detected(gpiod).
 
-- SOURCE_1_Fault
-- SOURCE_2_Fault
-- SOURCE_4_Fault
-- SOURCE_5_Fault
-- SOURCE_6_Fault
+| Fault Name (software name)       | Connected to                   |
+|------------------|--------------------------------|
+| SINK_FAULT       | SINK_OUT_1, SINK_OUT_2         |
+| SOURCE_1_FAULT   | SOURCE_Digital_OUT_1           |
+| SOURCE_2_FAULT   | SOURCE_Digital_OUT_2           |
+| SOURCE_4_FAULT   | SOURCE_OUT_4, SOURCE_OUT_5, SOURCE_OUT_6 |
+| SOURCE_5_FAULT   | SOURCE_PWR_OUT_BUZZER          |
+| SOURCE_6_FAULT   | SOURCE_OUT_8                   |
+
 
 ## Sleep and wake up
 
