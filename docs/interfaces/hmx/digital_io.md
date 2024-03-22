@@ -44,16 +44,17 @@ gpioset $(gpiofind OUT_SINK1)=1
 
 ## List of supported inputs
 
-There are two types of digital inputs:
+There are two types of digital inputs with pull up or pull down resistor.
 
-- Pull down (33k to GND)
-    - Digital_input_pulldown_1
-    - Digital_input_pulldown_2
-- pull up (33k to VCC)
-    - Digital_input_pullup_1
-    - Digital_input_pullup_2
-    - Digital_input_HMI_1
-    - Digital_input_HMI_2
+| Hardware Name           | Software Name | Software group | Input Type          |
+|-------------------------|---------------|----------------|---------------------|
+| Digital_input_pulldown_1| IN_PULLDOWN1  | gpiod          | Pull-down (33k to GND)|
+| Digital_input_pulldown_2| IN_PULLDOWN2  | gpiod          | Pull-down (33k to GND)|
+| Digital_input_pullup_1  | IN_PULLUP1    | gpiod          | Pull-up (33k to VCC)  |
+| Digital_input_pullup_2  | IN_PULLUP2    | gpiod          | Pull-up (33k to VCC)  |
+| Digital_input_HMI_1     | IN_HMI1       | gpiod          | Pull-up (33k to VCC)  |
+| Digital_input_HMI_2     | IN_HMI2       | gpiod          | Pull-up (33k to VCC)  |
+
 
 ## Fault detection
 
