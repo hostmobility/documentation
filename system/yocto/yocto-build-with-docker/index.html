@@ -1308,7 +1308,9 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span>--image<span class="w"> </span>console-hostmobility-image
 </code></pre></div>
 <h3 id="bygg-build-with-custom-distro"><a href="https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bygg">bygg</a> build with custom distro<a class="headerlink" href="#bygg-build-with-custom-distro" title="Permanent link">⚓︎</a></h3>
-<p>To make it work we recomend use of a manifest-file based on our kirkstone.xml (or newer), with your custom distro layer. In that distro layer you will need to setup a conf file and a bblayer.conf file (the bblayer need to include your distro so the build can include your bb(append) recipes). To start the build you need to target the conf folder with --templateconf if you use the 'bygg' script. Here is an example use case.</p>
+<p>To make this work we recommend using a manifest file based on our kirkstone.xml (or newer) together with your custom distro layer. In the distro layer, you will need to set up two files: conf and bblayer.conf. The latter must include your distro so that the build can include your bb(append) recipes.</p>
+<p>To start the build you need to target the conf folder with --templateconf when you use the 'bygg' script.</p>
+<p>Example usage:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">DL_DIR</span><span class="o">=</span><span class="nv">$HOME</span>/YOCTO_DOWNLOADS<span class="w"> </span><span class="c1"># Store downloads for reuse</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>scripts/bygg<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span>--repo-sync<span class="w"> </span><span class="se">\</span>
@@ -1318,7 +1320,7 @@
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span>--image<span class="w"> </span>console-hostmobility-image<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span>--templateconf<span class="w"> </span>sources/meta-your-custom-distro/conf/templates/hmx<span class="w"> </span><span class="se">\</span>
 </code></pre></div>
-<h3 id="bid-build-in-docker-script-example-older-way-than-bygg"><a href="https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bid">bid (build-in-docker)</a> script example (older way than bygg)<a class="headerlink" href="#bid-build-in-docker-script-example-older-way-than-bygg" title="Permanent link">⚓︎</a></h3>
+<h3 id="bid-build-in-docker-script-example-older-way-than-bygg-not-recommended-for-new-users"><a href="https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bid">bid (build-in-docker)</a> script example (older way than bygg not recommended for new users)<a class="headerlink" href="#bid-build-in-docker-script-example-older-way-than-bygg-not-recommended-for-new-users" title="Permanent link">⚓︎</a></h3>
 <p>Usage:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ git clone git@github.com:hostmobility/mobility-poky-platform.git
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$ cd mobility-poky-platform

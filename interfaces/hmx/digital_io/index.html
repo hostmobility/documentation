@@ -1256,61 +1256,216 @@
 <h2 id="list-of-supported-outputs">List of supported outputs<a class="headerlink" href="#list-of-supported-outputs" title="Permanent link">⚓︎</a></h2>
 <p>There are four different types of digital outputs.</p>
 <ul>
-<li>outputs with ability to sink a signal to ground<ul>
-<li>SINK_OUT_1</li>
-<li>SINK_OUT_2</li>
+<li>outputs with ability to sink a signal to ground</li>
+<li>outputs with the ability to source VCC power (they have different maximum current), either controlled by software or always on.</li>
+<li>output with both an internal buzzer and the ability to connect an external buzzer.</li>
 </ul>
-</li>
-<li>Activate eth2 network on OBDII cable<ul>
-<li>Digital_output_ETH2_ACT</li>
-</ul>
-</li>
-<li>outputs with ability to source VCC power (they have different maximum current)<ul>
-<li>SOURCE_Digital_OUT_1</li>
-<li>SOURCE_Digital_OUT_2</li>
-<li>SOURCE_OUT_3</li>
-<li>SOURCE_OUT_4</li>
-<li>SOURCE_OUT_5</li>
-<li>SOURCE_OUT_6</li>
-<li>SOURCE_OUT_7</li>
-<li>SOURCE_OUT_8</li>
-<li>SOURCE_PWR_OUT_LED_1</li>
-<li>SOURCE_PWR_OUT_LED_2</li>
-</ul>
-</li>
-<li>output with both an internal buzzer and the ability to connect an external buzzer.<ul>
-<li>SOURCE_PWR_OUT_BUZZER</li>
-</ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Hardware Name</th>
+<th>Software Name</th>
+<th>Software group</th>
+<th>Connected to</th>
+<th>Source Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SINK_OUT_1</td>
+<td>OUT_SINK1</td>
+<td>gpiod</td>
+<td></td>
+<td>Sink</td>
+</tr>
+<tr>
+<td>SINK_OUT_2</td>
+<td>OUT_SINK2</td>
+<td>gpiod</td>
+<td></td>
+<td>Sink</td>
+</tr>
+<tr>
+<td>Digital_output_ETH2_ACT</td>
+<td>ETH2_ACT</td>
+<td>gpiod</td>
+<td></td>
+<td>Source (Special)</td>
+</tr>
+<tr>
+<td>SOURCE_Digital_OUT_1</td>
+<td>OUT_SOURCE1</td>
+<td>gpiod</td>
+<td></td>
+<td>Source (VCC power)</td>
+</tr>
+<tr>
+<td>SOURCE_Digital_OUT_2</td>
+<td>OUT_SOURCE2</td>
+<td>gpiod</td>
+<td></td>
+<td>Source (VCC power)</td>
+</tr>
+<tr>
+<td>SOURCE_OUT_3</td>
+<td></td>
+<td></td>
+<td>SOURCE_OUT_7</td>
+<td>Source (Always powered)</td>
+</tr>
+<tr>
+<td>SOURCE_OUT_4</td>
+<td>pwr_out_active</td>
+<td>gpio-leds</td>
+<td>SOURCE_OUT_5, SOURCE_OUT_6</td>
+<td>Source (VCC power)</td>
+</tr>
+<tr>
+<td>SOURCE_OUT_5</td>
+<td>pwr_out_active</td>
+<td>gpio-leds</td>
+<td>SOURCE_OUT_4, SOURCE_OUT_6</td>
+<td>Source (VCC power)</td>
+</tr>
+<tr>
+<td>SOURCE_OUT_6</td>
+<td>pwr_out_active</td>
+<td>gpio-leds</td>
+<td>SOURCE_OUT_4, SOURCE_OUT_5</td>
+<td>Source (VCC power)</td>
+</tr>
+<tr>
+<td>SOURCE_OUT_7</td>
+<td></td>
+<td></td>
+<td>SOURCE_OUT_3</td>
+<td>Source (Always powered)</td>
+</tr>
+<tr>
+<td>SOURCE_OUT_8</td>
+<td>pwr_out_equipment</td>
+<td>gpio-leds</td>
+<td></td>
+<td>Source (VCC power)</td>
+</tr>
+<tr>
+<td>SOURCE_PWR_OUT_LED_1</td>
+<td>pwr_out_led_1</td>
+<td>gpio-leds</td>
+<td></td>
+<td>Source (VCC power)</td>
+</tr>
+<tr>
+<td>SOURCE_PWR_OUT_LED_2</td>
+<td>pwr_out_led_2</td>
+<td>gpio-leds</td>
+<td></td>
+<td>Source (VCC power)</td>
+</tr>
+<tr>
+<td>SOURCE_PWR_OUT_BUZZER</td>
+<td>pwr_out_buzzer</td>
+<td>gpio-leds</td>
+<td></td>
+<td>Source (VCC power, Buzzer)</td>
+</tr>
+</tbody>
+</table>
+<p>Example usage:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">#gpio-leds</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>/sys/class/leds/:pwr_out_led_1/brightness
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">#gpiod</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>gpioset<span class="w"> </span><span class="k">$(</span>gpiofind<span class="w"> </span>OUT_SINK1<span class="k">)</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div></p>
 <h2 id="list-of-supported-inputs">List of supported inputs<a class="headerlink" href="#list-of-supported-inputs" title="Permanent link">⚓︎</a></h2>
-<p>There are two types of digital inputs:</p>
-<ul>
-<li>Pull down (33k to GND)<ul>
-<li>Digital_input_pulldown_1</li>
-<li>Digital_input_pulldown_2</li>
-</ul>
-</li>
-<li>pull up (33k to VCC)<ul>
-<li>Digital_input_pullup_1</li>
-<li>Digital_input_pullup_2</li>
-<li>Digital_input_HMI_1</li>
-<li>Digital_input_HMI_2</li>
-</ul>
-</li>
-</ul>
+<p>There are two types of digital inputs with pull up or pull down resistor.</p>
+<table>
+<thead>
+<tr>
+<th>Hardware Name</th>
+<th>Software Name</th>
+<th>Software group</th>
+<th>Input Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digital_input_pulldown_1</td>
+<td>IN_PULLDOWN1</td>
+<td>gpiod</td>
+<td>Pull-down (33k to GND)</td>
+</tr>
+<tr>
+<td>Digital_input_pulldown_2</td>
+<td>IN_PULLDOWN2</td>
+<td>gpiod</td>
+<td>Pull-down (33k to GND)</td>
+</tr>
+<tr>
+<td>Digital_input_pullup_1</td>
+<td>IN_PULLUP1</td>
+<td>gpiod</td>
+<td>Pull-up (33k to VCC)</td>
+</tr>
+<tr>
+<td>Digital_input_pullup_2</td>
+<td>IN_PULLUP2</td>
+<td>gpiod</td>
+<td>Pull-up (33k to VCC)</td>
+</tr>
+<tr>
+<td>Digital_input_HMI_1</td>
+<td>IN_HMI1</td>
+<td>gpiod</td>
+<td>Pull-up (33k to VCC)</td>
+</tr>
+<tr>
+<td>Digital_input_HMI_2</td>
+<td>IN_HMI2</td>
+<td>gpiod</td>
+<td>Pull-up (33k to VCC)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="fault-detection">Fault detection<a class="headerlink" href="#fault-detection" title="Permanent link">⚓︎</a></h2>
-<p>The unit has fault detection that goes high if a fault is detected.</p>
-<ul>
-<li>SOURCE_1_Fault</li>
-<li>SOURCE_2_Fault</li>
-<li>SOURCE_4_Fault</li>
-<li>SOURCE_5_Fault</li>
-<li>SOURCE_6_Fault</li>
-</ul>
+<p>The unit has fault detection that goes high if a fault is detected(gpiod).</p>
+<table>
+<thead>
+<tr>
+<th>Fault Name (software name)</th>
+<th>Connected to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SINK_FAULT</td>
+<td>SINK_OUT_1, SINK_OUT_2</td>
+</tr>
+<tr>
+<td>SOURCE_1_FAULT</td>
+<td>SOURCE_Digital_OUT_1</td>
+</tr>
+<tr>
+<td>SOURCE_2_FAULT</td>
+<td>SOURCE_Digital_OUT_2</td>
+</tr>
+<tr>
+<td>SOURCE_4_FAULT</td>
+<td>SOURCE_OUT_4, SOURCE_OUT_5, SOURCE_OUT_6</td>
+</tr>
+<tr>
+<td>SOURCE_5_FAULT</td>
+<td>SOURCE_PWR_OUT_BUZZER</td>
+</tr>
+<tr>
+<td>SOURCE_6_FAULT</td>
+<td>SOURCE_OUT_8</td>
+</tr>
+</tbody>
+</table>
 <h2 id="sleep-and-wake-up">Sleep and wake up<a class="headerlink" href="#sleep-and-wake-up" title="Permanent link">⚓︎</a></h2>
 <p>For Digital in, wake-up is default on. If you want to disable the inputs one way is to change the device tree when building the image, the other is to unbind the gpio-keys.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>echo gpio-keys &gt; /sys/bus/platform/drivers/gpio-keys/unbind
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>echo gpio-keys &gt; /sys/bus/platform/drivers/gpio-keys/unbind
 </code></pre></div>
 After waking up, you can bind it again if you want to use the gpio-keys.</p>
 
