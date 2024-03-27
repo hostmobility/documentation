@@ -20,7 +20,7 @@ To help launching a build in Docker, we provide a couple of scripts in [mobility
 
 This requires only installation of Docker before starting the build.
 
-### [bygg](https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bygg) script example
+### [bygg](https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bygg) script example: image
 ```bash
 DL_DIR=/YOCTO_DOWNLOADS 
 scripts/bygg \ 
@@ -31,6 +31,7 @@ scripts/bygg \
   --machine imx8mp-var-dart-hmx1 \
   --image console-hostmobility-image
 ```
+
 ### [bygg](https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bygg) build with custom distro
 
 
@@ -50,6 +51,14 @@ scripts/bygg \
   --machine imx8mp-var-dart-hmx1 \
   --image console-hostmobility-image \
   --templateconf sources/meta-your-custom-distro/conf/templates/hmx \
+```
+
+### [bygg](https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bygg) script example with custom build command
+```bash
+DL_DIR=/YOCTO_DOWNLOADS
+BUILD_COMMAND="bitbake -c menuconfig virtual/kernel" scripts/bygg \
+  --manifest-file kirkstone \
+  --machine mx4-c61 \
 ```
 
 ### [bid (build-in-docker)](https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bid) script example (older way than bygg not recommended for new users)
