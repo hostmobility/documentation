@@ -1297,7 +1297,7 @@
 <p>Building with Yocto requires many software tools and those need to have correct versions. To create this build environment, Docker can be used to great advantage. </p>
 <p>To help launching a build in Docker, we provide a couple of scripts in <a href="https://github.com/hostmobility/mobility-poky-platform/tree/master/scripts">mobility-poky-platform/scripts</a> that automate much of the build tasks.</p>
 <p>This requires only installation of Docker before starting the build.</p>
-<h3 id="bygg-script-example"><a href="https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bygg">bygg</a> script example<a class="headerlink" href="#bygg-script-example" title="Permanent link">⚓︎</a></h3>
+<h3 id="bygg-script-example-image"><a href="https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bygg">bygg</a> script example: image<a class="headerlink" href="#bygg-script-example-image" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">DL_DIR</span><span class="o">=</span>/YOCTO_DOWNLOADS<span class="w"> </span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>scripts/bygg<span class="w"> </span><span class="se">\ </span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>--repo-sync<span class="w"> </span><span class="se">\</span>
@@ -1320,22 +1320,11 @@
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span>--image<span class="w"> </span>console-hostmobility-image<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span>--templateconf<span class="w"> </span>sources/meta-your-custom-distro/conf/templates/hmx<span class="w"> </span><span class="se">\</span>
 </code></pre></div>
-<h3 id="bid-build-in-docker-script-example-older-way-than-bygg-not-recommended-for-new-users"><a href="https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bid">bid (build-in-docker)</a> script example (older way than bygg not recommended for new users)<a class="headerlink" href="#bid-build-in-docker-script-example-older-way-than-bygg-not-recommended-for-new-users" title="Permanent link">⚓︎</a></h3>
-<p>Usage:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ git clone git@github.com:hostmobility/mobility-poky-platform.git
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$ cd mobility-poky-platform
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>$ mkdir ~/YOCTO_DOWNLOADS
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>$ scripts/bid [options] [build command]
-</code></pre></div></p>
-<h3 id="example-build-commands-for-the-mx4-c61-machine">Example build commands for the mx4-c61 machine<a class="headerlink" href="#example-build-commands-for-the-mx4-c61-machine" title="Permanent link">⚓︎</a></h3>
-<p>Sync repositories using the kirkstone manifest file and the master branch:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ scripts/bid -s -f kirkstone.xml -a master -m mx4-c61 bash
-</code></pre></div>
-<p>Do the same as above but build the Linux kernel:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ scripts/bid -f kirkstone.xml -a master -m mx4-c61 -d poky bitbake virtual/kernel
-</code></pre></div>
-<p>The same as above but build a complete image:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ scripts/bid -f kirkstone.xml -a master -m mx4-c61 -d poky bitbake console-hostmobility-image
+<h3 id="bygg-script-example-with-custom-build-command"><a href="https://github.com/hostmobility/mobility-poky-platform/blob/master/scripts/bygg">bygg</a> script example with custom build command<a class="headerlink" href="#bygg-script-example-with-custom-build-command" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">DL_DIR</span><span class="o">=</span>/YOCTO_DOWNLOADS
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">BUILD_COMMAND</span><span class="o">=</span><span class="s2">&quot;bitbake -c menuconfig virtual/kernel&quot;</span><span class="w"> </span>scripts/bygg<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span>--manifest-file<span class="w"> </span>kirkstone<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span>--machine<span class="w"> </span>mx4-c61<span class="w"> </span><span class="se">\</span>
 </code></pre></div>
 
 
