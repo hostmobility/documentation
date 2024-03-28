@@ -81,10 +81,12 @@ The production part numbers start with HM010-\*\*\*\*\*-revision, read from left
 
 This is for customers that want extra installation of software, additional labels or similar within design limitations.
 
-| Customer ID | Customer Tweaks | Description                                            |
-|-------------|-----------------|--------------------------------------------------------|
+| Customer ID | Customer Tweaks | Description                                             |
+|-------------|-----------------|---------------------------------------------------------|
 | 0           | Default         | No customization, only delivered with our reference BSP |
-| 1           | <Reserved>      | Reserved for customer                                  |
+| 1           | <Reserved>      | Reserved for customer                                   |
+| 2           | <Reserved>      | Reserved for customer                                   |
+| 3           | <Reserved>      | Reserved for customer                                   |
 
 ### List of known products
 
