@@ -45,13 +45,20 @@ repo sync --force-sync
 
 Set up environment variables:
 ```bash
-export DIR_WORK=$PWD/../
+export DIR_WORK=$PWD
 export BUILD_TAG=*optional build Tag*
 export PLATFORM_VERSION="$(git -C $DIR_WORK.repo/manifests rev-parse --short HEAD)"
 export PLATFORM_VERSION_DETAILS="$(repo forall -c 'echo $REPO_PATH\nLREV: $REPO_LREV\nRREV: $REPO_RREV; git diff --stat -b $REPO_LREV..HEAD ; echo -n "Commit: " ; git rev-parse HEAD ; echo -n "Uncommited changes: " ; git status -b -s ; git diff --stat -b ; echo ')"
 echo "building with repo versions: $PLATFORM_VERSION"
 export BB_ENV_PASSTHROUGH_ADDITIONS="$BB_ENV_PASSTHROUGH_ADDITIONS BUILD_TAG PLATFORM_VERSION PLATFORM_VERSION_DETAILS"
-export TEMPLATECONF=$PWD/../sources/meta-mobility-poky-distro/conf
+#old before kirkstone export TEMPLATECONF=$PWD/sources/meta-mobility-poky-distro/conf
+export TEMPLATECONF=$PWD/sources/meta-mobility-poky-distro/conf/generic
+#or
+export TEMPLATECONF=$PWD/sources/meta-mobility-poky-distro/conf/hmx
+
+#optional
+export MACHINE=*target machine name(see bsp layer or conf-notes.txt)*
+export DISTRO=*poky or other distro target*
 ```
 **NOTE!** You will need to perform these exports for each new session. If you already have
 a build directory, it will be untouched and only the environment variables will be set.
