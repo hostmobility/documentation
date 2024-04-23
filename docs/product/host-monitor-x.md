@@ -50,8 +50,8 @@ The production part numbers start with HM010-\*\*\*\*\*-revision, read from left
 | Processor ID | Module Part Number                 | Description                                         |
 |--------------|------------------------------------|-----------------------------------------------------|
 | 0            | No module                          |                                                     |
-| 1            | hMOD0009-R1A (Arena)               | i.MX 8M Plus with Quad Core CPU, 4GB DRAM and 64GB EMMC              |
-| 2            | TBD (Arena)                        | i.MX 8M Plus with Quad Core CPU, 4GB DRAM, 64GB EMMC and Wi-Fi. |
+| 1            | hMOD0009-R1A (Arena)               | i.MX 8M Plus with Quad Core CPU, 4GB DRAM and 64GB EMMC |
+| 2            | hMOD0013-R1A (Arena)               | i.MX 8M Plus with Quad Core CPU, 4GB DRAM, 64GB EMMC and Wi-Fi |
 
 ### Modem module
 
