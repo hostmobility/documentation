@@ -52,6 +52,7 @@ export PLATFORM_VERSION_DETAILS="$(repo forall -c 'echo $REPO_PATH\nLREV: $REPO_
 echo "building with repo versions: $PLATFORM_VERSION"
 export BB_ENV_PASSTHROUGH_ADDITIONS="$BB_ENV_PASSTHROUGH_ADDITIONS BUILD_TAG PLATFORM_VERSION PLATFORM_VERSION_DETAILS"
 #used to be TEMPLATECONF=$PWD/sources/meta-mobility-poky-distro/conf (before kirkstone export)
+#if unsure what is supported see meta-mobility-poky-distro/conf/generic or hmx/ conf-notes.txt for more information to select correct path for your MACHINE build.
 export TEMPLATECONF=$PWD/sources/meta-mobility-poky-distro/conf/generic
 #or
 export TEMPLATECONF=$PWD/sources/meta-mobility-poky-distro/conf/hmx
