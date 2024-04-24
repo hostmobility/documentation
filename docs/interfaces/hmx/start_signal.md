@@ -12,7 +12,8 @@ There are 5 start signals on different connectors. Start 1 to 4 is meant to be u
 
 To start the device the current signal time needs to be at least 2-3 seconds long (in the future we might shorter the time) for the unit to start up and be able to hold the start signal internally.
 
-The internal signal (called power_on) is also used to hold the power on even if the START 1,2,3 or 4 has got down. And if you want to use the the cut-off function. Make sure that the IN_START is low(0). Before use poweroff or shutdown command.
+The internal signal (called power_on) is also used to hold the power on even if the START 1,2,3 or 4 is down. 
+If you want to use the the cut-off function, make sure that IN_START is low(0) before use poweroff or shutdown.
 
 To shut down the unit, run
 ```
