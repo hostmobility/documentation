@@ -23,7 +23,7 @@ When cut-off is enabled the unit is back to same state as it was when you plugge
 
 ## Read start signal
 
-To read this signal you must first unbind it from gpio-keys or read it from /dev/input/event0.
+To read this signal you must first unbind it from gpio-keys or read it from /dev/input/event1.
 
 Example read with unbind gpio-key
 **Note:** This will disable wake-up possibility on digital and start signals.
