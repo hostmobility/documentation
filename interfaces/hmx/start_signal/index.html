@@ -1252,15 +1252,17 @@
   <h1>Host Monitor X start signals</h1>
 
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">⚓︎</a></h2>
-<p>There are 5 start signals on different connectors. Start 1 to 4 is meant to be used to start the device and Start 5 is meant to be used with an external LED or an output for signal start.</p>
+<p>There are 5 start signals on different connectors. Start 1 to 4 is meant to be used to start the device and Start 5 is meant to be used with an external LED or an output for signal start. Only one external start signal is needed to start the device. They are all connected to a a singel input and it can be read from gpio-key event or unbind gpio-key to use this signal and other digital in signals as regular gpios.</p>
+<p><strong>Note</strong> unbind gpio-keys will lose the wake-up possibility on those signals and all <a href="../digital_io/">digital in</a> signals.</p>
 <p>To start the device the current signal time needs to be at least 2-3 seconds long (in the future we might shorter the time) for the unit to start up and be able to hold the start signal internally.</p>
-<p>The internal signal is also used for the cut-off function.</p>
+<p>The internal signal (called power_on) is also used to hold the power on even if the START 1,2,3 or 4 is down. 
+If you want to use the the cut-off function, make sure that IN_START is low(0) before use poweroff or shutdown.</p>
 <p>To shut down the unit, run
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>shutdown -h now
 </code></pre></div>
 When cut-off is enabled the unit is back to same state as it was when you plugged it in and will start again when any of the start signals goes high.</p>
 <h2 id="read-start-signal">Read start signal<a class="headerlink" href="#read-start-signal" title="Permanent link">⚓︎</a></h2>
-<p>To read this signal you must first unbind it from gpio-keys or read it from /dev/input/event0.</p>
+<p>To read this signal you must first unbind it from gpio-keys or read it from /dev/input/event1.</p>
 <p>Example read with unbind gpio-key
 <strong>Note:</strong> This will disable wake-up possibility on digital and start signals.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>echo gpio-keys &gt; /sys/bus/platform/drivers/gpio-keys/unbind
