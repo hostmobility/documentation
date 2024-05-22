@@ -95,7 +95,7 @@ This is for customers that want extra installation of software, additional label
 | Default |   HM010-00111-V6B           | 4G modem and SD card, only delivered with our reference BSP |
 | <Reserved>           | HM010-11111-V6B      | Reserved for customer with 4G modem, SIM card, SD card and customization |
 
-**Note:** For Host Mobility employees, update this page after making changes to internal document FILE-000768 (800155-HMX-Product label spec).
+**Note:** For Host Mobility employees, update this page after making changes to internal document FILE-000767 (800141-Product variant definition HM010-000-x).
 
 
 
