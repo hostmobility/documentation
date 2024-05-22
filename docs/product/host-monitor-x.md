@@ -50,8 +50,8 @@ The production part numbers start with HM010-\*\*\*\*\*-revision, read from left
 | Processor ID | Module Part Number                 | Description                                         |
 |--------------|------------------------------------|-----------------------------------------------------|
 | 0            | No module                          |                                                     |
-| 1            | hMOD0009-R1A (Arena)               | i.MX 8M Plus with Quad Core CPU, 4GB DRAM and 64GB EMMC              |
-| 2            | TBD (Arena)                        | i.MX 8M Plus with Quad Core CPU, 4GB DRAM, 64GB EMMC and Wi-Fi. |
+| 1            | hMOD0009-R1A (Arena)               | i.MX 8M Plus with Quad Core CPU, 4GB DRAM and 64GB EMMC |
+| 2            | hMOD0013-R1A (Arena)               | i.MX 8M Plus with Quad Core CPU, 4GB DRAM, 64GB EMMC and Wi-Fi |
 
 ### Modem module
 
@@ -81,10 +81,12 @@ The production part numbers start with HM010-\*\*\*\*\*-revision, read from left
 
 This is for customers that want extra installation of software, additional labels or similar within design limitations.
 
-| Customer ID | Customer Tweaks | Description                                            |
-|-------------|-----------------|--------------------------------------------------------|
+| Customer ID | Customer Tweaks | Description                                             |
+|-------------|-----------------|---------------------------------------------------------|
 | 0           | Default         | No customization, only delivered with our reference BSP |
-| 1           | <Reserved>      | Reserved for customer                                  |
+| 1           | <Reserved>      | Reserved for customer                                   |
+| 2           | <Reserved>      | Reserved for customer                                   |
+| 3           | <Reserved>      | Reserved for customer                                   |
 
 ### List of known products
 
@@ -93,7 +95,7 @@ This is for customers that want extra installation of software, additional label
 | Default |   HM010-00111-V6B           | 4G modem and SD card, only delivered with our reference BSP |
 | <Reserved>           | HM010-11111-V6B      | Reserved for customer with 4G modem, SIM card, SD card and customization |
 
-**Note:** For Host Mobility employees, update this page after making changes to internal document FILE-000768 (800155-HMX-Product label spec).
+**Note:** For Host Mobility employees, update this page after making changes to internal document FILE-000767 (800141-Product variant definition HM010-000-x).
 
 
 
