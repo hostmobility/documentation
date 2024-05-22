@@ -7,11 +7,12 @@ tags:
 
 ## Overview
 
-This product has four Ethernet:
-  - eth0 : MX34 connector that supports 10BASE-T and 100BASE-TX
-  - eth1 : 8P8C(RJ45) connector that supports 10BASE-T and 100BASE-TX
-  - eth2 : Rosenberger connector that supports 100 and 1000BASE-T1
-  - eth3 : Rosenberger connector that supports 100 and 1000BASE-T1
+This product has four Ethernet ports:
+
+* eth0 : MX34 connector that supports 10BASE-T and 100BASE-TX
+* eth1 : 8P8C (RJ45) connector that supports 10BASE-T and 100BASE-TX
+* eth2 : Rosenberger connector that supports 100 and 1000BASE-T1
+* eth3 : Rosenberger connector that supports 100 and 1000BASE-T1
 
 ## Default IP addresses and interface names
 
