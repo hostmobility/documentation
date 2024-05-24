@@ -102,7 +102,8 @@ This is for customers that want extra installation of software, additional label
 
 ## Connectors and buttons
 
-[![Connectors and buttons](../assets/800125_HMX%20connectors%20and%20buttons.jpg)](../assets/800125_HMX%20connectors%20and%20buttons.PDF)
+[![Connectors and buttons](../assets/800125_HMX%20connectors%20and%20buttons%20(page%201).PNG)](../assets/800125_HMX%20connectors%20and%20buttons.PDF)
+[![Connectors and buttons 2](../assets/800125_HMX%20connectors%20and%20buttons%20(page%202).PNG)](../assets/800125_HMX%20connectors%20and%20buttons.PDF)
 
 ## Technical specification
 
