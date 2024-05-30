@@ -9,7 +9,7 @@ tags:
 
 ### Prepare upgrade
 
-* Copy `vf_hmupdate.img` to a USB memory or to `/boot` on the Linux file system
+* Copy `vf_hmupdate.img` to a USB memory or to `/boot/vf_boot.scr` on the Linux file system (renaming the file in the latter case only)
 
 ### If USB method is used
 
