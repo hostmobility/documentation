@@ -29,6 +29,6 @@ tags:
 *Upgrade example using /boot*
 ```bash
 image=kirkstone-poky/38/jenkins-Release-kirkstone-poky-38-mx4-c61/vf_hmupdate.img
-scp "$image" dut:/boot/ && \
+scp "$image" dut:/boot/vf_boot.scr && \
 ssh dut reboot
 ```
