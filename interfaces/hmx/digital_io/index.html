@@ -1464,10 +1464,72 @@
 </tbody>
 </table>
 <h2 id="sleep-and-wake-up">Sleep and wake up<a class="headerlink" href="#sleep-and-wake-up" title="Permanent link">⚓︎</a></h2>
-<p>For Digital in, wake-up is default on. If you want to disable the inputs one way is to change the device tree when building the image, the other is to unbind the gpio-keys.
+<p>For Digital in, wake-up is enabled by default. If you want to disable this feature, one way is to modify the device tree when building the image, the other is to unbind the gpio-keys as follows.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>echo gpio-keys &gt; /sys/bus/platform/drivers/gpio-keys/unbind
 </code></pre></div>
-After waking up, you can bind it again if you want to use the gpio-keys.</p>
+After waking up, you can rebind if you want to use the gpio-keys.</p>
+<p>You can disable one or more wake-up sources using signal-specific macro codes.</p>
+<table>
+<thead>
+<tr>
+<th>Hardware Name</th>
+<th>Software Name</th>
+<th>Key Code</th>
+<th>Macro Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digital_input_start</td>
+<td>in_start</td>
+<td>656</td>
+<td>KEY_MACRO1</td>
+</tr>
+<tr>
+<td>Digital_input_pulldown_1</td>
+<td>in_pulldown1</td>
+<td>657</td>
+<td>KEY_MACRO2</td>
+</tr>
+<tr>
+<td>Digital_input_pulldown_2</td>
+<td>in_pulldown2</td>
+<td>658</td>
+<td>KEY_MACRO3</td>
+</tr>
+<tr>
+<td>Digital_input_pullup_1</td>
+<td>in_pullup1</td>
+<td>659</td>
+<td>KEY_MACRO4</td>
+</tr>
+<tr>
+<td>Digital_input_pullup_2</td>
+<td>in_pullup2</td>
+<td>660</td>
+<td>KEY_MACRO5</td>
+</tr>
+<tr>
+<td>Digital_input_HMI_1</td>
+<td>in_hmi1</td>
+<td>661</td>
+<td>KEY_MACRO6</td>
+</tr>
+<tr>
+<td>Digital_input_HMI_2</td>
+<td>in_hmi2</td>
+<td>662</td>
+<td>KEY_MACRO7</td>
+</tr>
+</tbody>
+</table>
+<p>Example on how to disable in_start (all start signals):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>echo 656 | tee /sys/bus/platform/drivers/gpio-keys/gpio-keys/disabled_keys
+</code></pre></div>
+It is also possible, within limits, to see what caused the wake up.
+The following example displays all wakeup_count instances where gpio-keys is wakeup4 (wakeup4 has all digital in together so here you cannot see which signal was triggered).
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> cat /sys/class/wakeup/wakeup*/wakeup_count
+</code></pre></div></p>
 
 
 

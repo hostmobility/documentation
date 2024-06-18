@@ -1254,7 +1254,7 @@
 <h2 id="upgrade-procedure">Upgrade procedure<a class="headerlink" href="#upgrade-procedure" title="Permanent link">⚓︎</a></h2>
 <h3 id="prepare-upgrade">Prepare upgrade<a class="headerlink" href="#prepare-upgrade" title="Permanent link">⚓︎</a></h3>
 <ul>
-<li>Copy <code>vf_hmupdate.img</code> to a USB memory or to <code>/boot</code> on the Linux file system</li>
+<li>Copy <code>vf_hmupdate.img</code> to a USB memory or to <code>/boot/vf_boot.scr</code> on the Linux file system (renaming the file in the latter case only)</li>
 </ul>
 <h3 id="if-usb-method-is-used">If USB method is used<a class="headerlink" href="#if-usb-method-is-used" title="Permanent link">⚓︎</a></h3>
 <ul>
@@ -1272,7 +1272,7 @@
 </ul>
 <p><em>Upgrade example using /boot</em>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">image</span><span class="o">=</span>kirkstone-poky/38/jenkins-Release-kirkstone-poky-38-mx4-c61/vf_hmupdate.img
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>scp<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$image</span><span class="s2">&quot;</span><span class="w"> </span>dut:/boot/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>scp<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$image</span><span class="s2">&quot;</span><span class="w"> </span>dut:/boot/vf_boot.scr<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>ssh<span class="w"> </span>dut<span class="w"> </span>reboot
 </code></pre></div></p>
 
