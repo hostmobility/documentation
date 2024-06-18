@@ -95,7 +95,7 @@ Example on how to disable in_start (all start signals):
 echo 656 | tee /sys/bus/platform/drivers/gpio-keys/gpio-keys/disabled_keys
 ```
 It is also possible, within limits, to see what caused the wake up.
-The following example displays all wakeup_count instances where gpio-keys is wakeup4 (wakeup4 has all digital in together so you can not see which signal that has been triggerd).
+The following example displays all wakeup_count instances where gpio-keys is wakeup4 (wakeup4 has all digital in together so here you cannot see which signal was triggered).
 ```
  cat /sys/class/wakeup/wakeup*/wakeup_count
 ```
