@@ -33,3 +33,5 @@ gpioget $(gpiofind IN_START)
 echo gpio-keys > /sys/bus/platform/drivers/gpio-keys/bind
 ```
 
+##[Sleep and wake up](digital_io.md#sleep-and-wake-up)
+
