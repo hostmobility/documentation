@@ -72,18 +72,17 @@ The unit has fault detection that goes high if a fault is detected(gpiod).
 
 ## Sleep and wake up
 
-For Digital in, wake-up is default on. If you want to disable the inputs one way is to change the device tree when building the image, the other is to unbind the gpio-keys.
-Disable all input wake ups.
+For Digital in, wake-up is enabled by default. If you want to disable this feature, one way is to modify the device tree when building the image, the other is to unbind the gpio-keys as follows.
 ```
 echo gpio-keys > /sys/bus/platform/drivers/gpio-keys/unbind
 ```
-After waking up, you can bind it again if you want to use the gpio-keys.
+After waking up, you can rebind if you want to use the gpio-keys.
 
-Disable one or more wake up sources using using the macro code number for that signal
+You can disable one or more wake-up sources using signal-specific macro codes.
 
 | Hardware Name           | Software Name | Key Code | Macro Code |
 |-------------------------|---------------|----------|------------|
-| Digital_input_start     | in_start      | 656      | KEY_MACRO1	|
+| Digital_input_start     | in_start      | 656      | KEY_MACRO1 |
 | Digital_input_pulldown_1| in_pulldown1  | 657      | KEY_MACRO2 |
 | Digital_input_pulldown_2| in_pulldown2  | 658      | KEY_MACRO3 |
 | Digital_input_pullup_1  | in_pullup1    | 659      | KEY_MACRO4 |
@@ -91,12 +90,12 @@ Disable one or more wake up sources using using the macro code number for that s
 | Digital_input_HMI_1     | in_hmi1       | 661      | KEY_MACRO6 |
 | Digital_input_HMI_2     | in_hmi2       | 662      | KEY_MACRO7 |
 
-Example disable in_start (all start signals)
+Example on how to disable in_start (all start signals):
 ```
 echo 656 | tee /sys/bus/platform/drivers/gpio-keys/gpio-keys/disabled_keys
 ```
-It is also possible within limit to see what cause the wake up.
-All wakeup_count (gpio-keys is wakeup4)
+It is also possible, within limits, to see what caused the wake up.
+The following example displays all wakeup_count instances where gpio-keys is wakeup4 (wakeup4 has all digital in together so you can not see which signal that has been triggerd).
 ```
  cat /sys/class/wakeup/wakeup*/wakeup_count
 ```
