@@ -1287,10 +1287,15 @@
   <h1>Wake on Real Time Clock (set alarm)</h1>
 
 <p>To use wake on RTC, you can run the command below.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sleeptime_seconds=30
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sleeptime_seconds=30
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>RTC=/sys/class/rtc/rtc0/wakealarm; echo 0&gt;$RTC &amp;&amp; echo +${sleeptime_seconds} &gt;$RTC &amp;&amp; systemctl suspend
 </code></pre></div>
-<p>For HMX, <code>rtc1</code> will also work.</p>
+You can also run the following to enter suspend to RAM.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>rtcwake -s 10 -m mem
+</code></pre></div>
+For HMX, <code>rtc1</code> will also work.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>rtcwake -s 10 -m mem -d /dev/rtc1
+</code></pre></div>
 
 
 
