@@ -64,11 +64,11 @@ The production part numbers start with HM010-\*\*\*\*\*-revision, read from left
 
 ### Micro SD Card module
 
-| Micro SD Card ID | Module Part Number | Description                             |
+| Micro SD Card ID | Module Part Number  | Description                             |
 |------------------|---------------------|-----------------------------------------|
 | 0                | No SD card          |                                         |
-| 1                | hBMT0003 (Arena)    | Samsung uSDHC EVO 32GB Class 10         |
-| 2                | hBMT0002 (Arena)    | 32GB Sandisk UHS Class 1                 |
+| 1                | hBMT0003 (Arena)    | Samsung SDHC 32GB UHS-I U1              |
+| 2                | hBMT0002 (Arena)    | SanDisk SDHC 32GB UHS-I U1 A1           |
 
 ### SIM Card module
 
