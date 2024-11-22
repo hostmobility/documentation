@@ -43,7 +43,7 @@ See [Production Variant Definition](#production-variant-definition)
 
 ## Production variant definition
 
-The production part numbers start with HM010-\*\*\*\*\*-revision, read from left to right. For the first variant number, the processor module is followed by the modem. If no other parameters are stated, the part number will be HM010-00011-revision.
+The production part numbers start with HM010-\*\*\*\*\*-revision, read from right to left. For the first variant number, the processor module is followed by the modem. If no other parameters are stated, the part number will be HM010-00011-revision.
 
 ### Processor module
 
