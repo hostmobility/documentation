@@ -2,6 +2,7 @@
 title: WiFi
 tags:
   - WiFi
+  - HMM
   - MX-V
   - T30
   - T30 FR
@@ -12,6 +13,8 @@ This page briefly explains how to scan for and connect to WiFi networks using wp
 For more information, see the [Arch Linux Wiki](https://wiki.archlinux.org/title/Network_configuration/Wireless).
 
 ## Platform specific
+
+- [HMM](hmm/wifi.md)
 - [MX-V](mxv/wifi.md)
 - [T30](mx4/wifi.md)
 - [T30 FR](mx4/wifi.md)
