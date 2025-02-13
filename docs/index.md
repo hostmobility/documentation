@@ -8,6 +8,7 @@ title: Welcome to Host Mobility's Documentation
 The pages below contain feature overviews of our hardware platforms and product variants. This is a good place to start reading.
 
 * [Host Monitor X](product/host-monitor-x.md)
+* [Host Monitor Mini](product/host-monitor-mini.md)
 * [MX-4 C61](product/mx4-c61.md)
 * [MX-4 T30 FR](product/mx4-t30fr.md)
 * [MX-4 CT GL](product/mx4-ct-gl.md)
@@ -16,6 +17,7 @@ The pages below contain feature overviews of our hardware platforms and product 
 For more detailed information, you can use the links below to see which tags are associated with each platform.
 
 * [Host Monitor X](tags.md#hmx)
+* [Host Monitor Mini](tags.md#hmm)
 * [MX-4 C61](tags.md#c61)
 * [MX-4 T30](tags.md#t30)
 * [MX-4 T30 FR](tags.md#t30-fr)
