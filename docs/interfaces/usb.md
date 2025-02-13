@@ -2,6 +2,7 @@
 title: USB
 tags:
   - USB
+  - HMM
   - HMX
   - C61
   - MX-4
@@ -11,6 +12,7 @@ tags:
 Our products are equipped with at least one USB port and many of them also have a USB OTG port where it is possible to connect e.g. keyboards, memory sticks or a PC (to enable "Ethernet over USB").
 
 ## Platform specific
+- [HMM](hmm/usb.md)
 - [HMX](hmx/usb.md)
 - [MX-V](mxv/usb.md)
 - [C61](c61/usb.md)
