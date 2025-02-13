@@ -38,6 +38,7 @@ nav:
     - login.md
     - system/update.md
     - system/development.md
+    - system/watchdog.md
   - Interfaces:
     - interfaces/accelerometer.md
     - interfaces/analog.md
