@@ -3,6 +3,7 @@ title: Serial communication
 tags:
   - RS-232
   - RS-485
+  - HMM
   - MX-V
   - CT
   - CT GL
@@ -15,6 +16,7 @@ Several products have one or more serial interfaces:
 
 
 ## Platform specific
+- [HMM](hmm/serial.md)
 - [MX-V](mxv/serial.md)
 - [CT](mx4/serial.md)
 - [CT GL](mx4/serial.md)
