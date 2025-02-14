@@ -1,6 +1,7 @@
 ---
 title: Serial communication
 tags:
+  - Serial communication
   - RS-232
   - RS-485
   - HMM
