@@ -22,6 +22,7 @@ See [Production Variant Definition](#production-variant-definition)
 | External Logging | µSD Card
 | [GPS](../interfaces/hmx/modem.md) | Included in modem, external antenna
 | Housing | Aluminium/plastic
+| [HSM](../interfaces/hsm.md) | Hardware secure module
 | [Start Signals](../interfaces/start_signal.md) | External input, 2.5-36V (5 inputs)
 | Internal Storage | 64 GB eMMC
 | [LEDs](../interfaces/leds.md) | 5 red+green (yellow in combination), 1 RGB
