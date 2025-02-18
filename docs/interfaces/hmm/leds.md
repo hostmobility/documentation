@@ -37,14 +37,15 @@ Overlay illustration (HM020-003711, HM020-010411)
 
 ### System built in modes
 
-| Stage                             | LED 4 (Top) | LED 3 | LED 2 | LED 1 (Bottom) |
-|-----------------------------------|------------|-------|-------|---------------|
-| **Power On**                      | 🟡         | 🟡    | 🟡    | 🟡            |
-| **Booting U-Boot**                | ⚫         | ⚫    | 🟡    | 🟡            |
-| **Bootscript(load bootfs)**       | ⚫         | ⚫    | ⚫    | ⚫            |
-| **Flashing Mode(initial)**        | ⚫         | ⚫    | ⚫    | ⚫            |
-| **File Load OK**                  | ⚫         | ⚫    | 🟢    | ⚫            |
-| **File Load Fail**                | ⚫         | ⚫    | 🔴    | ⚫            |
-| **Flash Success**                 | ⚫         | 🟢    | 🟢    | ⚫            |
-| **Booting Linux**                 | ⚫         | ⚫    | ⚫    | 🟢            |
-| **Linux Running**                 | ⚫         | ⚫    | ⚫    | 🟢 (blinking) |
+| Stage                             | LED 4 (Top) | LED 3 | LED 2 | LED 1 (Bottom)     |
+|-----------------------------------|------------|-------|-------|---------------------|
+| **Power On**                      | 🟡         | 🟡    | 🟡    | 🟡                |
+| **Booting U-Boot**                | ⚫         | ⚫    | ⚫    | 🟡                |
+| **Bootscript(load bootfs)**       | ⚫         | ⚫    | ⚫    | ⚫                |
+| **Flashing Mode(initial USB*)**   | ⚫         | ⚫    | ⚫    | ⚫                |
+| **File Load OK**                  | ⚫         | 🟢    | ⚫    | ⚫                |
+| **File Load Fail(USB*)**          | ⚫         | 🔴    | ⚫    | ⚫                |
+| **Flash Success**                 | 🟢         | 🟢    | ⚫    | ⚫                |
+| **Booting Linux**                 |            |        | ⚫    | 🟢                |
+| **Linux Running**                 | ⚫         | ⚫    | ⚫    | 🟢/⚫(blinking)  |
+ - *USB= Flashing with USB memory stick
