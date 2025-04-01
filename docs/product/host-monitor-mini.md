@@ -9,26 +9,27 @@ tags:
 
 The Host Monitor Mini is an industrial Linux-based edge-computing device in a DIN-rail mountable enclosure.
 
-## Features lists 
+## Features lists
 
 ### Feature for Hm020
 
 | Feature | Description
 | --- | ---
 | Housing | galvanized metal, 110(117)x134(153)x32mm (in parenthesis connector front to back din-rail clip)
-| Operating Temperature | -5C to +65C 
+| Operating Temperature | -5C to +65C
 | Nominal Voltage | 24V
-| Operating System | Yocto Scarthgap, Linux kernel 6.6 
-| Protection | IP20 
-| [Low power mode](../system/power_management.md)  | Suspend to RAM. 
+| Nominal Current consumtion | less than 3W
+| Operating System | Yocto Scarthgap, Linux kernel 6.6
+| Protection | IP20
+| [Low power mode](../system/power_management.md)  | Suspend to RAM.
 
-### Feature summary for HM020-100W01
+### Feature summary for HM020-100W11
 
 This product is shipped with a custom distribution/BSP and an application called Liam.
 
 | Feature | Description
 | --- | ---
-| CPU | Texas Instruments AM625 Solo 1.4 GHz A53 (64 bit) with Cortex M4F 400 MHz co-processor 
+| CPU | Texas Instruments AM625 Solo 1.4 GHz A53 (64 bit) with Cortex M4F 400 MHz co-processor
 | RAM | 512 MB DDR4
 | Internal Storage | 4 GB eMMC
 |Interface| Description|
@@ -42,7 +43,9 @@ This product is shipped with a custom distribution/BSP and an application called
 | [USB](../interfaces/hmm/usb.md) | USB 2.0 OTG type C
 | [WIFI](../interfaces/wifi.md) | 802.11 b/g/n WiFi |
 
-### Feature summary for HM020-000W51
+### Feature summary for HM020-000W21
+
+This version of the product is shipped with a custom distribution BSP as a reference OS.
 
 This version of the product is shipped with a custom distribution BSP as a reference OS.
 
@@ -58,15 +61,15 @@ This version of the product is shipped with a custom distribution BSP as a refer
 | [HSM](../interfaces/hsm.md) | Hardware security module
 | [LEDs](../interfaces/leds.md) | 4 x red+green (yellow in combination)
 | [Modem](../interfaces/modem/modem.md) | Quectel EG21 GL
-| [Real Time Clock](../interfaces/rtc.md) | System time keeper and wakeup, power backed up by BR1220 coin cell battery TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!TODO remove?!
+| [Real Time Clock](../interfaces/rtc.md) | System time keeper and wakeup, power backed up by BR1220 coin cell battery
 | [RS-232](../interfaces/serial.md) | 1 x RS-232 bus
 | [RS-485](../interfaces/serial.md) | 1 x RS-485 bus
 | SIM | nanoSIM, hot-swap
 | [USB](../interfaces/hmm/usb.md) | USB 2.0 OTG type C
-| [Universal I/O](../interfaces/hmm/digital_io.md) | with individual modes | 
+| [Universal I/O](../interfaces/hmm/digital_io.md) | with individual modes |
 | [WIFI](../interfaces/wifi.md) | 802.11 b/g/n WiFi* | Optional/Bluetooth
 
-### Feature(s) on request 
+### Feature(s) on request
 
 See [Production Variant Definition](#production-variant-definition) if your variant is already a product available for sale.
 
@@ -105,7 +108,7 @@ The product part numbers start with HM020-\*\*\*\*\*-revision, read from right t
 
 Position in field: xxxxxX
 
-| Processor ID | Module Part Number      | Additional Details                   | 
+| Processor ID | Module Part Number      | Additional Details                   |
 |--------------|-------------------------|--------------------------------------|
 | 0            | No module               |                                      |
 | 1            | hMOD0014 (Arena)        | Verdin AM62 Solo 512MB WB (WiFi) IT  |
@@ -113,25 +116,23 @@ Position in field: xxxxxX
 | 3            | - (Arena)               | Verdin AM62 Dual 1GB WB IT           |
 | 4            | - (Arena)               | Verdin AM62 Quad 2GB WB IT           |
 
-### CAN-FD, WiFi/BT, UNIV I/O, Accelerometer, Real-time Clock Battery, and Modem Features
+### PCBA Variant
 
-Position in field: xxxXXx
+Position in field: xxxxXx
 
-| Variant ID | Feature CAN | Feature RS-485 | Feature UNIV I/O | Feature Accelerometer | Feature WiFi/BT | Real-time Clock Battery | Modem Type | PCBA |
-|------------|------------|----------------|-------------------|----------------------|----------------|------------------------|------------|------------|
-| W0         | No         | No             | No                | No                   | WiFi           | No                      | EG21GL     | HMP1031-11 |
-| W1         | No         | No             | 2x                | No                   | WiFi           | No                      | EG21GL     | HMP1031-12 |
-| W2         | 2x         | No             | No                | No                   | WiFi           | No                      | EG21GL     | HMP1031-13 |
-| W3         | 2x         | No             | 2x                | No                   | WiFi           | No                      | EG21GL     | HMP1031-14 |
-| W4         | No         | No             | No                | Yes                  | WiFi           | No                      | EG21GL     | HMP1031-15 |
-| W5         | 2x         | Yes            | 2x                | No                   | WiFi           | No                      | EG21GL     | HMP1031-16 |
-| -          | -          | -              | -                 | -                    | -              | -                      | -          | -          |
-| B0         | No         | No             | No                | No                   | BT             | No                      | EG21GL     | HMP1031-11 |
-| B1         | No         | Yes            | 2x                | No                   | BT             | No                      | EG21GL     | HMP1031-12 |
-| B2         | 2x         | No             | No                | No                   | BT             | No                      | EG21GL     | HMP1031-13 |
-| B3         | 2x         | Yes            | 2x                | No                   | BT             | No                      | EG21GL     | HMP1031-14 |
-| B4         | No         | No             | No                | No                   | BT             | No                      | EG21GL     | HMP1031-15 |
-| B5         | 2x         | Yes            | 2x                | No                   | BT             | No                      | EG21GL     | HMP1031-16 |
+| Variant ID | PCBA Variant |
+|------------|------------|
+| 1          HMP1031-11 |
+| 2          HMP1031-16 |
+
+### WiFi or BLE features
+
+Position in field: xxxXxx
+
+| Variant ID | Feature WiFi/BLE |
+|------------|------------|
+| W          WiFi |
+| B          Blutooth |
 
 
 ### SD-Card
@@ -145,16 +146,16 @@ Position in field: xxXxxx
 
 ### SIM Card
 
-Position in field: xxXxxx
+Position in field: xXxxxx
 
 | Variant ID | Nano-SIM Card | Additional Details                       |
 |------------|---------------|------------------------------------------|
 | 0          | Not fitted    | No SIM card included                     |
 
 
-
 ### Custom BSP/OS
-Position in field: XXxxxx
+
+Position in field: Xxxxxx
 
 This is for customers that want extra installation of software, additional labels or similar within design limitations.
 
@@ -164,13 +165,13 @@ This is for customers that want extra installation of software, additional label
 | 1           | <Reserved>      | Reserved for customer using the Liam application and a custom BSP  |
 | n           | <Reserved>      | -                                                                  |
 
-  
+
 ### List of known products
 
 | Products   | Product part number | Description
 |------------|---------------------|---------------------------------------------------|
-| Default    | HM020-000W51        | Only delivered with our reference BSP             |
-| <Reserved> | HM020-100W01        | Reserved for customer using the Liam application  |
+| Default    | HM020-000W21        | Only delivered with our reference BSP             |
+| <Reserved> | HM020-100W11        | Reserved for customer using the Liam application  |
 
 **Note:** For SETEK employees, update this page after making changes to the internal document 900126-HM Mini Variant definitions and encoding.
 
