@@ -176,9 +176,18 @@ This is for customers that want extra installation of software, additional label
 **Note:** For SETEK employees, update this page after making changes to the internal document 900126-HM Mini Variant definitions and encoding.
 
 
-## Connectors and buttons
+## Connectors and buttons (PCBA Variant 1)
 
-[![Connectors and buttons](tbd.PNG)](../assets/tbd.PDF)
+[![Connectors and buttons](../assets/hmm/900154_typ1.1.PNG)](../assets/hmm/900154_typ1.pdf)
+
+[![Connectors and buttons2](../assets/hmm/900154_typ1.2.PNG)](../assets/hmm/900154_typ1.pdf)
+
+
+## Connectors and buttons (PCBA Variant 2)
+
+[![Connectors and buttons](../assets/hmm/900154_typ2.1.PNG)](../assets/hmm/900154_typ2.pdf)
+
+[![Connectors and buttons2](../assets/hmm/900154_typ2.2.PNG)](../assets/hmm/900154_typ2.pdf)
 
 ## Technical specification
 
