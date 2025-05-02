@@ -11,7 +11,7 @@ The Host Monitor Mini is an industrial Linux-based edge-computing device in a DI
 
 ## Features lists
 
-### Feature for HM020
+### Common features for HM020
 
 | Feature | Description
 | --- | ---
