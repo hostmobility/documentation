@@ -176,16 +176,16 @@ This is for customers that want extra installation of software, additional label
 
 ## Connectors and buttons (PCBA Variant 1)
 
-[![Connectors and buttons](../assets/hmm/900154_typ1.1.PNG)]
+![Connectors and buttons](../assets/hmm/900154_typ1.1.PNG)
 
-[![Connectors and buttons2](../assets/hmm/900154_typ1.2.PNG)]
+![Connectors and buttons2](../assets/hmm/900154_typ1.2.PNG)
 
 
 ## Connectors and buttons (PCBA Variant 2)
 
-[![Connectors and buttons](../assets/hmm/900154_typ2.1.PNG)]
+![Connectors and buttons](../assets/hmm/900154_typ2.1.PNG)
 
-[![Connectors and buttons2](../assets/hmm/900154_typ2.2.PNG)]
+![Connectors and buttons2](../assets/hmm/900154_typ2.2.PNG)
 
 ## Technical specification
 
