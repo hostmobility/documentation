@@ -11,7 +11,7 @@ The Host Monitor Mini is an industrial Linux-based edge-computing device in a DI
 
 ## Features lists
 
-### Feature for Hm020
+### Common features for HM020
 
 | Feature | Description
 | --- | ---
@@ -44,8 +44,6 @@ This product is shipped with a custom distribution/BSP and an application called
 | [WIFI](../interfaces/wifi.md) | 802.11 b/g/n WiFi |
 
 ### Feature summary for HM020-000W21
-
-This version of the product is shipped with a custom distribution BSP as a reference OS.
 
 This version of the product is shipped with a custom distribution BSP as a reference OS.
 
