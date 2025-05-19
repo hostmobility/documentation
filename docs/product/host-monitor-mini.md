@@ -110,9 +110,9 @@ Position in field: xxxxxX
 |--------------|-------------------------|--------------------------------------|
 | 0            | No module               |                                      |
 | 1            | hMOD0014 (Arena)        | Verdin AM62 Solo 512MB WB (WiFi) IT  |
-| 2            | - (Arena)               | Verdin AM62 Dual 1GB WB IT           |
-| 3            | - (Arena)               | Verdin AM62 Dual 1GB WB IT           |
-| 4            | - (Arena)               | Verdin AM62 Quad 2GB WB IT           |
+| 2            | -                       | Verdin AM62 Dual 1GB WB IT           |
+| 3            | -                       | Verdin AM62 Dual 1GB WB IT           |
+| 4            | -                       | Verdin AM62 Quad 2GB WB IT           |
 
 ### PCBA Variant
 
