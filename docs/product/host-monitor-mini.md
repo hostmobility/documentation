@@ -52,7 +52,6 @@ This version of the product is shipped with a custom distribution BSP as a refer
 | CPU | Texas Instruments AM625 Solo 1.4 GHz A53 (64 bit) with Cortex M4F 400 MHz co-processor 
 | RAM | 512 MB DDR4
 | Internal Storage | 4 GB eMMC
-|Interface| Sumary|
 | [CAN](../interfaces/can.md) | 2 x CAN-FD
 | [Ethernet](../interfaces/ethernet.md) |  1 x 100/1000 Base-T
 | [GPS](../interfaces/hmm/modem.md) | Included in modem, external antenna connector (SMA)
@@ -119,18 +118,18 @@ Position in field: xxxxxX
 Position in field: xxxxXx
 
 | Variant ID | PCBA Variant |
-|------------|------------|
-| 1          HMP1031-11 |
-| 2          HMP1031-16 |
+|------------|--------------|
+| 1          | HMP1031-11   |
+| 2          | HMP1031-16   |
 
 ### WiFi or BLE features
 
 Position in field: xxxXxx
 
 | Variant ID | Feature WiFi/BLE |
-|------------|------------|
-| W          WiFi |
-| B          Blutooth |
+|------------|------------------|
+| W          | WiFi             |
+| B          | Blutooth         |
 
 
 ### SD-Card
@@ -176,7 +175,7 @@ This is for customers that want extra installation of software, additional label
 
 ## Connectors and buttons (PCBA Variant 1)
 
-[![Connectors and buttons](../assets/hmm/900154_type1.1.png])(../assets/hmm/900154_type1.pdf)
+[![Connectors and buttons](../assets/hmm/900154_type1.1.png)](../assets/hmm/900154_type1.pdf)
 
 [![Connectors and buttons2](../assets/hmm/900154_type1.2.png)](../assets/hmm/900154_type1.pdf)
 
