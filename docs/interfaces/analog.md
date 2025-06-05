@@ -2,6 +2,7 @@
 title: Analog inputs (ADC)
 tags:
   - ADC
+  - HMM
   - C61
   - MX-V
   - CT
@@ -15,6 +16,7 @@ Many of our products have analog inputs. On the MX-4 platform they are accessibl
 
 ## Platform specific
 
+- [HMM](hmm/io.md)
 - [MX-4](mx4/analog.md)
     - [MX-4 T30/T30fr](mx4/analog.md)
     - [C61 IO](c61/io.md)

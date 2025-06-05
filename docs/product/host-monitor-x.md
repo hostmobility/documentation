@@ -22,6 +22,7 @@ See [Production Variant Definition](#production-variant-definition)
 | External Logging | µSD Card
 | [GPS](../interfaces/hmx/modem.md) | Included in modem, external antenna
 | Housing | Aluminium/plastic
+| [HSM](../interfaces/hsm.md) | Hardware secure module
 | [Start Signals](../interfaces/start_signal.md) | External input, 2.5-36V (5 inputs)
 | Internal Storage | 64 GB eMMC
 | [LEDs](../interfaces/leds.md) | 5 red+green (yellow in combination), 1 RGB
@@ -47,6 +48,8 @@ The production part numbers start with HM010-\*\*\*\*\*-revision, read from righ
 
 ### Processor module
 
+Position in field: xxxxX
+
 | Processor ID | Module Part Number                 | Description                                         |
 |--------------|------------------------------------|-----------------------------------------------------|
 | 0            | No module                          |                                                     |
@@ -54,6 +57,8 @@ The production part numbers start with HM010-\*\*\*\*\*-revision, read from righ
 | 2            | hMOD0013-R1A (Arena)               | i.MX 8M Plus with Quad Core CPU, 4GB DRAM, 64GB EMMC and Wi-Fi |
 
 ### Modem module
+
+Position in field: xxxXx
 
 | Modem ID | Module Part Number     | Description             |
 |----------|------------------------|-------------------------|
@@ -64,6 +69,8 @@ The production part numbers start with HM010-\*\*\*\*\*-revision, read from righ
 
 ### Micro SD Card module
 
+Position in field: xxXxx
+
 | Micro SD Card ID | Module Part Number  | Description                             |
 |------------------|---------------------|-----------------------------------------|
 | 0                | No SD card          |                                         |
@@ -71,6 +78,8 @@ The production part numbers start with HM010-\*\*\*\*\*-revision, read from righ
 | 2                | hBMT0002 (Arena)    | SanDisk SDHC 32GB UHS-I U1 A1           |
 
 ### SIM Card module
+
+Position in field: xXxxx
 
 | SIM Card ID | Module Part Number | Description             |
 |-------------|---------------------|-------------------------|
@@ -80,6 +89,8 @@ The production part numbers start with HM010-\*\*\*\*\*-revision, read from righ
 ### Customer customization
 
 This is for customers that want extra installation of software, additional labels or similar within design limitations.
+
+Position in field: Xxxxx
 
 | Customer ID | Customer Tweaks | Description                                             |
 |-------------|-----------------|---------------------------------------------------------|
@@ -96,8 +107,6 @@ This is for customers that want extra installation of software, additional label
 | <Reserved>           | HM010-11111-V6B      | Reserved for customer with 4G modem, SIM card, SD card and customization |
 
 **Note:** For Host Mobility employees, update this page after making changes to internal document FILE-000767 (800141-Product variant definition HM010-000-x).
-
-
 
 
 ## Connectors and buttons

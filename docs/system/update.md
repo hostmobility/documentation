@@ -2,6 +2,7 @@
 title: System update
 tags:
   - System update
+  - HMM
   - HMX
   - MX-4
   - CT
@@ -55,6 +56,7 @@ Host dut
 
 Depending on the hardware, the upgrade procedures are then slightly different:
 
+* [System upgrade (HMM)](hmm/update.md)
 * [System upgrade (HMX)](hmx/update.md)
 * [System upgrade (MXV)](mxv/update.md)
 * [System upgrade (MX-4 T30)](mx4/t30/update.md)

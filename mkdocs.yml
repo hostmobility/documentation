@@ -24,6 +24,7 @@ nav:
   - index.md
   - Platforms:
     - product/host-monitor-x.md
+    - product/host-monitor-mini.md
     - product/mx4-c61.md
     - product/mx4-t30fr.md
     - product/mx4-ct-gl.md
@@ -38,6 +39,7 @@ nav:
     - login.md
     - system/update.md
     - system/development.md
+    - system/watchdog.md
   - Interfaces:
     - interfaces/accelerometer.md
     - interfaces/analog.md

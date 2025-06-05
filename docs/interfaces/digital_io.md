@@ -2,6 +2,7 @@
 title:  Digital I/O
 tags:
   - Digital I/O
+  - HMM
   - MX-V
   - T30
   - T30 FR
@@ -17,11 +18,10 @@ Digital I/O is handled by the Linux GPIO subsystem. This is a generic interface 
 
 ## Platform specific
 
-[HMX](hmx/digital_io.md)
-
-[MX-V](mxv/digital_io.md)
-
-[mx4](mx4/digital_io.md)
+- [HMM](hmm/io.md)
+- [HMX](hmx/digital_io.md)
+- [MX-V](mxv/digital_io.md)
+- [MX-4](mx4/digital_io.md)
 
 ## Geting started
 Where possible, it is recommended to use the modern (since Linux v4.8) GPIO API. It is implemented in

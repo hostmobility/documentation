@@ -2,6 +2,7 @@
 title: LEDs
 tags:
   - LED
+  - HMM
   - HMX
   - C61
   - MX-4
@@ -32,6 +33,7 @@ echo 0 >  /sys/class/leds/mx4-wifi-red/brightness
 
 ## Platform specific
 
-- [hmx-leds](hmx/leds.md)
-- [mxv-leds](mxv/leds.md)
-- [mx4-leds](mx4/leds.md)
+- [HMM](hmm/leds.md)
+- [HMX](hmx/leds.md)
+- [MX-V](mxv/leds.md)
+- [Mx4](mx4/leds.md)

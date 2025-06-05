@@ -2,6 +2,7 @@
 title: Real Time Clock
 tags:
   - Real Time Clock
+  - HMM
   - C61
   - HMX
   - MX-V

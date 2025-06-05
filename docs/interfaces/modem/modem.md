@@ -2,6 +2,7 @@
 title: Modem
 tags:
   - Modem
+  - HMM
   - MX-V
   - T30
   - T30 FR
@@ -17,16 +18,12 @@ The modems in Host Mobility's products typically provide support for both mobile
 
 ## Platform specific
 
+[HMM](../hmm/modem.md)
 [HMX](../hmx/modem.md)
-
 [MX-V](../mxv/modem.md)
-
 [CT GL](../ctgl/modem.md)
-
 [C61](../c61/modem.md)
-
 [CT](../mx4/modem.md)
-
 [T30/T30fr](../mx4/modem.md)
 
 ## Communication channels

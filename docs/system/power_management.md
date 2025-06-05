@@ -2,6 +2,7 @@
 title: Power management
 tags:
   - Power management
+  - HMM
   - HMX
   - MX-4
   - MX-V
@@ -23,6 +24,7 @@ fast resume time (around 1 s) to running state.
 The machine can wake up from different sources but the Real time clock and CAN are most often used. The list of wake-up sources is platform specific and depending on the sleep mode. For `Shutdown/Cutoff`, for example, only start signal input is supported.
 
 ## Platform specific
+- [HMM](hmm/power_management.md)
 - [HMX](hmx/power_management.md)
 - [MX4](mx4/power_management.md)
 - [MX-V](mxv/power_management.md)

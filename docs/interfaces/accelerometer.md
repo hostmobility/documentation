@@ -2,6 +2,7 @@
 title: Accelerometer
 tags:
   - Accelerometer
+  - HMM
   - HMX
   - C61
   - MX-4
