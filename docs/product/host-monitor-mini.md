@@ -4,7 +4,7 @@ tags:
     - HMM
 ---
 
-<img src="../assets/hmm/HM020-xxx2x.png" alt="Host Monitor Mini" width="300" />
+![Host Monitor Mini](../assets/hmm/HM020-xxx2x.png){: style="width:300px"}
 
 ## Abstract
 
