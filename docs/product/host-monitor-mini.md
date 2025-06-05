@@ -3,8 +3,9 @@ title: Platform Host Monitor Mini
 tags:
     - HMM
 ---
-![](hmm-box.png)
-![](hmm_back-box.png)
+
+![Host Monitor Mini](../assets/hmm/HM020-xxx2x.png){width="300"}
+
 ## Abstract
 
 The Host Monitor Mini is an industrial Linux-based edge-computing device in a DIN-rail mountable enclosure.
