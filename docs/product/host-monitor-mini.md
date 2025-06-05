@@ -33,7 +33,6 @@ This product is shipped with a custom distribution/BSP and an application called
 | CPU | Texas Instruments AM625 Solo 1.4 GHz A53 (64 bit) with Cortex M4F 400 MHz co-processor
 | RAM | 512 MB DDR4
 | Internal Storage | 4 GB eMMC
-|Interface| Description|
 | [Ethernet](../interfaces/ethernet.md) |  1 x 100/1000 Base-T
 | [GPS](../interfaces/hmm/modem.md) | Included in modem, external antenna
 | [LEDs](../interfaces/leds.md) | 4 x red+green (yellow in combination)
@@ -64,7 +63,7 @@ This version of the product is shipped with a custom distribution BSP as a refer
 | [RS-485](../interfaces/serial.md) | 1 x RS-485 bus
 | SIM | nanoSIM, hot-swap
 | [USB](../interfaces/hmm/usb.md) | USB 2.0 OTG type C
-| [Universal I/O](../interfaces/hmm/digital_io.md) | with individual modes |
+| [Universal I/O](../interfaces/hmm/io.md) | with individual modes |
 | [WIFI](../interfaces/wifi.md) | 802.11 b/g/n WiFi* | Optional/Bluetooth
 
 ### Feature(s) on request
