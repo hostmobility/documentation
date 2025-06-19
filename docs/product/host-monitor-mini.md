@@ -20,13 +20,10 @@ The Host Monitor Mini is an industrial Linux-based edge-computing device in a DI
 | Operating Temperature | -5C to +65C
 | Nominal Voltage | 24V
 | Nominal Current consumtion | less than 3W
-| Operating System | Yocto Scarthgap, Linux kernel 6.6
 | Protection | IP20
 | [Low power mode](../system/power_management.md)  | Suspend to RAM.
 
 ### Feature summary for HM020-100W11
-
-This product is shipped with a custom distribution/BSP and an application called Liam.
 
 | Feature | Description
 | --- | ---
@@ -42,10 +39,9 @@ This product is shipped with a custom distribution/BSP and an application called
 | SIM | nanoSIM, hot-swap
 | [USB](../interfaces/hmm/usb.md) | USB 2.0 OTG type C
 | [WIFI](../interfaces/wifi.md) | 802.11 b/g/n WiFi |
+| Software | Custom operating system based on Yocto Scarthgap with Linux kernel 6.6, featuring an application called Liam.
 
 ### Feature summary for HM020-000W21
-
-This version of the product is shipped with a custom distribution BSP as a reference OS.
 
 | Feature | Description
 | --- | ---
@@ -65,6 +61,7 @@ This version of the product is shipped with a custom distribution BSP as a refer
 | [USB](../interfaces/hmm/usb.md) | USB 2.0 OTG type C
 | [Universal I/O](../interfaces/hmm/io.md) | with individual modes |
 | [WIFI](../interfaces/wifi.md) | 802.11 b/g/n WiFi* | Optional/Bluetooth
+| Software | Reference operating system based on Yocto Scarthgap with Linux kernel 6.6. For evaluation use only; not for production.
 
 ### Feature(s) on request
 
