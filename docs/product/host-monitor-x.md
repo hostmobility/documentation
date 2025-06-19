@@ -29,7 +29,6 @@ See [Production Variant Definition](#production-variant-definition)
 | [Modem](../interfaces/modem/modem.md) | 5G or 4G, M2 connector
 | Nominal Voltage | 12-24V
 | Operating Temperature | -40C to +65C
-| Operating System | Yocto Kirkstone, Linux kernel 6.1
 | Power Consumption @12V | < 1 mA in "Off", 25 mA  in "Suspend to RAM"
 | Protection | IP30
 | RAM | 4 GB DDR4
@@ -40,6 +39,7 @@ See [Production Variant Definition](#production-variant-definition)
 | UPS | 3 seconds supercap power
 | [USB](../interfaces/hmx/usb.md) | USB 3.0 OTG type C, USB 2.0 host type A
 | [Sleep-Mode](../system/power_management.md) | Low power sleep mode |
+| Software | Reference operating system based on Yocto Kirkstone with Linux kernel 6.1. For evaluation use only; not for production.
 
 
 ## Production variant definition
