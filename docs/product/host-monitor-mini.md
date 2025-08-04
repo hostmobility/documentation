@@ -33,7 +33,7 @@ The Host Monitor Mini is an industrial Linux-based edge-computing device in a DI
 | [Ethernet](../interfaces/ethernet.md) |  1 x 100/1000 Base-T
 | [GPS](../interfaces/hmm/modem.md) | Included in modem, external antenna
 | [LEDs](../interfaces/leds.md) | 4 x red+green (yellow in combination)
-| [Modem](../interfaces/modem/modem.md) | Quectel EG21 GL
+| [Modem](../interfaces/modem/modem.md) | Quectel EG21
 | [Real Time Clock](../interfaces/rtc.md) | No battery mounted; please use network time
 | [RS-232](../interfaces/serial.md) | 1 x RS-232 bus 
 | SIM | nanoSIM, hot-swap
@@ -53,7 +53,7 @@ The Host Monitor Mini is an industrial Linux-based edge-computing device in a DI
 | [GPS](../interfaces/hmm/modem.md) | Included in modem, external antenna connector (SMA)
 | [HSM](../interfaces/hsm.md) | Hardware security module
 | [LEDs](../interfaces/leds.md) | 4 x red+green (yellow in combination)
-| [Modem](../interfaces/modem/modem.md) | Quectel EG21 GL
+| [Modem](../interfaces/modem/modem.md) | Quectel EG21
 | [Real Time Clock](../interfaces/rtc.md) | System time keeper and wakeup, power backed up by BR1220 coin cell battery
 | [RS-232](../interfaces/serial.md) | 1 x RS-232 bus
 | [RS-485](../interfaces/serial.md) | 1 x RS-485 bus
