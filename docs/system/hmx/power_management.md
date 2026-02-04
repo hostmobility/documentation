@@ -52,3 +52,35 @@ shutdown -h now
 poweroff
 ```
 
+### Check wakeup source
+
+Most of the signals would be registerd in /sys/class/wakeup and the folowing example gives the temporary name: name: and event_count. Check the counter before enter suspend.
+For gpio-keys there is just one counter so START signals and Digital input should be checked in '/dev/input/event'.
+
+
+```bash
+for d in /sys/class/wakeup/wakeup*; do 
+    echo -n "$(basename $d): $(cat $d/name) -> " && cat $d/event_count; 
+done
+```
+
+Example output from a scarthgap system
+```
+wakeup0: 30370000.snvs:snvs-powerkey -> 0
+wakeup1: 30370000.snvs:snvs-rtc-lp -> 0
+wakeup10: 3-001e -> 0 (Accelerometer)
+wakeup11: spi1.2 -> 0 (CAN)
+wakeup12: spi1.3 -> 0 (CAN)
+wakeup13: spi3.0 -> 0 (CAN)
+wakeup14: spi3.1 -> 0 (CAN)
+wakeup2: alarmtimer.0.auto -> 0
+wakeup3: mmc2 -> 0
+wakeup4: mmc0 -> 0
+wakeup5: mmc1 -> 0
+wakeup6: gpio-keys -> 242
+wakeup7: 308c0000.can -> 0
+wakeup8: 308d0000.can -> 0
+wakeup9: 1-0051 -> 946 (RTC)
+```
+
+
