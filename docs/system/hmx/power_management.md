@@ -82,5 +82,50 @@ wakeup7: 308c0000.can -> 0
 wakeup8: 308d0000.can -> 0
 wakeup9: 1-0051 -> 946 (RTC)
 ```
+### Configure wakeup source in userspace
 
+The following list is generated using a script. Note that **paths and wakeup IDs may change** depending on your software and hardware version. If unsure, you can find the script [here](list_wakeup_source.sh) and run it on your device to get a similar output.
 
+#### Hardware Mapping (Helper)
+Use this list to identify which physical interface corresponds to which CAN interface or component:
+
+*   **3-001e** -> **Accelerometer**
+*   **1-0051** -> **RTC** (Main board w/ battery backup)
+*   **30370000.snvs:snvs-rtc-lp** -> **Module RTC**
+*   **spi1.2** -> **CAN4**
+*   **spi1.3** -> **CAN5**
+*   **spi3.0** -> **CAN0**
+*   **spi3.1** -> **CAN3**
+*   **308c0000.can** -> **CAN2**
+*   **308d0000.can** -> **CAN1**
+
+#### Wakeup Sources Table
+
+| WAKEUP ID | IFACE | SET WAKEUP PATH | STATUS | EVENTS | EVENTS PATH |
+|-----------|-------|--------------|--------|--------|-------------|
+| wakeup0 | platform | /sys/devices/platform/soc@0/30000000.bus/30370000.snvs/30370000.snvs:snvs-powerkey/power/wakeup | enabled | 0 | /sys/class/wakeup/wakeup0/event_count |
+| wakeup1 | platform | /sys/devices/platform/soc@0/30000000.bus/30370000.snvs/30370000.snvs:snvs-rtc-lp/power/wakeup | enabled | 0 | /sys/class/wakeup/wakeup1/event_count |
+| wakeup10 | i2c | /sys/bus/i2c/devices/3-001e/power/wakeup | enabled | 0 | /sys/class/wakeup/wakeup10/event_count |
+| wakeup11 | spi | /sys/bus/spi/devices/spi1.2/power/wakeup | enabled | 0 | /sys/class/wakeup/wakeup11/event_count |
+| wakeup12 | spi | /sys/bus/spi/devices/spi1.3/power/wakeup | enabled | 0 | /sys/class/wakeup/wakeup12/event_count |
+| wakeup13 | spi | /sys/bus/spi/devices/spi3.0/power/wakeup | enabled | 0 | /sys/class/wakeup/wakeup13/event_count |
+| wakeup14 | spi | /sys/bus/spi/devices/spi3.1/power/wakeup | enabled | 0 | /sys/class/wakeup/wakeup14/event_count |
+| wakeup2 | rtc | /sys/devices/platform/soc@0/30000000.bus/30370000.snvs/30370000.snvs:snvs-rtc-lp/rtc/rtc1/alarmtimer.0.auto/power/wakeup | enabled | 0 | /sys/class/wakeup/wakeup2/event_count |
+| wakeup3 | unknown | n/a | n/a | 0 | /sys/class/wakeup/wakeup3/event_count |
+| wakeup4 | unknown | n/a | n/a | 0 | /sys/class/wakeup/wakeup4/event_count |
+| wakeup5 | unknown | n/a | n/a | 0 | /sys/class/wakeup/wakeup5/event_count |
+| wakeup6 | gpio | /sys/devices/platform/gpio-keys/power/wakeup | enabled | 242 | /sys/class/wakeup/wakeup6/event_count |
+| wakeup7 | platform | /sys/devices/platform/soc@0/30800000.bus/30800000.spba-bus/308c0000.can/power/wakeup | enabled | 0 | /sys/class/wakeup/wakeup7/event_count |
+| wakeup8 | platform | /sys/devices/platform/soc@0/30800000.bus/30800000.spba-bus/308d0000.can/power/wakeup | enabled | 0 | /sys/class/wakeup/wakeup8/event_count |
+| wakeup9 | i2c | /sys/bus/i2c/devices/1-0051/power/wakeup | enabled | 1060 | /sys/class/wakeup/wakeup9/event_count |
+
+#### Examples
+
+**Disable wakeup source (e.g., RTC):**
+```bash
+echo disabled > /sys/bus/i2c/devices/1-0051/power/wakeup
+```
+**Enable wakeup source (e.g., RTC):**
+```bash
+echo enabled > /sys/bus/i2c/devices/1-0051/power/wakeup
+```
