@@ -1,7 +1,11 @@
-# Automotive Ethernet (100BASE-T1 / 1000BASE-T1) Setup Guide
-
+---
+title: HMX Automotive Ethernet
+tags:
+  - HMX
+  - Automotive
+  - Ethernet
+---
 ## Overview
-
 This document explains how to configure the automotive ethernet ports on the HMX. The
 Automotive Ethernet (T1) in:
 
