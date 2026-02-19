@@ -9,8 +9,7 @@ tags:
 This document explains how to configure the automotive ethernet ports on the HMX. The
 Automotive Ethernet (T1) in:
 
--   1000BASE-T1 (1 Gbit)
--   100BASE-T1 (100 Mbit)
+-   100BASE-T1 (100 Mbit) or 1000BASE-T1 (1 Gbit) speed selection
 -   Master (CMD) / Slave (RSP) configurations
 -   Throughput testing using iperf3
 
