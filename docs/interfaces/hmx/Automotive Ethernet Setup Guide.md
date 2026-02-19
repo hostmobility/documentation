@@ -2,7 +2,7 @@
 title: HMX Automotive Ethernet
 tags:
   - HMX
-  - Automotive
+  - Automotive Ethernet
   - Ethernet
 ---
 ## Overview
