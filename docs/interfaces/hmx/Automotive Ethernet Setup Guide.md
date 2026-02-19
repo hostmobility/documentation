@@ -6,8 +6,8 @@ tags:
   - Ethernet
 ---
 ## Overview
-This document explains how to configure the automotive ethernet ports on the HMX. The
-Automotive Ethernet (T1) in:
+This document explains how to configure and use the automotive ethernet ports (eth2 and eth3) on the HMX including
+
 
 -   100BASE-T1 (100 Mbit) or 1000BASE-T1 (1 Gbit) speed selection
 -   Master (CMD) / Slave (RSP) configurations
