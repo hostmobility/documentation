@@ -8,7 +8,7 @@ tags:
 ## HMX Automotive Ethernet Setup Guide
 This document explains how to configure and use the automotive ethernet ports (eth2 / eth3) between two HMX units.
 
-In practice, you should be able to replicate the steps that suit your desired setup by adjusting or removing HMX Unit B as needed to match your configuration. Keep in mind that the speed and master/slave role may vary, so you must configure both units correctly in order to establish a connection.
+In practice, you should be able to replicate the steps that suit your desired setup by adjusting or removing HMX Unit B as needed to match your configuration. Keep in mind that the speed and master/slave role may vary, so you must manually configure both units correctly in order to establish a connection.
 
 This guide covers:
 
@@ -56,6 +56,7 @@ You should see:
 ## Configuration 1
 
 HMX A = Master
+
 HMX B = Slave
 
 ### On HMX A
@@ -68,14 +69,6 @@ ethtool -s eth2 master-slave forced-master
 
 ``` bash
 ethtool -s eth2 master-slave forced-slave
-```
-
-Retrain link (run on both sides):
-
-``` bash
-ip link set eth2 down
-sleep 1
-ip link set eth2 up
 ```
 
 Verify:
@@ -94,6 +87,7 @@ Expected:
 ## Configuration 2
 
 HMX A = Slave
+
 HMX B = Master
 
 ### On HMX A
@@ -106,14 +100,6 @@ ethtool -s eth2 master-slave forced-slave
 
 ``` bash
 ethtool -s eth2 master-slave forced-master
-```
-
-Retrain link (run on both sides):
-
-``` bash
-ip link set eth2 down
-sleep 1
-ip link set eth2 up
 ```
 
 Verify:
@@ -131,7 +117,7 @@ Expected:
 ------------------------------------------------------------------------
 # 4. Set Link Speed
 
-## For 1000BASE-T1
+## For 1000BASE-T1 (1 Gbit) speed
 
 On both systems:
 
@@ -139,15 +125,13 @@ On both systems:
 ethtool -s eth2 speed 1000 duplex full
 ```
 
-## For 100BASE-T1
+## For 100BASE-T1 (100 Mbit) speed
 
 On both systems:
 
 ``` bash
 ethtool -s eth2 speed 100 duplex full
 ```
-
-Retrain link after changing speed.
 
 Verify:
 
@@ -247,6 +231,16 @@ If ping fails:
 -   Verify IP addresses are in same subnet
 -   Check firewall rules
 -   Verify route with: ip route
+
+If HMX fails to switch Speed or Slave/Master roles:
+
+- Bring down the interface and bring it back up
+
+``` bash
+ip link set eth2 down
+sleep 1
+ip link set eth2 up
+```
 
 ------------------------------------------------------------------------
 
