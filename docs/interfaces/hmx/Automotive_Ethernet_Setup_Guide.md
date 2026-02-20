@@ -5,12 +5,16 @@ tags:
   - Automotive Ethernet
   - Ethernet
 ---
-## Overview
-This document explains how to configure and use the automotive ethernet ports (eth2 and eth3) on the HMX including
+## HMX Automotive Ethernet Setup Guide
+This document explains how to configure and use the automotive ethernet ports (eth2 / eth3) between two HMX units.
 
+In practice, you should be able to replicate the steps that suit your desired setup by adjusting or removing HMX Unit B as needed to match your configuration. Keep in mind that the speed and master/slave role may vary, so you must configure both units correctly in order to establish a connection.
 
--   100BASE-T1 (100 Mbit) or 1000BASE-T1 (1 Gbit) speed selection
+This guide covers:
+
+-   100BASE-T1 (100 Mbit) and 1000BASE-T1 (1 Gbit) speed selection
 -   Master (CMD) / Slave (RSP) configurations
+-   IP configuration
 -   Throughput testing using iperf3
 
 Both systems must use compatible T1 PHYs.
@@ -19,7 +23,7 @@ Both systems must use compatible T1 PHYs.
 
 # 1. Physical Topology
 
-    HMX (eth2/eth3)  <---- T1 cable ---->  SYSTEM
+    HMX A (eth2/eth3) <---- T1 cable ---->  HMX B (eth2/eth3)
 
 Requirements:
 
@@ -30,6 +34,9 @@ Requirements:
 ------------------------------------------------------------------------
 
 # 2. Verify Link Capability
+
+Either port eth2/eth3 is fine to use but for this guide eth2 will be used.
+
 
 Run on both systems:
 
@@ -46,19 +53,24 @@ You should see:
 
 # 3. Configure Master / Slave Roles
 
-## Set HMX as Master
+## Configuration 1
+
+HMX A = Master
+HMX B = Slave
+
+### On HMX A
 
 ``` bash
 ethtool -s eth2 master-slave forced-master
 ```
 
-## Set HMX as Slave
+### On HMX B
 
 ``` bash
 ethtool -s eth2 master-slave forced-slave
 ```
 
-Retrain link:
+Retrain link (run on both sides):
 
 ``` bash
 ip link set eth2 down
@@ -72,14 +84,51 @@ Verify:
 ethtool eth2
 ```
 
-You should see:
+Expected:
 
--   master-slave status: master (on A)
--   master-slave status: slave (on B)
+-   master-slave status: master (on HMX A)
+-   master-slave status: slave (on HMX B)
+-   Link detected: yes
+------------------------------------------------------------------------
+
+## Configuration 2
+
+HMX A = Slave
+HMX B = Master
+
+### On HMX A
+
+``` bash
+ethtool -s eth2 master-slave forced-slave
+```
+
+### On HMX B
+
+``` bash
+ethtool -s eth2 master-slave forced-master
+```
+
+Retrain link (run on both sides):
+
+``` bash
+ip link set eth2 down
+sleep 1
+ip link set eth2 up
+```
+
+Verify:
+
+``` bash
+ethtool eth2
+```
+
+Expected:
+
+-   master-slave status: slave (on HMX A)
+-   master-slave status: master (on HMX B)
 -   Link detected: yes
 
 ------------------------------------------------------------------------
-
 # 4. Set Link Speed
 
 ## For 1000BASE-T1
@@ -120,7 +169,7 @@ or
 
 Choose a subnet (example 192.168.10.0/24)
 
-## HMX
+## On HMX A
 
 ``` bash
 ip addr flush dev eth2
@@ -128,17 +177,34 @@ ip addr add 192.168.10.1/24 dev eth2
 ip link set eth2 up
 ```
 
+## On HMX B
+
+``` bash
+ip addr flush dev eth2
+ip addr add 192.168.10.2/24 dev eth2
+ip link set eth2 up
+```
+
+Verify:
+
+``` bash
+ip route
+```
+
+You should see:
+
+    192.168.10.0/24 dev eth2 scope link
 ------------------------------------------------------------------------
 
 # 6. Test Connectivity
 
-From **HMX** to SERVER:
+From **HMX** **A**:
 
 ``` bash
-ping -I eth2 [SYSTEMS IP]
+ping -I eth2 192.168.10.2
 ```
 
-From SERVER to **HMX**:
+From **HMX** **B** :
 
 ``` bash
 ping -I eth2 192.168.10.1
@@ -148,22 +214,16 @@ ping -I eth2 192.168.10.1
 
 # 7. Throughput Testing (iperf3)
 
-Install iperf3 if needed:
-
-``` bash
-sudo apt install iperf3
-```
-
-## On Server
+## On HMX B (Server)
 
 ``` bash
 iperf3 -s
 ```
 
-## On HMX
+## On HMX A (Client)
 
 ``` bash
-iperf3 -c 192.168.10.2              NOTE!! EXAMPLE IP use ur own IP
+iperf3 -c 192.168.10.2              
 ```
 
 Expected throughput:
@@ -179,7 +239,6 @@ If link is down:
 
 -   Ensure speeds match on both sides
 -   Ensure one side is master and the other slave
--   Retrain link
 -   Reconnect cable
 -   Verify with: ethtool eth2
 
@@ -193,9 +252,9 @@ If ping fails:
 
 # 9. Validated Configurations
 
-Configuration A: - HMX = Master - System = Slave
+Configuration A: - HMX A = Master - HMX B = Slave
 
-Configuration B: - HMX = Slave - System = Master
+Configuration B: - HMX A = Slave - HMX B = Master
 
 Both configurations should support full throughput.
 
