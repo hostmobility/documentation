@@ -8,7 +8,7 @@ tags:
 ## HMX Automotive Ethernet Setup Guide
 This document explains how to configure and use the automotive ethernet ports (eth2 / eth3) between two HMX units.
 
-In practice, you should be able to replicate the steps that suit your desired setup by adjusting or removing HMX Unit B as needed to match your configuration. Keep in mind that the speed and master/slave role may vary, so you must manually configure both units correctly in order to establish a connection.
+In practice, you should be able to replicate the steps that suit your desired setup by replacing HMX B with another system. Keep in mind that the speed and master/slave roles must be compatible in order to establish a connection, so if one of the endpoints is fixed (e.g. the one that replaces HMX B), the other one (HMX A) must be adapted.
 
 This guide covers:
 
