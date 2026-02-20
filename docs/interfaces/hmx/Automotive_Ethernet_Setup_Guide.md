@@ -224,18 +224,23 @@ If link is down:
 -   Ensure speeds match on both sides
 -   Ensure one side is master and the other slave
 -   Reconnect cable
--   Verify with: ethtool eth2
+-   Verify with: 
+``` bash
+ethtool eth2
+```
 
 If ping fails:
 
 -   Verify IP addresses are in same subnet
 -   Check firewall rules
--   Verify route with: ip route
+-   Verify route with: 
+``` bash
+ip route
+```
 
 If HMX fails to switch Speed or Slave/Master roles:
 
 - Bring down the interface and bring it back up
-
 ``` bash
 ip link set eth2 down
 sleep 1
@@ -249,7 +254,5 @@ ip link set eth2 up
 Configuration A: - HMX A = Master - HMX B = Slave
 
 Configuration B: - HMX A = Slave - HMX B = Master
-
-Both configurations should support full throughput.
 
 ------------------------------------------------------------------------
