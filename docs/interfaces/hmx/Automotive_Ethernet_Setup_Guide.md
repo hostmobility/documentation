@@ -221,7 +221,7 @@ Expected throughput:
 
 If link is down:
 
--   Ensure speeds match on both sides
+-   Ensure speed selection is the same on both ends
 -   Ensure one side is master and the other slave
 -   Reconnect cable
 -   Verify with: 
