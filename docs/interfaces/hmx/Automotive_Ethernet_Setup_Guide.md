@@ -188,7 +188,7 @@ From **HMX A**:
 ping -I eth2 192.168.10.2
 ```
 
-From **HMX** **B** :
+From **HMX B** :
 
 ``` bash
 ping -I eth2 192.168.10.1
