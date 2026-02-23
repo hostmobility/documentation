@@ -182,7 +182,7 @@ You should see:
 
 # 6. Test Connectivity
 
-From **HMX** **A**:
+From **HMX A**:
 
 ``` bash
 ping -I eth2 192.168.10.2
