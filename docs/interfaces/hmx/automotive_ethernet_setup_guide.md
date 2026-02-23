@@ -27,6 +27,7 @@ Both systems must use compatible T1 PHYs.
 
 Requirements:
 
+-   Yocto Scarthgap with Linux 6.6 or later 
 -   Both systems must be configured to use the same speed (100BASE-T1 or 1000BASE-T1)
 -   Cable properly connected
 -   One side must be Master (CMD), the other Slave (RSP)
