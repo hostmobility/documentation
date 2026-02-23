@@ -151,7 +151,7 @@ or
 
 # 5. Configure IP Addresses
 
-Choose a subnet (example 192.168.10.0/24)
+Choose a subnet (example 192.168.10.0/24).
 
 ## On HMX A
 
