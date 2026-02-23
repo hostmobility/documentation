@@ -35,7 +35,7 @@ Requirements:
 
 # 2. Verify Link Capability
 
-Either port eth2/eth3 is fine to use but for this guide eth2 will be used.
+Either port eth2/eth3 is fine but in this guide eth2 will be used.
 
 
 Run on both systems:
