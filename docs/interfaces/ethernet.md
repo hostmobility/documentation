@@ -11,8 +11,10 @@ tags:
   - MX-V
 ---
 ## Overview
-Our products come with one or two RJ45 (Ethernet) ports.
 
+Our products include one or two RJ45 Ethernet ports. The HMX also provides Ethernet connectivity through additional ports.
+
+For details, see the platform-specific pages below.
 
 ## Platform specific
 - [HMX](hmx/ethernet.md)
