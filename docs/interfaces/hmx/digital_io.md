@@ -39,7 +39,7 @@ Example usage:
 #gpio-leds
 echo 1 > /sys/class/leds/:pwr_out_led_1/brightness
 #gpiod
-gpioset $(gpiofind OUT_SINK1)=1
+timeout 0.1 gpioset OUT_SINK1=1
 ```
 
 ## List of supported inputs

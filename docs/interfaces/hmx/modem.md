@@ -19,8 +19,7 @@ root@10210100023:~# gpioinfo | grep MODEM
         line  10:  "MODEM_PWR"       unused   input  active-high
         line  20:  "MODEM_RST"       unused   input  active-high
 
-gpioset $(gpiofind MODEM_PWR)=0
-```
+timeout 0.1 gpioset MODEM_PWR=0
 ```
 
 * The modem takes about 10 seconds to start and register itself with the kernel. It then takes up to one minute before it is registered in the linux usb list.

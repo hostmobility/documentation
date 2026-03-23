@@ -29,7 +29,7 @@ Example read with unbind gpio-key
 **Note:** This will disable wake-up possibility on digital and start signals.
 ```
 echo gpio-keys > /sys/bus/platform/drivers/gpio-keys/unbind
-gpioget $(gpiofind IN_START)
+gpioget IN_START
 echo gpio-keys > /sys/bus/platform/drivers/gpio-keys/bind
 ```
 
