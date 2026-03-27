@@ -1625,20 +1625,22 @@
 <h2 id="startingenabling-modem">Starting/Enabling modem<a class="headerlink" href="#startingenabling-modem" title="Permanent link">⚓︎</a></h2>
 <p>The modem is turned on by default. To disable it, set the GPIO MODEM_PWR to 0.
 To reset it use MODEM_RST and set it to 0, then back to 1 after a second.</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>root@10210100023:~#<span class="w"> </span>gpioinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>MODEM
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>root@10210100023:~#<span class="w"> </span>gpioinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>MODEM
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span>line<span class="w">  </span><span class="m">10</span>:<span class="w">  </span><span class="s2">&quot;MODEM_PWR&quot;</span><span class="w">       </span>unused<span class="w">   </span>input<span class="w">  </span>active-high
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span>line<span class="w">  </span><span class="m">20</span>:<span class="w">  </span><span class="s2">&quot;MODEM_RST&quot;</span><span class="w">       </span>unused<span class="w">   </span>input<span class="w">  </span>active-high
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>gpioset<span class="w"> </span><span class="k">$(</span>gpiofind<span class="w"> </span>MODEM_PWR<span class="k">)</span><span class="o">=</span><span class="m">0</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>timeout<span class="w"> </span><span class="m">0</span>.1<span class="w"> </span>gpioset<span class="w"> </span><span class="nv">MODEM_PWR</span><span class="o">=</span><span class="m">0</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>* The modem takes about 10 seconds to start and register itself with the kernel. It then takes up to one minute before it is registered in the linux usb list.
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>* Check USB TTY device to see if it has shown up.
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>```bash
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>find /dev -name &quot;ttyUSB*&quot;
-</code></pre></div></p>
+<ul>
+<li>
+<p>The modem takes about 10 seconds to start and register itself with the kernel. It then takes up to one minute before it is registered in the linux usb list.</p>
+</li>
+<li>
+<p>Check USB TTY device to see if it has shown up.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>find<span class="w"> </span>/dev<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;ttyUSB*&quot;</span>
+</code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/dev/ttyUSB3
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>/dev/ttyUSB2
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>/dev/ttyUSB1

@@ -1744,7 +1744,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">#gpio-leds</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>/sys/class/leds/:pwr_out_led_1/brightness
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">#gpiod</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>gpioset<span class="w"> </span><span class="k">$(</span>gpiofind<span class="w"> </span>OUT_SINK1<span class="k">)</span><span class="o">=</span><span class="m">1</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>timeout<span class="w"> </span><span class="m">0</span>.1<span class="w"> </span>gpioset<span class="w"> </span><span class="nv">OUT_SINK1</span><span class="o">=</span><span class="m">1</span>
 </code></pre></div></p>
 <h2 id="list-of-supported-inputs">List of supported inputs<a class="headerlink" href="#list-of-supported-inputs" title="Permanent link">⚓︎</a></h2>
 <p>There are two types of digital inputs with pull up or pull down resistor.</p>
