@@ -73,4 +73,4 @@ gpioget IN_START
 gpionotify MODEM_PWR
 ```
 
-**Note:** Only the HMX platform currently uses libgpiod v2.x.
+**Note:** All platforms on Yocto 5.0 Scarthgap are (already or soon will be) using libgpiod v2.x.
