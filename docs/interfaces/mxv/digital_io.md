@@ -67,21 +67,22 @@ gpiochip9 - 25 lines:
         line  24: "digital-out-enable" unused input active-high
 ```
 
-To find a specific signal, the `gpiofind` command can be used:
+To inspect a specific signal, pass the line name directly to `gpioinfo`:
 
 ```bash
-root@mxv-pt:~# gpiofind digital-out-enable
-gpiochip9 24
+root@mxv-pt:~# gpioinfo digital-out-enable
 ```
 
 ### Enable digital out
 
 To enable digital out, the `digital-out-enable` line needs to be set to high.
 
-We can use the `gpioset` command in combination with `gpiofind` in `bash`.
+With libgpiod v2.x, GPIO line names can be used directly. Since `gpioset`
+holds the line while the process is running, `timeout` is used here to keep
+the line asserted briefly before returning to the shell.
 
 ```bash
-root@mxv-pt:~# gpioset $(gpiofind digital-out-enable)=1
+root@mxv-pt:~# timeout 0.1 gpioset digital-out-enable=1
 ```
 
 ### Digital out high and low
@@ -92,7 +93,8 @@ are controlled with `digital-out-source-0..7` and the sink drivers with
 cannot be used at the same time.
 
 ```bash
-root@mxv-pt:~# gpioset $(gpiofind digital-out-source-0)=1
+root@mxv-pt:~# timeout 0.1 gpioset digital-out-source-0=1
+root@mxv-pt:~# timeout 0.1 gpioset digital-out-sink-0=1
 ```
 
 ### Over-current sense
@@ -101,7 +103,7 @@ For each digital-out-source-n there is a digital-out-oc-n which can be read to
 detect short-circuits.
 
 ```bash
-root@mxv-pt:~# gpioget $(gpiofind digital-out-oc-0)
+root@mxv-pt:~# gpioget --numeric digital-out-oc-0
 ```
 
 ### Debugging
@@ -151,31 +153,32 @@ root@mxv-pt:~# cat /sys/kernel/debug/gpio | grep -i dig
 ```
 
 ## Digital in
-This unit has 13 digital and analog in (adc) channels using iio devices.
+
+This unit has 13 digital and analog in (ADC) channels using IIO devices.
 
 ```bash
- gpioget $(gpiofind digital-in-1)
- gpioget $(gpiofind digital-in-2)
- gpioget $(gpiofind digital-in-3)
- gpioget $(gpiofind digital-in-4)
- gpioget $(gpiofind digital-in-5)
- gpioget $(gpiofind digital-in-6)
- gpioget $(gpiofind digital-in-7)
- gpioget $(gpiofind digital-in-8)
+gpioget --numeric digital-in-1
+gpioget --numeric digital-in-2
+gpioget --numeric digital-in-3
+gpioget --numeric digital-in-4
+gpioget --numeric digital-in-5
+gpioget --numeric digital-in-6
+gpioget --numeric digital-in-7
+gpioget --numeric digital-in-8
 
- # analog way to access the value
- cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_0_raw
- cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_1_raw
- cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_2_raw
- cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_3_raw
- cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_4_raw
- cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_5_raw
- cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_6_raw
- cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_7_raw
+# Analog way to access the value
+cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_0_raw
+cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_1_raw
+cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_2_raw
+cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_3_raw
+cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_4_raw
+cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_5_raw
+cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_6_raw
+cat /sys/bus/iio/devices/iio:device0/*DIG_IN_AN_7_raw
 
- cat /sys/bus/iio/devices/iio:device0/*AN_IN_AN_1_raw
- cat /sys/bus/iio/devices/iio:device0/*AN_IN_AN_2_raw
- cat /sys/bus/iio/devices/iio:device0/*AN_IN_AN_3_raw
- cat /sys/bus/iio/devices/iio:device0/*AN_IN_AN_4_raw
- cat /sys/bus/iio/devices/iio:device0/*AN_IN_AN_5_raw
+cat /sys/bus/iio/devices/iio:device0/*AN_IN_AN_1_raw
+cat /sys/bus/iio/devices/iio:device0/*AN_IN_AN_2_raw
+cat /sys/bus/iio/devices/iio:device0/*AN_IN_AN_3_raw
+cat /sys/bus/iio/devices/iio:device0/*AN_IN_AN_4_raw
+cat /sys/bus/iio/devices/iio:device0/*AN_IN_AN_5_raw
 ```
