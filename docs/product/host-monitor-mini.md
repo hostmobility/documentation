@@ -16,7 +16,7 @@ The Host Monitor Mini is an industrial Linux-based edge-computing device in a DI
 
 | Feature | Description
 | --- | ---
-| Housing | galvanized metal, 110(117)x134(153)x32mm (in parenthesis connector front to back din-rail clip)
+| Housing | galvanized metal, 110(117)x134(153)x32mm (in parenthesis connector front to back DIN-rail clip)
 | Operating Temperature | -5C to +65C
 | Nominal Voltage | 24V
 | Nominal Current consumtion | less than 3W
@@ -35,7 +35,7 @@ The Host Monitor Mini is an industrial Linux-based edge-computing device in a DI
 | [LEDs](../interfaces/leds.md) | 4 x red+green (yellow in combination)
 | [Modem](../interfaces/modem/modem.md) | Quectel EG21
 | [Real Time Clock](../interfaces/rtc.md) | No battery mounted; please use network time
-| [RS-232](../interfaces/serial.md) | 1 x RS-232 bus 
+| [RS-232](../interfaces/serial.md) | 1 x RS-232 bus
 | SIM | nanoSIM, hot-swap
 | [USB](../interfaces/hmm/usb.md) | USB 2.0 OTG type C
 | [WIFI](../interfaces/wifi.md) | 802.11 b/g/n WiFi |
@@ -77,19 +77,19 @@ See [Production Variant Definition](#production-variant-definition) if your vari
 
 | Interface                                 | Description                                   | Mounted/Optional                        |
 |-------------------------------------------|-----------------------------------------------|-----------------------------------------|
-| [Bluetooth](../interfaces/bluetooth.md)   | Bluetooth Low Energy 5.2*                     | Optional / Wi-Fi                       |
-| [CAN](../interfaces/can.md)               | 2 x CAN-FD                                     | Optional / -                           |
-| [Ethernet](../interfaces/ethernet.md)     | 1 x 100/1000 Base-T                           | Always / -                             |
-| [GPS](../interfaces/hmm/modem.md)         | Included in modem, external antenna           | Always / -                             |
-| [HSM](../interfaces/hmm/hsm.md)           | Hardware security module                        | Optional / -                           |
-| [LEDs](../interfaces/leds.md)             | 4 x red+green (yellow in combination)           | Always / -                             |
+| [Bluetooth](../interfaces/bluetooth.md)   | Bluetooth Low Energy 5.2*                     | Optional / Wi-Fi                        |
+| [CAN](../interfaces/can.md)               | 2 x CAN-FD                                    | Optional / -                            |
+| [Ethernet](../interfaces/ethernet.md)     | 1 x 100/1000 Base-T                           | Always / -                              |
+| [GPS](../interfaces/hmm/modem.md)         | Included in modem, external antenna           | Always / -                              |
+| [HSM](../interfaces/hmm/hsm.md)           | Hardware security module                      | Optional / -                            |
+| [LEDs](../interfaces/leds.md)             | 4 x red+green (yellow in combination)         | Always / -                              |
 | [Real Time Clock](../interfaces/rtc.md)   | System time keeper and wakeup                 | Optional / Optional power-backed by BR1220 coin cell battery |
-| [RS-232](../interfaces/serial.md)         | 1 x RS-232 bus                                | Always / -                             |
-| [RS-485](../interfaces/serial.md)         | 1 x RS-485 bus                                | Optional / -                           |
-| SIM                                       | NanoSIM, hot-swap                             | Always / -                             |
-| [USB](../interfaces/hmm/usb.md)           | USB 2.0 OTG Type-C                            | Always / -                             |
-| [Universal I/O](../interfaces/hmm/io.md)  | With individual modes                         | Optional / -                           |
-| [WIFI](../interfaces/wifi.md)             | 802.11 b/g/n WiFi*                            | Optional / Bluetooth                   |
+| [RS-232](../interfaces/serial.md)         | 1 x RS-232 bus                                | Always / -                              |
+| [RS-485](../interfaces/serial.md)         | 1 x RS-485 bus                                | Optional / -                            |
+| SIM                                       | NanoSIM, hot-swap                             | Always / -                              |
+| [USB](../interfaces/hmm/usb.md)           | USB 2.0 OTG Type-C                            | Always / -                              |
+| [Universal I/O](../interfaces/hmm/io.md)  | With individual modes                         | Optional / -                            |
+| [WIFI](../interfaces/wifi.md)             | 802.11 b/g/n WiFi*                            | Optional / Bluetooth                    |
 
 * *You can only choose either BLE or WiFi as there is only one SMA connector in this design.
 
@@ -119,7 +119,7 @@ Position in field: xxxxXx
 | 1          | HMP1031-11   |
 | 2          | HMP1031-16   |
 
-### WiFi or BLE features
+### WiFi or BLE feature
 
 Position in field: xxxXxx
 
