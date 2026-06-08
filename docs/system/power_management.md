@@ -10,6 +10,7 @@ tags:
 ## Overview
 
 The majority of platforms have at least three different operating modes:
+
 - Running
     - The default operating state where we have full functionality.
 - Sleep/Suspend
