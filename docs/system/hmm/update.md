@@ -11,14 +11,14 @@ tags:
 ### Prepare upgrade
 
 * Rename the file `***-image-verdin-am62-hmm.wic.gz` to `hmm-image.wic.gz`
-* Copy `hmm_boot.scr` and `hmm-image.wic.gz` to a USB memory.
+* Copy `hmm_boot.scr` and `hmm-image.wic.gz` to a USB flash drive.
 * It is also possible to update by copying `hmm-image.wic.gz` to `/boot` or  `/`  on the Linux file system
 
 ### If the USB method is used
 
-* Plug the USB memory into the HMM
-* Press and release the the `RESET` button 
-* You can add an [autoboot.sh](../update.md#usb-method-autobootsh) script to the USB memory on the first boot after flash to perform post installation.
+* Plug the USB drive into the HMM
+* Press and release the the `RESET` button
+* You can add an [autoboot.sh](../update.md#usb-method-autobootsh) script to the USB drive on the first boot after flash to perform post installation.
 
 ### If /boot method is used
 
@@ -30,7 +30,7 @@ tags:
 
 * The unit shall now set LED 4 (D) to green if it was successful in writing the wic.gz file or red for 10 seconds before reset.
 
-***NOTE*** Detailed LED behavior can be found [here](../interfaces/hmm/leds.md
+***NOTE*** Detailed LED behavior can be found [here](../interfaces/hmm/leds.md).
 
 
 
