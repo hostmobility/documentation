@@ -11,7 +11,10 @@ This platform has four red, green and yellow light-emitting diodes (LEDs).
 
 LEDs are used to indicate [system flashing](../../system/update.md).
 
-LED 1 will be yellow when entering u-boot and green when leaving. The same LED is then set up with a heartbeat trigger from device tree and blink in green light to indicate that the system is running.
+LED 1 will be yellow when entering u-boot and green when leaving. The same LED is then set up with a heartbeat trigger
+from device tree and blink in green light to indicate that the system is running.
+After that point, any application running on the device may take over and change the behavior of the LEDs.
+If your product comes with customer specific software, see the dedicated software manual companion for the specific LED matrix.
 
 ### The following LEDs are available
 
@@ -28,7 +31,7 @@ LED 1 will be yellow when entering u-boot and green when leaving. The same LED i
 
 
 ### Default front
-Overlay illustration (HM020-003711, HM020-010411)
+Overlay illustration (HM020-\*\*\*W11, HM020-\*\*\*W21)
 
  - 🟢 D
  - 🟢 C 
@@ -37,15 +40,15 @@ Overlay illustration (HM020-003711, HM020-010411)
 
 ### System built in modes
 
-| Stage                             | LED 4 (Top) | LED 3 | LED 2 | LED 1 (Bottom)     |
-|-----------------------------------|------------|-------|-------|---------------------|
-| **Power On**                      | 🟡         | 🟡    | 🟡    | 🟡                |
-| **Booting U-Boot**                | ⚫         | ⚫    | ⚫    | 🟡                |
-| **Bootscript(load bootfs)**       | ⚫         | ⚫    | ⚫    | ⚫                |
-| **Flashing Mode(initial USB*)**   | ⚫         | ⚫    | ⚫    | ⚫                |
-| **File Load OK**                  | ⚫         | 🟢    | ⚫    | ⚫                |
-| **File Load Fail(USB*)**          | ⚫         | 🔴    | ⚫    | ⚫                |
-| **Flash Success**                 | 🟢         | 🟢    | ⚫    | ⚫                |
-| **Booting Linux**                 |            |        | ⚫    | 🟢                |
-| **Linux Running**                 | ⚫         | ⚫    | ⚫    | 🟢/⚫(blinking)  |
- - *USB= Flashing with USB memory stick
+| Stage                             | LED D (Top) | LED C | LED B | LED A (Bottom)     |
+|-----------------------------------|-------------|-------|-------|--------------------|
+| **Power On**                      | 🟡          | 🟡    | 🟡    | 🟡                 |
+| **Booting U-Boot**                | ⚫          | ⚫    | ⚫    | 🟡                 |
+| **Bootscript(load bootfs)**       | ⚫          | ⚫    | ⚫    | ⚫                 |
+| **Flashing Mode(initial USB*)**   | ⚫          | ⚫    | ⚫    | ⚫                 |
+| **File Load OK**                  | ⚫          | 🟢    | ⚫    | ⚫                 |
+| **File Load Fail(USB*)**          | ⚫          | 🔴    | ⚫    | ⚫                 |
+| **Flash Success**                 | 🟢          | 🟢    | ⚫    | ⚫                 |
+| **Booting Linux**                 |             |       | ⚫    | 🟢                 |
+| **Linux Running**                 | ⚫          | ⚫    | ⚫    | 🟢/⚫(blinking)    |
+ - *USB= Flashing with USB flash drive
