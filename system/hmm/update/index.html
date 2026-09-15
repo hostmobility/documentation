@@ -1624,14 +1624,14 @@
 <h3 id="prepare-upgrade">Prepare upgrade<a class="headerlink" href="#prepare-upgrade" title="Permanent link">⚓︎</a></h3>
 <ul>
 <li>Rename the file <code>***-image-verdin-am62-hmm.wic.gz</code> to <code>hmm-image.wic.gz</code></li>
-<li>Copy <code>hmm_boot.scr</code> and <code>hmm-image.wic.gz</code> to a USB memory.</li>
+<li>Copy <code>hmm_boot.scr</code> and <code>hmm-image.wic.gz</code> to a USB flash drive.</li>
 <li>It is also possible to update by copying <code>hmm-image.wic.gz</code> to <code>/boot</code> or  <code>/</code>  on the Linux file system</li>
 </ul>
 <h3 id="if-the-usb-method-is-used">If the USB method is used<a class="headerlink" href="#if-the-usb-method-is-used" title="Permanent link">⚓︎</a></h3>
 <ul>
-<li>Plug the USB memory into the HMM</li>
-<li>Press and release the the <code>RESET</code> button </li>
-<li>You can add an <a href="../../update/#usb-method-autobootsh">autoboot.sh</a> script to the USB memory on the first boot after flash to perform post installation.</li>
+<li>Plug the USB drive into the HMM</li>
+<li>Press and release the the <code>RESET</code> button</li>
+<li>You can add an <a href="../../update/#usb-method-autobootsh">autoboot.sh</a> script to the USB drive on the first boot after flash to perform post installation.</li>
 </ul>
 <h3 id="if-boot-method-is-used">If /boot method is used<a class="headerlink" href="#if-boot-method-is-used" title="Permanent link">⚓︎</a></h3>
 <ul>
@@ -1646,7 +1646,7 @@
 <p>The unit shall now set LED 4 (D) to green if it was successful in writing the wic.gz file or red for 10 seconds before reset.</p>
 </li>
 </ul>
-<p><strong><em>NOTE</em></strong> Detailed LED behavior can be found [here](../interfaces/hmm/leds.md</p>
+<p><strong><em>NOTE</em></strong> Detailed LED behavior can be found <a href="../interfaces/hmm/leds.md">here</a>.</p>
 <p><em>Upgrade example using /boot</em>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">image</span><span class="o">=</span>console-hostmobility-image-verdin-am62-hmm.wic.gz
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>scp<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$image</span><span class="s2">&quot;</span><span class="w"> </span>dut:/boot/hmm-image.wic.gz<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>

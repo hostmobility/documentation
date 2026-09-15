@@ -1623,7 +1623,10 @@
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">⚓︎</a></h2>
 <p>This platform has four red, green and yellow light-emitting diodes (LEDs).</p>
 <p>LEDs are used to indicate <a href="../../../system/update/">system flashing</a>.</p>
-<p>LED 1 will be yellow when entering u-boot and green when leaving. The same LED is then set up with a heartbeat trigger from device tree and blink in green light to indicate that the system is running.</p>
+<p>LED 1 will be yellow when entering u-boot and green when leaving. The same LED is then set up with a heartbeat trigger
+from device tree and blink in green light to indicate that the system is running.
+After that point, any application running on the device may take over and change the behavior of the LEDs.
+If your product comes with customer specific software, see the dedicated software manual companion for the specific LED matrix.</p>
 <h3 id="the-following-leds-are-available">The following LEDs are available<a class="headerlink" href="#the-following-leds-are-available" title="Permanent link">⚓︎</a></h3>
 <table>
 <thead>
@@ -1677,7 +1680,7 @@
 </tbody>
 </table>
 <h3 id="default-front">Default front<a class="headerlink" href="#default-front" title="Permanent link">⚓︎</a></h3>
-<p>Overlay illustration (HM020-003711, HM020-010411)</p>
+<p>Overlay illustration (HM020-***W11, HM020-***W21)</p>
 <ul>
 <li>🟢 D</li>
 <li>🟢 C </li>
@@ -1689,10 +1692,10 @@
 <thead>
 <tr>
 <th>Stage</th>
-<th>LED 4 (Top)</th>
-<th>LED 3</th>
-<th>LED 2</th>
-<th>LED 1 (Bottom)</th>
+<th>LED D (Top)</th>
+<th>LED C</th>
+<th>LED B</th>
+<th>LED A (Bottom)</th>
 </tr>
 </thead>
 <tbody>
@@ -1760,7 +1763,7 @@
 <td>🟢/⚫(blinking)</td>
 </tr>
 <tr>
-<td>- *USB= Flashing with USB memory stick</td>
+<td>- *USB= Flashing with USB flash drive</td>
 <td></td>
 <td></td>
 <td></td>
