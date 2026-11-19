@@ -54,7 +54,7 @@ The Host Monitor Mini is an industrial Linux-based edge-computing device in a DI
 | [HSM](../interfaces/hsm.md) | Hardware security module
 | [LEDs](../interfaces/leds.md) | 4 x red+green (yellow in combination)
 | [Modem](../interfaces/modem/modem.md) | Quectel EG21
-| [Real Time Clock](../interfaces/rtc.md) | System time keeper and wakeup, power backed up by BR1220 coin cell battery
+| [Real Time Clock](../interfaces/rtc.md) | No battery mounted; please use network time
 | [RS-232](../interfaces/serial.md) | 1 x RS-232 bus
 | [RS-485](../interfaces/serial.md) | 1 x RS-485 bus
 | SIM | nanoSIM, hot-swap
